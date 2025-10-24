@@ -36,6 +36,36 @@ const AnimatedCharacters: React.FC = () => {
   const [bearFill, setBearFill] = useState(100);
   const [rhinoFill, setRhinoFill] = useState(100);
   const [snakeFill, setSnakeFill] = useState(100);
+  const [robotFill, setRobotFill] = useState(100);
+  const [droneFill, setDroneFill] = useState(100);
+  const [aiCoreFill, setAiCoreFill] = useState(100);
+  const [nanoBotFill, setNanoBotFill] = useState(100);
+  const [holoChipFill, setHoloChipFill] = useState(100);
+  const [cyberLionFill, setCyberLionFill] = useState(100);
+  const [cyberTigerFill, setCyberTigerFill] = useState(100);
+  const [mechaDragonFill, setMechaDragonFill] = useState(100);
+  const [neuralOrbFill, setNeuralOrbFill] = useState(100);
+  const [laserFill, setLaserFill] = useState(100);
+  const [hologramFill, setHologramFill] = useState(100);
+  const [techFoxFill, setTechFoxFill] = useState(100);
+  const [aiWolfFill, setAiWolfFill] = useState(100);
+  const [circuitBotFill, setCircuitBotFill] = useState(100);
+  const [cyberPantherFill, setCyberPantherFill] = useState(100);
+  const [starFill, setStarFill] = useState(100);
+  const [planetFill, setPlanetFill] = useState(100);
+  const [blackHoleFill, setBlackHoleFill] = useState(100);
+  const [nebulaFill, setNebulaFill] = useState(100);
+  const [cometFill, setCometFill] = useState(100);
+  const [supernovaFill, setSupernovaFill] = useState(100);
+  const [voidFill, setVoidFill] = useState(100);
+  const [galaxyFill, setGalaxyFill] = useState(100);
+  const [alienFill, setAlienFill] = useState(100);
+  const [phoenixFill, setPhoenixFill] = useState(100);
+  const [cosmicDragonFill, setCosmicDragonFill] = useState(100);
+  const [meteorFill, setMeteorFill] = useState(100);
+  const [auroraFill, setAuroraFill] = useState(100);
+  const [quantumStarFill, setQuantumStarFill] = useState(100);
+  const [celestialOrbFill, setCelestialOrbFill] = useState(100);
   
   // Interactive states
   const [hoveredCharacter, setHoveredCharacter] = useState<string | null>(null);
@@ -181,6 +211,126 @@ const AnimatedCharacters: React.FC = () => {
       });
       setSnakeFill(prev => {
         const newValue = prev - 0.4;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setRobotFill(prev => {
+        const newValue = prev - 0.6;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setDroneFill(prev => {
+        const newValue = prev - 0.8;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setAiCoreFill(prev => {
+        const newValue = prev - 0.7;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setNanoBotFill(prev => {
+        const newValue = prev - 0.9;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setHoloChipFill(prev => {
+        const newValue = prev - 0.75;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setCyberLionFill(prev => {
+        const newValue = prev - 0.55;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setCyberTigerFill(prev => {
+        const newValue = prev - 0.65;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setMechaDragonFill(prev => {
+        const newValue = prev - 0.45;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setNeuralOrbFill(prev => {
+        const newValue = prev - 0.85;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setLaserFill(prev => {
+        const newValue = prev - 0.95;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setHologramFill(prev => {
+        const newValue = prev - 0.8;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setTechFoxFill(prev => {
+        const newValue = prev - 0.6;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setAiWolfFill(prev => {
+        const newValue = prev - 0.5;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setCircuitBotFill(prev => {
+        const newValue = prev - 0.7;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setCyberPantherFill(prev => {
+        const newValue = prev - 0.55;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setStarFill(prev => {
+        const newValue = prev - 0.7;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setPlanetFill(prev => {
+        const newValue = prev - 0.5;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setBlackHoleFill(prev => {
+        const newValue = prev - 0.4;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setNebulaFill(prev => {
+        const newValue = prev - 0.6;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setCometFill(prev => {
+        const newValue = prev - 0.9;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setSupernovaFill(prev => {
+        const newValue = prev - 0.8;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setVoidFill(prev => {
+        const newValue = prev - 0.35;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setGalaxyFill(prev => {
+        const newValue = prev - 0.45;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setAlienFill(prev => {
+        const newValue = prev - 0.65;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setPhoenixFill(prev => {
+        const newValue = prev - 0.75;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setCosmicDragonFill(prev => {
+        const newValue = prev - 0.55;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setMeteorFill(prev => {
+        const newValue = prev - 0.95;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setAuroraFill(prev => {
+        const newValue = prev - 0.5;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setQuantumStarFill(prev => {
+        const newValue = prev - 0.7;
+        return newValue <= 0 ? 100 : newValue;
+      });
+      setCelestialOrbFill(prev => {
+        const newValue = prev - 0.6;
         return newValue <= 0 ? 100 : newValue;
       });
     }, 100);
@@ -531,7 +681,481 @@ const AnimatedCharacters: React.FC = () => {
         cat: () => console.log('🐈 Meow!'),
         bear: () => console.log('🐻 Grr!'),
         rhino: () => console.log('🦏 Snort!'),
-        snake: () => console.log('🐍 Hiss!')
+        snake: () => console.log('🐍 Hiss!'),
+        robot: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'square';
+          oscillator.frequency.setValueAtTime(200, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(100, audioContext.currentTime + 0.2);
+          gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.2);
+          console.log('🤖 Beep boop!');
+        },
+        drone: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(400, audioContext.currentTime);
+          oscillator.frequency.setValueAtTime(500, audioContext.currentTime + 0.05);
+          oscillator.frequency.setValueAtTime(450, audioContext.currentTime + 0.1);
+          gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.15);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.15);
+          console.log('🚁 Whirrrr!');
+        },
+        aiCore: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'triangle';
+          oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(800, audioContext.currentTime + 0.1);
+          oscillator.frequency.exponentialRampToValueAtTime(500, audioContext.currentTime + 0.2);
+          gainNode.gain.setValueAtTime(0.25, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.3);
+          console.log('🧠 Processing...');
+        },
+        nanoBot: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'square';
+          oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(1200, audioContext.currentTime + 0.05);
+          oscillator.frequency.exponentialRampToValueAtTime(900, audioContext.currentTime + 0.1);
+          gainNode.gain.setValueAtTime(0.15, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.15);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.15);
+          console.log('🔬 Bzzt!');
+        },
+        holoChip: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(1000, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(1500, audioContext.currentTime + 0.08);
+          gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.2);
+          console.log('💾 Shimmer!');
+        },
+        cyberLion: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sawtooth';
+          oscillator.frequency.setValueAtTime(150, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(300, audioContext.currentTime + 0.15);
+          oscillator.frequency.exponentialRampToValueAtTime(180, audioContext.currentTime + 0.3);
+          gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.35);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.35);
+          console.log('🦁⚡ Cyber Roar!');
+        },
+        cyberTiger: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sawtooth';
+          oscillator.frequency.setValueAtTime(180, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(350, audioContext.currentTime + 0.12);
+          oscillator.frequency.exponentialRampToValueAtTime(200, audioContext.currentTime + 0.25);
+          gainNode.gain.setValueAtTime(0.28, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.3);
+          console.log('🐯⚡ Tech Growl!');
+        },
+        mechaDragon: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sawtooth';
+          oscillator.frequency.setValueAtTime(120, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.2);
+          oscillator.frequency.exponentialRampToValueAtTime(150, audioContext.currentTime + 0.4);
+          gainNode.gain.setValueAtTime(0.35, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.5);
+          console.log('🐉🤖 ROAR!!!');
+        },
+        neuralOrb: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(700, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(1400, audioContext.currentTime + 0.15);
+          oscillator.frequency.exponentialRampToValueAtTime(900, audioContext.currentTime + 0.25);
+          gainNode.gain.setValueAtTime(0.22, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.3);
+          console.log('🔮 Mind link!');
+        },
+        laser: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'square';
+          oscillator.frequency.setValueAtTime(1500, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(500, audioContext.currentTime + 0.1);
+          gainNode.gain.setValueAtTime(0.25, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.12);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.12);
+          console.log('⚡🔴 PEW PEW!');
+        },
+        hologram: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(900, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(1300, audioContext.currentTime + 0.1);
+          oscillator.frequency.exponentialRampToValueAtTime(800, audioContext.currentTime + 0.2);
+          gainNode.gain.setValueAtTime(0.18, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.25);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.25);
+          console.log('👤✨ Projecting!');
+        },
+        techFox: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'triangle';
+          oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(900, audioContext.currentTime + 0.08);
+          oscillator.frequency.exponentialRampToValueAtTime(650, audioContext.currentTime + 0.15);
+          gainNode.gain.setValueAtTime(0.24, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.2);
+          console.log('🦊⚡ Yip!');
+        },
+        aiWolf: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sawtooth';
+          oscillator.frequency.setValueAtTime(200, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.15);
+          oscillator.frequency.exponentialRampToValueAtTime(250, audioContext.currentTime + 0.3);
+          gainNode.gain.setValueAtTime(0.26, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.35);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.35);
+          console.log('🐺🤖 AWOOOO!');
+        },
+        circuitBot: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'square';
+          oscillator.frequency.setValueAtTime(300, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(600, audioContext.currentTime + 0.1);
+          gainNode.gain.setValueAtTime(0.22, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.18);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.18);
+          console.log('🔌🤖 Buzz buzz!');
+        },
+        cyberPanther: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sawtooth';
+          oscillator.frequency.setValueAtTime(160, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(320, audioContext.currentTime + 0.13);
+          oscillator.frequency.exponentialRampToValueAtTime(190, audioContext.currentTime + 0.28);
+          gainNode.gain.setValueAtTime(0.29, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.32);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.32);
+          console.log('🐆⚡ Growwwl!');
+        },
+        star: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(1200, audioContext.currentTime + 0.1);
+          oscillator.frequency.exponentialRampToValueAtTime(900, audioContext.currentTime + 0.2);
+          gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.25);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.25);
+          console.log('⭐ Twinkle!');
+        },
+        planet: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'triangle';
+          oscillator.frequency.setValueAtTime(300, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(200, audioContext.currentTime + 0.3);
+          gainNode.gain.setValueAtTime(0.25, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.35);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.35);
+          console.log('🪐 Orbit!');
+        },
+        blackHole: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sawtooth';
+          oscillator.frequency.setValueAtTime(100, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(50, audioContext.currentTime + 0.4);
+          gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.5);
+          console.log('🕳️ Woooom!');
+        },
+        nebula: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(500, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(700, audioContext.currentTime + 0.15);
+          oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.3);
+          gainNode.gain.setValueAtTime(0.18, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.35);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.35);
+          console.log('☁️✨ Mystic!');
+        },
+        comet: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sawtooth';
+          oscillator.frequency.setValueAtTime(1200, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.15);
+          gainNode.gain.setValueAtTime(0.22, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.18);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.18);
+          console.log('☄️ Whoosh!');
+        },
+        supernova: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sawtooth';
+          oscillator.frequency.setValueAtTime(400, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(1600, audioContext.currentTime + 0.1);
+          oscillator.frequency.exponentialRampToValueAtTime(200, audioContext.currentTime + 0.35);
+          gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.4);
+          console.log('💥 BOOM!');
+        },
+        void: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(80, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(40, audioContext.currentTime + 0.5);
+          gainNode.gain.setValueAtTime(0.25, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.6);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.6);
+          console.log('⚫ Silence...');
+        },
+        galaxy: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(300, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(450, audioContext.currentTime + 0.2);
+          oscillator.frequency.exponentialRampToValueAtTime(250, audioContext.currentTime + 0.4);
+          gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.45);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.45);
+          console.log('🌌 Spiral!');
+        },
+        alien: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'square';
+          oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(900, audioContext.currentTime + 0.08);
+          oscillator.frequency.exponentialRampToValueAtTime(550, audioContext.currentTime + 0.16);
+          oscillator.frequency.exponentialRampToValueAtTime(800, audioContext.currentTime + 0.24);
+          gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.28);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.28);
+          console.log('👽 Beep boop!');
+        },
+        phoenix: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'triangle';
+          oscillator.frequency.setValueAtTime(700, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(1200, audioContext.currentTime + 0.15);
+          oscillator.frequency.exponentialRampToValueAtTime(800, audioContext.currentTime + 0.3);
+          gainNode.gain.setValueAtTime(0.23, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.35);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.35);
+          console.log('🔥🦅 Rise!');
+        },
+        cosmicDragon: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sawtooth';
+          oscillator.frequency.setValueAtTime(150, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.2);
+          oscillator.frequency.exponentialRampToValueAtTime(200, audioContext.currentTime + 0.4);
+          gainNode.gain.setValueAtTime(0.27, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.45);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.45);
+          console.log('🐉🌌 ROAR!');
+        },
+        meteor: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sawtooth';
+          oscillator.frequency.setValueAtTime(1400, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(300, audioContext.currentTime + 0.12);
+          gainNode.gain.setValueAtTime(0.24, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.15);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.15);
+          console.log('💫 CRASH!');
+        },
+        aurora: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(400, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(600, audioContext.currentTime + 0.2);
+          oscillator.frequency.exponentialRampToValueAtTime(350, audioContext.currentTime + 0.4);
+          gainNode.gain.setValueAtTime(0.18, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.45);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.45);
+          console.log('🌈 Shimmer!');
+        },
+        quantumStar: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'square';
+          oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(1200, audioContext.currentTime + 0.05);
+          oscillator.frequency.exponentialRampToValueAtTime(600, audioContext.currentTime + 0.1);
+          oscillator.frequency.exponentialRampToValueAtTime(1000, audioContext.currentTime + 0.15);
+          oscillator.frequency.exponentialRampToValueAtTime(700, audioContext.currentTime + 0.2);
+          gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.25);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.25);
+          console.log('⚛️✨ Quantum!');
+        },
+        celestialOrb: () => {
+          const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(500, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(800, audioContext.currentTime + 0.25);
+          oscillator.frequency.exponentialRampToValueAtTime(450, audioContext.currentTime + 0.5);
+          gainNode.gain.setValueAtTime(0.21, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.55);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.55);
+          console.log('🔮✨ Celestial!');
+        }
       };
       
       sounds[soundType]?.();
@@ -578,7 +1202,37 @@ const AnimatedCharacters: React.FC = () => {
       cat: { symbols: ['🐈', '💕', '✨'], count: 5, colors: ['#ff69b4', '#ffa500', '#696969'] },
       bear: { symbols: ['🐻', '🍯', '✨'], count: 5, colors: ['#8b4513', '#a0522d', '#d2691e'] },
       rhino: { symbols: ['🦏', '💨', '✨'], count: 4, colors: ['#808080', '#696969', '#778899'] },
-      snake: { symbols: ['🐍', '💚', '✨'], count: 5, colors: ['#32cd32', '#228b22', '#556b2f'] }
+      snake: { symbols: ['🐍', '💚', '✨'], count: 5, colors: ['#32cd32', '#228b22', '#556b2f'] },
+      robot: { symbols: ['🤖', '⚙️', '💫'], count: 6, colors: ['#00bfff', '#4169e1', '#1e90ff'] },
+      drone: { symbols: ['🚁', '✨', '💨'], count: 7, colors: ['#87ceeb', '#4682b4', '#5f9ea0'] },
+      aiCore: { symbols: ['🧠', '💡', '⚡'], count: 8, colors: ['#00ffff', '#00bfff', '#ff00ff'] },
+      nanoBot: { symbols: ['🔬', '⚛️', '✨'], count: 9, colors: ['#00ffff', '#00ff00', '#ff00ff'] },
+      holoChip: { symbols: ['💾', '💿', '✨'], count: 7, colors: ['#7fffd4', '#40e0d0', '#48d1cc'] },
+      cyberLion: { symbols: ['🦁', '⚡', '💥'], count: 6, colors: ['#ffd700', '#00bfff', '#ff00ff'] },
+      cyberTiger: { symbols: ['🐯', '⚡', '🔥'], count: 6, colors: ['#ff8c00', '#00ffff', '#ff00ff'] },
+      mechaDragon: { symbols: ['🐉', '⚙️', '🔥'], count: 8, colors: ['#ff4500', '#00ffff', '#ffd700'] },
+      neuralOrb: { symbols: ['🔮', '🧠', '✨'], count: 10, colors: ['#9370db', '#00ffff', '#ff00ff'] },
+      laser: { symbols: ['⚡', '🔴', '💥'], count: 12, colors: ['#ff0000', '#ff4500', '#ffff00'] },
+      hologram: { symbols: ['👤', '✨', '💫'], count: 8, colors: ['#00ffff', '#87ceeb', '#add8e6'] },
+      techFox: { symbols: ['🦊', '⚡', '🔥'], count: 7, colors: ['#ff8c00', '#00ffff', '#ffd700'] },
+      aiWolf: { symbols: ['🐺', '🤖', '⚡'], count: 7, colors: ['#4169e1', '#00ffff', '#c0c0c0'] },
+      circuitBot: { symbols: ['🔌', '⚙️', '💡'], count: 8, colors: ['#32cd32', '#00ff00', '#ffff00'] },
+      cyberPanther: { symbols: ['🐆', '⚡', '💜'], count: 6, colors: ['#9400d3', '#00ffff', '#ff00ff'] },
+      star: { symbols: ['⭐', '✨', '💫'], count: 10, colors: ['#ffff00', '#ffd700', '#ffffe0'] },
+      planet: { symbols: ['🪐', '🌍', '🌙'], count: 8, colors: ['#4169e1', '#32cd32', '#ff8c00'] },
+      blackHole: { symbols: ['🕳️', '⚫', '💫'], count: 12, colors: ['#000000', '#4b0082', '#8b00ff'] },
+      nebula: { symbols: ['☁️', '✨', '🌌'], count: 15, colors: ['#9370db', '#ff1493', '#00ffff'] },
+      comet: { symbols: ['☄️', '✨', '💫'], count: 14, colors: ['#ff4500', '#ffd700', '#ffffff'] },
+      supernova: { symbols: ['💥', '✨', '🔥'], count: 20, colors: ['#ff4500', '#ffff00', '#ffffff'] },
+      void: { symbols: ['⚫', '💫', '🌀'], count: 10, colors: ['#000000', '#4b0082', '#2f2f2f'] },
+      galaxy: { symbols: ['🌌', '⭐', '✨'], count: 16, colors: ['#9370db', '#4169e1', '#ff1493'] },
+      alien: { symbols: ['👽', '🛸', '✨'], count: 10, colors: ['#00ff00', '#39ff14', '#7fff00'] },
+      phoenix: { symbols: ['🔥', '🦅', '✨'], count: 18, colors: ['#ff4500', '#ffd700', '#ff8c00'] },
+      cosmicDragon: { symbols: ['🐉', '✨', '🌌'], count: 14, colors: ['#9370db', '#4169e1', '#00ffff'] },
+      meteor: { symbols: ['💫', '🔥', '✨'], count: 16, colors: ['#ff4500', '#ff8c00', '#ffd700'] },
+      aurora: { symbols: ['🌈', '✨', '💫'], count: 20, colors: ['#00ffff', '#00ff00', '#ff00ff'] },
+      quantumStar: { symbols: ['⚛️', '✨', '💫'], count: 15, colors: ['#00ffff', '#ff00ff', '#ffff00'] },
+      celestialOrb: { symbols: ['🔮', '✨', '💎'], count: 12, colors: ['#9370db', '#87ceeb', '#ffffff'] }
     };
     
     const config = particleConfigs[character];
@@ -4355,6 +5009,1878 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🦁 Lion</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(lionFill)}%</div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Techlings Category */}
+        <div>
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            🤖 Techlings
+          </h2>
+          <div className="flex flex-wrap items-center justify-center gap-8 py-8">
+            
+            {/* Robot */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="robot" onClick={() => handleCharacterClick('robot')} onMouseEnter={() => handleCharacterHover('robot')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'robot' ? [1, 1.15, 1] : [1, 1.05, 1], y: hoveredCharacter === 'robot' ? [0, -5, 0] : [0, -2, 0] }} transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.25, filter: "brightness(1.3) drop-shadow(0 0 20px rgba(0,191,255,0.8))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'robot' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="robotBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#00bfff" />
+                      <stop offset="50%" stopColor="#1e90ff" />
+                      <stop offset="100%" stopColor="#4169e1" />
+                    </linearGradient>
+                    <filter id="robotGlow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="robotFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (robotFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Body - enhanced with segments */}
+                  <rect x="38" y="65" width="52" height="50" rx="6" fill="url(#robotBodyGrad)" mask="url(#robotFillMask)" filter="url(#robotGlow)" />
+                  <rect x="38" y="65" width="52" height="50" rx="6" fill="none" stroke="#00bfff" strokeWidth="3" />
+                  {/* Body segments */}
+                  <line x1="40" y1="85" x2="88" y2="85" stroke="#1e90ff" strokeWidth="2" mask="url(#robotFillMask)" opacity="0.6" />
+                  <line x1="40" y1="100" x2="88" y2="100" stroke="#1e90ff" strokeWidth="2" mask="url(#robotFillMask)" opacity="0.6" />
+                  {/* Chest panel with more detail */}
+                  <rect x="46" y="72" width="36" height="20" rx="3" fill="#1e90ff" mask="url(#robotFillMask)" opacity="0.6" />
+                  <rect x="50" y="76" width="28" height="12" rx="2" fill="#00bfff" mask="url(#robotFillMask)" opacity="0.4" />
+                  {/* LED indicators */}
+                  <circle cx="52" cy="82" r="2.5" fill="#00ffff" mask="url(#robotFillMask)" />
+                  <circle cx="60" cy="82" r="2.5" fill="#00ff00" mask="url(#robotFillMask)" />
+                  <circle cx="68" cy="82" r="2.5" fill="#ffff00" mask="url(#robotFillMask)" />
+                  <circle cx="76" cy="82" r="2.5" fill="#ff9900" mask="url(#robotFillMask)" />
+                  {/* Core power display */}
+                  <rect x="56" y="98" width="16" height="12" rx="2" fill="#4169e1" mask="url(#robotFillMask)" opacity="0.7" />
+                  <circle cx="64" cy="104" r="4" fill="#00ffff" mask="url(#robotFillMask)" />
+                  <circle cx="64" cy="104" r="2" fill="#ffffff" mask="url(#robotFillMask)" />
+                  {/* Head - enhanced box */}
+                  <rect x="44" y="28" width="40" height="36" rx="4" fill="url(#robotBodyGrad)" mask="url(#robotFillMask)" />
+                  <rect x="44" y="28" width="40" height="36" rx="4" fill="none" stroke="#00bfff" strokeWidth="3" />
+                  {/* Head top panel */}
+                  <rect x="48" y="30" width="32" height="8" rx="2" fill="#1e90ff" mask="url(#robotFillMask)" opacity="0.6" />
+                  {/* Antenna with segments */}
+                  <rect x="62" y="22" width="4" height="6" rx="1" fill="#00bfff" mask="url(#robotFillMask)" />
+                  <line x1="64" y1="22" x2="64" y2="15" stroke="#00bfff" strokeWidth="2.5" mask="url(#robotFillMask)" />
+                  <circle cx="64" cy="12" r="4" fill="#ff0000" mask="url(#robotFillMask)" />
+                  <circle cx="64" cy="12" r="6" fill="none" stroke="#ff0000" strokeWidth="1.5" mask="url(#robotFillMask)" opacity="0.5" />
+                  {/* Eyes - enhanced digital displays */}
+                  <rect x="50" y="40" width="11" height="12" rx="2" fill="#00ffff" mask="url(#robotFillMask)" />
+                  <rect x="67" y="40" width="11" height="12" rx="2" fill="#00ffff" mask="url(#robotFillMask)" />
+                  <rect x="51" y="41" width="9" height="10" fill="#000" mask="url(#robotFillMask)" />
+                  <rect x="68" y="41" width="9" height="10" fill="#000" mask="url(#robotFillMask)" />
+                  {/* Pupil glow */}
+                  <rect x="53" y="43" width="5" height="6" fill="#00ffff" mask="url(#robotFillMask)" opacity="0.8" />
+                  <rect x="70" y="43" width="5" height="6" fill="#00ffff" mask="url(#robotFillMask)" opacity="0.8" />
+                  <rect x="54" y="44" width="2" height="4" fill="#ffffff" mask="url(#robotFillMask)" />
+                  <rect x="71" y="44" width="2" height="4" fill="#ffffff" mask="url(#robotFillMask)" />
+                  {/* Mouth - enhanced grille */}
+                  <rect x="52" y="56" width="24" height="6" rx="1" fill="#1e90ff" mask="url(#robotFillMask)" opacity="0.5" />
+                  <line x1="54" y1="57" x2="54" y2="61" stroke="#00ffff" strokeWidth="1" mask="url(#robotFillMask)" opacity="0.7" />
+                  <line x1="58" y1="57" x2="58" y2="61" stroke="#00ffff" strokeWidth="1" mask="url(#robotFillMask)" opacity="0.7" />
+                  <line x1="62" y1="57" x2="62" y2="61" stroke="#00ffff" strokeWidth="1" mask="url(#robotFillMask)" opacity="0.7" />
+                  <line x1="66" y1="57" x2="66" y2="61" stroke="#00ffff" strokeWidth="1" mask="url(#robotFillMask)" opacity="0.7" />
+                  <line x1="70" y1="57" x2="70" y2="61" stroke="#00ffff" strokeWidth="1" mask="url(#robotFillMask)" opacity="0.7" />
+                  <line x1="74" y1="57" x2="74" y2="61" stroke="#00ffff" strokeWidth="1" mask="url(#robotFillMask)" opacity="0.7" />
+                  {/* Arms with joints */}
+                  <circle cx="38" cy="70" r="4" fill="#4169e1" mask="url(#robotFillMask)" />
+                  <circle cx="90" cy="70" r="4" fill="#4169e1" mask="url(#robotFillMask)" />
+                  <rect x="26" y="72" width="9" height="26" rx="2" fill="url(#robotBodyGrad)" mask="url(#robotFillMask)" />
+                  <rect x="26" y="72" width="9" height="26" rx="2" fill="none" stroke="#00bfff" strokeWidth="2" />
+                  <rect x="93" y="72" width="9" height="26" rx="2" fill="url(#robotBodyGrad)" mask="url(#robotFillMask)" />
+                  <rect x="93" y="72" width="9" height="26" rx="2" fill="none" stroke="#00bfff" strokeWidth="2" />
+                  {/* Elbow joints */}
+                  <circle cx="30" cy="87" r="3" fill="#1e90ff" mask="url(#robotFillMask)" />
+                  <circle cx="98" cy="87" r="3" fill="#1e90ff" mask="url(#robotFillMask)" />
+                  {/* Hands - enhanced claws */}
+                  <ellipse cx="30" cy="102" rx="5" ry="6" fill="#4169e1" mask="url(#robotFillMask)" />
+                  <ellipse cx="98" cy="102" rx="5" ry="6" fill="#4169e1" mask="url(#robotFillMask)" />
+                  <line x1="28" y1="107" x2="28" y2="112" stroke="#4169e1" strokeWidth="2" mask="url(#robotFillMask)" />
+                  <line x1="30" y1="107" x2="30" y2="114" stroke="#4169e1" strokeWidth="2" mask="url(#robotFillMask)" />
+                  <line x1="32" y1="107" x2="32" y2="112" stroke="#4169e1" strokeWidth="2" mask="url(#robotFillMask)" />
+                  <line x1="96" y1="107" x2="96" y2="112" stroke="#4169e1" strokeWidth="2" mask="url(#robotFillMask)" />
+                  <line x1="98" y1="107" x2="98" y2="114" stroke="#4169e1" strokeWidth="2" mask="url(#robotFillMask)" />
+                  <line x1="100" y1="107" x2="100" y2="112" stroke="#4169e1" strokeWidth="2" mask="url(#robotFillMask)" />
+                  {/* Bolts and screws */}
+                  <circle cx="47" cy="32" r="2" fill="#87ceeb" mask="url(#robotFillMask)" />
+                  <circle cx="81" cy="32" r="2" fill="#87ceeb" mask="url(#robotFillMask)" />
+                  <circle cx="47" cy="60" r="2" fill="#87ceeb" mask="url(#robotFillMask)" />
+                  <circle cx="81" cy="60" r="2" fill="#87ceeb" mask="url(#robotFillMask)" />
+                  <circle cx="42" cy="70" r="1.5" fill="#87ceeb" mask="url(#robotFillMask)" />
+                  <circle cx="86" cy="70" r="1.5" fill="#87ceeb" mask="url(#robotFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🤖 Robot</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-600">{Math.round(robotFill)}%</div>
+            </div>
+
+            {/* Drone */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="drone" onClick={() => handleCharacterClick('drone')} onMouseEnter={() => handleCharacterHover('drone')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'drone' ? [1, 1.18, 1] : [1, 1.08, 1], rotate: hoveredCharacter === 'drone' ? [0, 5, -5, 0] : [0, 2, -2, 0] }} transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.3, filter: "brightness(1.3) drop-shadow(0 0 20px rgba(135,206,235,0.8))" }} whileTap={{ scale: 0.85 }} className={`${hoveredCharacter === 'drone' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="droneBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#87ceeb" />
+                      <stop offset="50%" stopColor="#4682b4" />
+                      <stop offset="100%" stopColor="#5f9ea0" />
+                    </linearGradient>
+                    <radialGradient id="dronePropGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#b0e0e6" />
+                      <stop offset="100%" stopColor="#4682b4" />
+                    </radialGradient>
+                    <linearGradient id="droneArmGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#708090" />
+                      <stop offset="100%" stopColor="#4682b4" />
+                    </linearGradient>
+                    <filter id="droneGlow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="droneFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (droneFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Propeller arms - thicker and more detailed */}
+                  <path d="M38 52 L15 25" stroke="url(#droneArmGrad)" strokeWidth="5" mask="url(#droneFillMask)" strokeLinecap="round" />
+                  <path d="M90 52 L113 25" stroke="url(#droneArmGrad)" strokeWidth="5" mask="url(#droneFillMask)" strokeLinecap="round" />
+                  <path d="M38 76 L15 103" stroke="url(#droneArmGrad)" strokeWidth="5" mask="url(#droneFillMask)" strokeLinecap="round" />
+                  <path d="M90 76 L113 103" stroke="url(#droneArmGrad)" strokeWidth="5" mask="url(#droneFillMask)" strokeLinecap="round" />
+                  {/* Arm details - power wires */}
+                  <path d="M38 52 L15 25" stroke="#1e90ff" strokeWidth="1.5" mask="url(#droneFillMask)" strokeLinecap="round" opacity="0.6" />
+                  <path d="M90 52 L113 25" stroke="#ff0000" strokeWidth="1.5" mask="url(#droneFillMask)" strokeLinecap="round" opacity="0.6" />
+                  <path d="M38 76 L15 103" stroke="#ffff00" strokeWidth="1.5" mask="url(#droneFillMask)" strokeLinecap="round" opacity="0.6" />
+                  <path d="M90 76 L113 103" stroke="#00ff00" strokeWidth="1.5" mask="url(#droneFillMask)" strokeLinecap="round" opacity="0.6" />
+                  {/* Propellers - spinning blades */}
+                  <ellipse cx="15" cy="25" rx="14" ry="4" fill="url(#dronePropGrad)" mask="url(#droneFillMask)" opacity="0.6" transform="rotate(30 15 25)" />
+                  <ellipse cx="15" cy="25" rx="14" ry="4" fill="url(#dronePropGrad)" mask="url(#droneFillMask)" opacity="0.6" transform="rotate(-30 15 25)" />
+                  <ellipse cx="113" cy="25" rx="14" ry="4" fill="url(#dronePropGrad)" mask="url(#droneFillMask)" opacity="0.6" transform="rotate(45 113 25)" />
+                  <ellipse cx="113" cy="25" rx="14" ry="4" fill="url(#dronePropGrad)" mask="url(#droneFillMask)" opacity="0.6" transform="rotate(-45 113 25)" />
+                  <ellipse cx="15" cy="103" rx="14" ry="4" fill="url(#dronePropGrad)" mask="url(#droneFillMask)" opacity="0.6" transform="rotate(60 15 103)" />
+                  <ellipse cx="15" cy="103" rx="14" ry="4" fill="url(#dronePropGrad)" mask="url(#droneFillMask)" opacity="0.6" transform="rotate(-60 15 103)" />
+                  <ellipse cx="113" cy="103" rx="14" ry="4" fill="url(#dronePropGrad)" mask="url(#droneFillMask)" opacity="0.6" transform="rotate(75 113 103)" />
+                  <ellipse cx="113" cy="103" rx="14" ry="4" fill="url(#dronePropGrad)" mask="url(#droneFillMask)" opacity="0.6" transform="rotate(-75 113 103)" />
+                  {/* Motor housings - more detailed */}
+                  <circle cx="15" cy="25" r="7" fill="#2f4f4f" mask="url(#droneFillMask)" />
+                  <circle cx="15" cy="25" r="7" fill="none" stroke="#4682b4" strokeWidth="1.5" />
+                  <circle cx="15" cy="25" r="3" fill="#708090" mask="url(#droneFillMask)" />
+                  <circle cx="113" cy="25" r="7" fill="#2f4f4f" mask="url(#droneFillMask)" />
+                  <circle cx="113" cy="25" r="7" fill="none" stroke="#4682b4" strokeWidth="1.5" />
+                  <circle cx="113" cy="25" r="3" fill="#708090" mask="url(#droneFillMask)" />
+                  <circle cx="15" cy="103" r="7" fill="#2f4f4f" mask="url(#droneFillMask)" />
+                  <circle cx="15" cy="103" r="7" fill="none" stroke="#4682b4" strokeWidth="1.5" />
+                  <circle cx="15" cy="103" r="3" fill="#708090" mask="url(#droneFillMask)" />
+                  <circle cx="113" cy="103" r="7" fill="#2f4f4f" mask="url(#droneFillMask)" />
+                  <circle cx="113" cy="103" r="7" fill="none" stroke="#4682b4" strokeWidth="1.5" />
+                  <circle cx="113" cy="103" r="3" fill="#708090" mask="url(#droneFillMask)" />
+                  {/* Central body - more detailed */}
+                  <rect x="40" y="50" width="48" height="28" rx="4" fill="url(#droneBodyGrad)" mask="url(#droneFillMask)" filter="url(#droneGlow)" />
+                  <rect x="40" y="50" width="48" height="28" rx="4" fill="none" stroke="#4682b4" strokeWidth="3" />
+                  {/* Battery indicator */}
+                  <rect x="45" y="55" width="38" height="8" rx="2" fill="#2f4f4f" mask="url(#droneFillMask)" opacity="0.7" />
+                  <rect x="47" y="57" width="10" height="4" rx="1" fill="#00ff00" mask="url(#droneFillMask)" />
+                  <rect x="59" y="57" width="10" height="4" rx="1" fill="#00ff00" mask="url(#droneFillMask)" />
+                  <rect x="71" y="57" width="10" height="4" rx="1" fill="#ffff00" mask="url(#droneFillMask)" />
+                  {/* LED status lights */}
+                  <circle cx="46" cy="70" r="2.5" fill="#00ff00" mask="url(#droneFillMask)" />
+                  <circle cx="82" cy="70" r="2.5" fill="#ff0000" mask="url(#droneFillMask)" />
+                  {/* Camera gimbal assembly */}
+                  <rect x="58" y="78" width="12" height="6" rx="1" fill="#708090" mask="url(#droneFillMask)" />
+                  <rect x="60" y="84" width="8" height="10" rx="2" fill="#2f4f4f" mask="url(#droneFillMask)" />
+                  {/* Camera lens */}
+                  <circle cx="64" cy="88" r="6" fill="#000" mask="url(#droneFillMask)" />
+                  <circle cx="64" cy="88" r="5" fill="#1e90ff" mask="url(#droneFillMask)" opacity="0.8" />
+                  <circle cx="64" cy="88" r="3" fill="#000" mask="url(#droneFillMask)" />
+                  <circle cx="65" cy="87" r="1.5" fill="#87ceeb" mask="url(#droneFillMask)" opacity="0.9" />
+                  {/* Sensors */}
+                  <circle cx="52" cy="64" r="3" fill="#ff6347" mask="url(#droneFillMask)" opacity="0.8" />
+                  <circle cx="76" cy="64" r="3" fill="#ff6347" mask="url(#droneFillMask)" opacity="0.8" />
+                  {/* Landing gear - more realistic */}
+                  <line x1="48" y1="78" x2="46" y2="96" stroke="#708090" strokeWidth="3" mask="url(#droneFillMask)" strokeLinecap="round" />
+                  <line x1="80" y1="78" x2="82" y2="96" stroke="#708090" strokeWidth="3" mask="url(#droneFillMask)" strokeLinecap="round" />
+                  <path d="M44 96 L48 96 L48 100 L44 100 Z" fill="#5f9ea0" mask="url(#droneFillMask)" />
+                  <path d="M80 96 L84 96 L84 100 L80 100 Z" fill="#5f9ea0" mask="url(#droneFillMask)" />
+                  {/* Antenna */}
+                  <line x1="64" y1="50" x2="64" y2="42" stroke="#4682b4" strokeWidth="2" mask="url(#droneFillMask)" />
+                  <circle cx="64" cy="40" r="2" fill="#ff0000" mask="url(#droneFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🚁 Drone</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">{Math.round(droneFill)}%</div>
+            </div>
+
+            {/* AI Core */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="aiCore" onClick={() => handleCharacterClick('aiCore')} onMouseEnter={() => handleCharacterHover('aiCore')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'aiCore' ? [1, 1.2, 1] : [1, 1.08, 1], rotate: hoveredCharacter === 'aiCore' ? [0, 360] : [0, 180] }} transition={{ duration: hoveredCharacter === 'aiCore' ? 2 : 4, repeat: Infinity, ease: "linear" }} whileHover={{ scale: 1.3, filter: "brightness(1.4) drop-shadow(0 0 25px rgba(0,255,255,0.9))" }} whileTap={{ scale: 0.85 }} className={`${hoveredCharacter === 'aiCore' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="aiCoreGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#00ffff" />
+                      <stop offset="50%" stopColor="#00bfff" />
+                      <stop offset="100%" stopColor="#ff00ff" />
+                    </radialGradient>
+                    <linearGradient id="aiNeuralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#00ffff" />
+                      <stop offset="50%" stopColor="#ff00ff" />
+                      <stop offset="100%" stopColor="#00ffff" />
+                    </linearGradient>
+                    <filter id="aiCoreGlow"><feGaussianBlur stdDeviation="5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="aiCoreFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (aiCoreFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Outer ring */}
+                  <circle cx="64" cy="64" r="50" fill="none" stroke="url(#aiNeuralGrad)" strokeWidth="3" mask="url(#aiCoreFillMask)" opacity="0.7" />
+                  <circle cx="64" cy="64" r="42" fill="none" stroke="url(#aiNeuralGrad)" strokeWidth="2" mask="url(#aiCoreFillMask)" opacity="0.5" />
+                  {/* Neural network nodes */}
+                  <circle cx="64" cy="20" r="5" fill="#00ffff" mask="url(#aiCoreFillMask)" />
+                  <circle cx="100" cy="50" r="5" fill="#ff00ff" mask="url(#aiCoreFillMask)" />
+                  <circle cx="100" cy="78" r="5" fill="#00ffff" mask="url(#aiCoreFillMask)" />
+                  <circle cx="64" cy="108" r="5" fill="#ff00ff" mask="url(#aiCoreFillMask)" />
+                  <circle cx="28" cy="78" r="5" fill="#00ffff" mask="url(#aiCoreFillMask)" />
+                  <circle cx="28" cy="50" r="5" fill="#ff00ff" mask="url(#aiCoreFillMask)" />
+                  {/* Connection lines */}
+                  <line x1="64" y1="20" x2="64" y2="40" stroke="#00ffff" strokeWidth="1.5" mask="url(#aiCoreFillMask)" opacity="0.6" />
+                  <line x1="100" y1="50" x2="82" y2="55" stroke="#ff00ff" strokeWidth="1.5" mask="url(#aiCoreFillMask)" opacity="0.6" />
+                  <line x1="100" y1="78" x2="82" y2="73" stroke="#00ffff" strokeWidth="1.5" mask="url(#aiCoreFillMask)" opacity="0.6" />
+                  <line x1="64" y1="108" x2="64" y2="88" stroke="#ff00ff" strokeWidth="1.5" mask="url(#aiCoreFillMask)" opacity="0.6" />
+                  <line x1="28" y1="78" x2="46" y2="73" stroke="#00ffff" strokeWidth="1.5" mask="url(#aiCoreFillMask)" opacity="0.6" />
+                  <line x1="28" y1="50" x2="46" y2="55" stroke="#ff00ff" strokeWidth="1.5" mask="url(#aiCoreFillMask)" opacity="0.6" />
+                  {/* Core sphere */}
+                  <circle cx="64" cy="64" r="28" fill="url(#aiCoreGrad)" mask="url(#aiCoreFillMask)" filter="url(#aiCoreGlow)" />
+                  <circle cx="64" cy="64" r="28" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Brain pattern inside */}
+                  <path d="M50 60 Q55 55, 60 60 Q62 58, 64 60 Q66 58, 68 60 Q73 55, 78 60" fill="none" stroke="#ff00ff" strokeWidth="2" mask="url(#aiCoreFillMask)" opacity="0.8" />
+                  <path d="M50 68 Q55 73, 60 68 Q62 70, 64 68 Q66 70, 68 68 Q73 73, 78 68" fill="none" stroke="#00ffff" strokeWidth="2" mask="url(#aiCoreFillMask)" opacity="0.8" />
+                  {/* Center glow */}
+                  <circle cx="64" cy="64" r="8" fill="#ffffff" mask="url(#aiCoreFillMask)" opacity="0.9" />
+                  <circle cx="64" cy="64" r="4" fill="#00ffff" mask="url(#aiCoreFillMask)" />
+                  {/* Data particles */}
+                  <circle cx="64" cy="50" r="2" fill="#00ffff" mask="url(#aiCoreFillMask)" />
+                  <circle cx="75" cy="64" r="2" fill="#ff00ff" mask="url(#aiCoreFillMask)" />
+                  <circle cx="64" cy="78" r="2" fill="#00ffff" mask="url(#aiCoreFillMask)" />
+                  <circle cx="53" cy="64" r="2" fill="#ff00ff" mask="url(#aiCoreFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🧠 AI Core</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(aiCoreFill)}%</div>
+            </div>
+
+            {/* NanoBot */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="nanoBot" onClick={() => handleCharacterClick('nanoBot')} onMouseEnter={() => handleCharacterHover('nanoBot')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'nanoBot' ? [1, 1.25, 1] : [1, 1.1, 1], y: hoveredCharacter === 'nanoBot' ? [0, -8, 0] : [0, -3, 0] }} transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.35, filter: "brightness(1.5) drop-shadow(0 0 20px rgba(0,255,255,0.9))" }} whileTap={{ scale: 0.85 }} className={`${hoveredCharacter === 'nanoBot' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="nanoBotGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#00ffff" />
+                      <stop offset="50%" stopColor="#00ff00" />
+                      <stop offset="100%" stopColor="#00bfff" />
+                    </radialGradient>
+                    <filter id="nanoBotGlow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="nanoBotFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (nanoBotFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Central sphere */}
+                  <circle cx="64" cy="64" r="18" fill="url(#nanoBotGrad)" mask="url(#nanoBotFillMask)" filter="url(#nanoBotGlow)" />
+                  <circle cx="64" cy="64" r="18" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Inner core */}
+                  <circle cx="64" cy="64" r="10" fill="#00ff00" mask="url(#nanoBotFillMask)" opacity="0.8" />
+                  <circle cx="64" cy="64" r="5" fill="#ffffff" mask="url(#nanoBotFillMask)" />
+                  {/* Orbiting particles */}
+                  <circle cx="84" cy="64" r="4" fill="#00ffff" mask="url(#nanoBotFillMask)" />
+                  <circle cx="44" cy="64" r="4" fill="#00ff00" mask="url(#nanoBotFillMask)" />
+                  <circle cx="64" cy="44" r="4" fill="#ff00ff" mask="url(#nanoBotFillMask)" />
+                  <circle cx="64" cy="84" r="4" fill="#00bfff" mask="url(#nanoBotFillMask)" />
+                  <circle cx="76" cy="52" r="3" fill="#00ffff" mask="url(#nanoBotFillMask)" opacity="0.7" />
+                  <circle cx="52" cy="76" r="3" fill="#00ff00" mask="url(#nanoBotFillMask)" opacity="0.7" />
+                  <circle cx="76" cy="76" r="3" fill="#ff00ff" mask="url(#nanoBotFillMask)" opacity="0.7" />
+                  <circle cx="52" cy="52" r="3" fill="#00bfff" mask="url(#nanoBotFillMask)" opacity="0.7" />
+                  {/* Orbit lines */}
+                  <circle cx="64" cy="64" r="24" fill="none" stroke="#00ffff" strokeWidth="1" mask="url(#nanoBotFillMask)" opacity="0.3" />
+                  <circle cx="64" cy="64" r="30" fill="none" stroke="#00ff00" strokeWidth="1" mask="url(#nanoBotFillMask)" opacity="0.3" />
+                  <circle cx="64" cy="64" r="36" fill="none" stroke="#ff00ff" strokeWidth="1" mask="url(#nanoBotFillMask)" opacity="0.3" />
+                  {/* Molecular bonds */}
+                  <line x1="64" y1="64" x2="84" y2="64" stroke="#00ffff" strokeWidth="1.5" mask="url(#nanoBotFillMask)" opacity="0.5" />
+                  <line x1="64" y1="64" x2="44" y2="64" stroke="#00ff00" strokeWidth="1.5" mask="url(#nanoBotFillMask)" opacity="0.5" />
+                  <line x1="64" y1="64" x2="64" y2="44" stroke="#ff00ff" strokeWidth="1.5" mask="url(#nanoBotFillMask)" opacity="0.5" />
+                  <line x1="64" y1="64" x2="64" y2="84" stroke="#00bfff" strokeWidth="1.5" mask="url(#nanoBotFillMask)" opacity="0.5" />
+                  {/* Nano appendages */}
+                  <path d="M82 64 L100 54 L102 56 L100 58" stroke="#00ffff" strokeWidth="2" mask="url(#nanoBotFillMask)" fill="none" />
+                  <path d="M46 64 L28 54 L26 56 L28 58" stroke="#00ff00" strokeWidth="2" mask="url(#nanoBotFillMask)" fill="none" />
+                  <path d="M64 46 L74 28 L76 30 L74 32" stroke="#ff00ff" strokeWidth="2" mask="url(#nanoBotFillMask)" fill="none" />
+                  <path d="M64 82 L74 100 L76 98 L74 96" stroke="#00bfff" strokeWidth="2" mask="url(#nanoBotFillMask)" fill="none" />
+                  {/* Micro details */}
+                  <circle cx="64" cy="64" r="2" fill="#ffffff" mask="url(#nanoBotFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🔬 NanoBot</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">{Math.round(nanoBotFill)}%</div>
+            </div>
+
+            {/* Holo Chip */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="holoChip" onClick={() => handleCharacterClick('holoChip')} onMouseEnter={() => handleCharacterHover('holoChip')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'holoChip' ? [1, 1.15, 1] : [1, 1.05, 1], y: hoveredCharacter === 'holoChip' ? [0, -5, 0] : [0, -2, 0] }} transition={{ duration: hoveredCharacter === 'holoChip' ? 1.5 : 2.5, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.25, filter: "brightness(1.4) drop-shadow(0 0 20px rgba(127,255,212,0.9))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'holoChip' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="holoChipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#7fffd4" />
+                      <stop offset="50%" stopColor="#40e0d0" />
+                      <stop offset="100%" stopColor="#48d1cc" />
+                    </linearGradient>
+                    <filter id="holoChipGlow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="holoChipFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (holoChipFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Chip body */}
+                  <rect x="36" y="36" width="56" height="56" rx="4" fill="url(#holoChipGrad)" mask="url(#holoChipFillMask)" filter="url(#holoChipGlow)" />
+                  <rect x="36" y="36" width="56" height="56" rx="4" fill="none" stroke="#40e0d0" strokeWidth="3" />
+                  {/* Circuit patterns */}
+                  <path d="M44 44 L54 44 L54 54 L44 54 Z" fill="none" stroke="#00ffff" strokeWidth="2" mask="url(#holoChipFillMask)" />
+                  <path d="M74 44 L84 44 L84 54 L74 54 Z" fill="none" stroke="#00ffff" strokeWidth="2" mask="url(#holoChipFillMask)" />
+                  <path d="M44 74 L54 74 L54 84 L44 84 Z" fill="none" stroke="#00ffff" strokeWidth="2" mask="url(#holoChipFillMask)" />
+                  <path d="M74 74 L84 74 L84 84 L74 84 Z" fill="none" stroke="#00ffff" strokeWidth="2" mask="url(#holoChipFillMask)" />
+                  {/* Central processor */}
+                  <rect x="56" y="56" width="16" height="16" rx="2" fill="#7fffd4" mask="url(#holoChipFillMask)" />
+                  <rect x="56" y="56" width="16" height="16" rx="2" fill="none" stroke="#ffffff" strokeWidth="2" />
+                  <circle cx="64" cy="64" r="4" fill="#ffffff" mask="url(#holoChipFillMask)" />
+                  {/* Circuit lines */}
+                  <line x1="49" y1="49" x2="56" y2="56" stroke="#00ffff" strokeWidth="1.5" mask="url(#holoChipFillMask)" />
+                  <line x1="79" y1="49" x2="72" y2="56" stroke="#00ffff" strokeWidth="1.5" mask="url(#holoChipFillMask)" />
+                  <line x1="49" y1="79" x2="56" y2="72" stroke="#00ffff" strokeWidth="1.5" mask="url(#holoChipFillMask)" />
+                  <line x1="79" y1="79" x2="72" y2="72" stroke="#00ffff" strokeWidth="1.5" mask="url(#holoChipFillMask)" />
+                  {/* Connection pins */}
+                  <rect x="28" y="56" width="8" height="3" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="28" y="64" width="8" height="3" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="28" y="72" width="8" height="3" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="92" y="56" width="8" height="3" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="92" y="64" width="8" height="3" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="92" y="72" width="8" height="3" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="56" y="28" width="3" height="8" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="64" y="28" width="3" height="8" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="72" y="28" width="3" height="8" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="56" y="92" width="3" height="8" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="64" y="92" width="3" height="8" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  <rect x="72" y="92" width="3" height="8" fill="#40e0d0" mask="url(#holoChipFillMask)" />
+                  {/* Holographic data streams */}
+                  <circle cx="49" cy="49" r="2" fill="#00ffff" mask="url(#holoChipFillMask)" />
+                  <circle cx="79" cy="49" r="2" fill="#00ffff" mask="url(#holoChipFillMask)" />
+                  <circle cx="49" cy="79" r="2" fill="#00ffff" mask="url(#holoChipFillMask)" />
+                  <circle cx="79" cy="79" r="2" fill="#00ffff" mask="url(#holoChipFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">💾 Holo Chip</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-teal-600">{Math.round(holoChipFill)}%</div>
+            </div>
+
+            {/* Cyber Lion */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="cyberLion" onClick={() => handleCharacterClick('cyberLion')} onMouseEnter={() => handleCharacterHover('cyberLion')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'cyberLion' ? [1, 1.2, 1] : [1, 1.1, 1], rotate: clickedCharacter === 'cyberLion' ? [0, 5, -5, 0] : 0 }} transition={{ duration: 1.3, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.25, filter: "brightness(1.3) drop-shadow(0 0 20px rgba(255,215,0,0.9))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'cyberLion' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="cyberLionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ffd700" />
+                      <stop offset="50%" stopColor="#00bfff" />
+                      <stop offset="100%" stopColor="#ff00ff" />
+                    </linearGradient>
+                    <filter id="cyberLionGlow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="cyberLionFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (cyberLionFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Body */}
+                  <ellipse cx="64" cy="82" rx="28" ry="32" fill="url(#cyberLionGrad)" mask="url(#cyberLionFillMask)" filter="url(#cyberLionGlow)" />
+                  <ellipse cx="64" cy="82" rx="28" ry="32" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Circuit pattern on body */}
+                  <path d="M50 75 L58 75 L58 85 L50 85" fill="none" stroke="#00ffff" strokeWidth="1.5" mask="url(#cyberLionFillMask)" opacity="0.6" />
+                  <path d="M70 75 L78 75 L78 85 L70 85" fill="none" stroke="#ff00ff" strokeWidth="1.5" mask="url(#cyberLionFillMask)" opacity="0.6" />
+                  {/* Head */}
+                  <circle cx="64" cy="50" r="24" fill="url(#cyberLionGrad)" mask="url(#cyberLionFillMask)" />
+                  <circle cx="64" cy="50" r="24" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Digital mane */}
+                  <path d="M40 40 L30 25 L35 28 L40 35 Z" fill="#ffd700" mask="url(#cyberLionFillMask)" opacity="0.8" />
+                  <path d="M50 32 L45 18 L48 22 L52 28 Z" fill="#00bfff" mask="url(#cyberLionFillMask)" opacity="0.8" />
+                  <path d="M64 28 L64 14 L66 18 L64 24 Z" fill="#ff00ff" mask="url(#cyberLionFillMask)" opacity="0.8" />
+                  <path d="M78 32 L83 18 L80 22 L76 28 Z" fill="#ffd700" mask="url(#cyberLionFillMask)" opacity="0.8" />
+                  <path d="M88 40 L98 25 L93 28 L88 35 Z" fill="#00bfff" mask="url(#cyberLionFillMask)" opacity="0.8" />
+                  {/* Glowing eyes */}
+                  <circle cx="54" cy="48" r="6" fill="#00ffff" mask="url(#cyberLionFillMask)" />
+                  <circle cx="74" cy="48" r="6" fill="#00ffff" mask="url(#cyberLionFillMask)" />
+                  <circle cx="54" cy="48" r="3" fill="#ffffff" mask="url(#cyberLionFillMask)" />
+                  <circle cx="74" cy="48" r="3" fill="#ffffff" mask="url(#cyberLionFillMask)" />
+                  {/* Tech snout */}
+                  <ellipse cx="64" cy="58" rx="8" ry="6" fill="#4169e1" mask="url(#cyberLionFillMask)" />
+                  <ellipse cx="64" cy="60" rx="3" ry="2" fill="#000" mask="url(#cyberLionFillMask)" />
+                  {/* Energy tail */}
+                  <path d="M90 85 Q105 90, 110 100 L108 102 L105 95 Q95 88, 88 87" fill="url(#cyberLionGrad)" mask="url(#cyberLionFillMask)" opacity="0.8" />
+                  <circle cx="110" cy="100" r="4" fill="#ffff00" mask="url(#cyberLionFillMask)" />
+                  {/* Tech details */}
+                  <line x1="44" y1="50" x2="34" y2="50" stroke="#00ffff" strokeWidth="1.5" mask="url(#cyberLionFillMask)" />
+                  <line x1="84" y1="50" x2="94" y2="50" stroke="#00ffff" strokeWidth="1.5" mask="url(#cyberLionFillMask)" />
+                  <circle cx="64" cy="50" r="2" fill="#ff00ff" mask="url(#cyberLionFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🦁⚡ Cyber Lion</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-600">{Math.round(cyberLionFill)}%</div>
+            </div>
+
+            {/* Cyber Tiger */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="cyberTiger" onClick={() => handleCharacterClick('cyberTiger')} onMouseEnter={() => handleCharacterHover('cyberTiger')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'cyberTiger' ? [1, 1.22, 1] : [1, 1.1, 1], rotate: clickedCharacter === 'cyberTiger' ? [0, 8, -8, 0] : 0 }} transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.28, filter: "brightness(1.3) drop-shadow(0 0 22px rgba(255,140,0,0.9))" }} whileTap={{ scale: 0.88 }} className={`${hoveredCharacter === 'cyberTiger' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="cyberTigerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ff8c00" />
+                      <stop offset="50%" stopColor="#00ffff" />
+                      <stop offset="100%" stopColor="#ff00ff" />
+                    </linearGradient>
+                    <filter id="cyberTigerGlow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="cyberTigerFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (cyberTigerFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Body */}
+                  <ellipse cx="64" cy="80" rx="30" ry="34" fill="url(#cyberTigerGrad)" mask="url(#cyberTigerFillMask)" filter="url(#cyberTigerGlow)" />
+                  <ellipse cx="64" cy="80" rx="30" ry="34" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Tech stripes */}
+                  <path d="M48 72 Q52 74, 56 72" stroke="#000" strokeWidth="3" mask="url(#cyberTigerFillMask)" opacity="0.7" />
+                  <path d="M72 72 Q76 74, 80 72" stroke="#000" strokeWidth="3" mask="url(#cyberTigerFillMask)" opacity="0.7" />
+                  <path d="M45 82 Q50 84, 55 82" stroke="#000" strokeWidth="3" mask="url(#cyberTigerFillMask)" opacity="0.7" />
+                  <path d="M73 82 Q78 84, 83 82" stroke="#000" strokeWidth="3" mask="url(#cyberTigerFillMask)" opacity="0.7" />
+                  {/* Neon stripes */}
+                  <line x1="50" y1="75" x2="54" y2="75" stroke="#00ffff" strokeWidth="2" mask="url(#cyberTigerFillMask)" />
+                  <line x1="74" y1="75" x2="78" y2="75" stroke="#ff00ff" strokeWidth="2" mask="url(#cyberTigerFillMask)" />
+                  <line x1="47" y1="85" x2="52" y2="85" stroke="#00ffff" strokeWidth="2" mask="url(#cyberTigerFillMask)" />
+                  <line x1="76" y1="85" x2="81" y2="85" stroke="#ff00ff" strokeWidth="2" mask="url(#cyberTigerFillMask)" />
+                  {/* Head */}
+                  <ellipse cx="64" cy="48" rx="26" ry="24" fill="url(#cyberTigerGrad)" mask="url(#cyberTigerFillMask)" />
+                  <ellipse cx="64" cy="48" rx="26" ry="24" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Mechanical ears */}
+                  <path d="M42 32 L36 20 L40 24 L44 30 Z" fill="#ff8c00" mask="url(#cyberTigerFillMask)" />
+                  <path d="M42 32 L36 20 L40 24 L44 30 Z" fill="none" stroke="#00ffff" strokeWidth="1.5" />
+                  <path d="M86 32 L92 20 L88 24 L84 30 Z" fill="#ff8c00" mask="url(#cyberTigerFillMask)" />
+                  <path d="M86 32 L92 20 L88 24 L84 30 Z" fill="none" stroke="#00ffff" strokeWidth="1.5" />
+                  {/* Cybernetic eyes */}
+                  <ellipse cx="52" cy="46" rx="7" ry="8" fill="#00ffff" mask="url(#cyberTigerFillMask)" />
+                  <ellipse cx="76" cy="46" rx="7" ry="8" fill="#00ffff" mask="url(#cyberTigerFillMask)" />
+                  <ellipse cx="52" cy="46" rx="3" ry="6" fill="#ff0000" mask="url(#cyberTigerFillMask)" />
+                  <ellipse cx="76" cy="46" rx="3" ry="6" fill="#ff0000" mask="url(#cyberTigerFillMask)" />
+                  <circle cx="52" cy="44" r="2" fill="#ffffff" mask="url(#cyberTigerFillMask)" />
+                  <circle cx="76" cy="44" r="2" fill="#ffffff" mask="url(#cyberTigerFillMask)" />
+                  {/* Tech snout */}
+                  <ellipse cx="64" cy="56" rx="10" ry="8" fill="#00ffff" mask="url(#cyberTigerFillMask)" opacity="0.5" />
+                  <ellipse cx="64" cy="58" rx="4" ry="3" fill="#000" mask="url(#cyberTigerFillMask)" />
+                  {/* Energy whiskers */}
+                  <line x1="40" y1="50" x2="28" y2="48" stroke="#00ffff" strokeWidth="1.5" mask="url(#cyberTigerFillMask)" />
+                  <line x1="40" y1="54" x2="28" y2="54" stroke="#ff00ff" strokeWidth="1.5" mask="url(#cyberTigerFillMask)" />
+                  <line x1="88" y1="50" x2="100" y2="48" stroke="#00ffff" strokeWidth="1.5" mask="url(#cyberTigerFillMask)" />
+                  <line x1="88" y1="54" x2="100" y2="54" stroke="#ff00ff" strokeWidth="1.5" mask="url(#cyberTigerFillMask)" />
+                  {/* Power core */}
+                  <circle cx="64" cy="80" r="5" fill="#ffff00" mask="url(#cyberTigerFillMask)" />
+                  <circle cx="64" cy="80" r="3" fill="#ffffff" mask="url(#cyberTigerFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐯⚡ Cyber Tiger</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(cyberTigerFill)}%</div>
+            </div>
+
+            {/* Mecha Dragon */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="mechaDragon" onClick={() => handleCharacterClick('mechaDragon')} onMouseEnter={() => handleCharacterHover('mechaDragon')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'mechaDragon' ? [1, 1.25, 1] : [1, 1.12, 1], rotate: hoveredCharacter === 'mechaDragon' ? [0, 10, -10, 0] : 0 }} transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.3, filter: "brightness(1.4) drop-shadow(0 0 25px rgba(255,69,0,0.9))" }} whileTap={{ scale: 0.85 }} className={`${hoveredCharacter === 'mechaDragon' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="mechaDragonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ff4500" />
+                      <stop offset="50%" stopColor="#00ffff" />
+                      <stop offset="100%" stopColor="#ffd700" />
+                    </linearGradient>
+                    <filter id="mechaDragonGlow"><feGaussianBlur stdDeviation="5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="mechaDragonFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (mechaDragonFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Body */}
+                  <ellipse cx="64" cy="75" rx="32" ry="38" fill="url(#mechaDragonGrad)" mask="url(#mechaDragonFillMask)" filter="url(#mechaDragonGlow)" />
+                  <ellipse cx="64" cy="75" rx="32" ry="38" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Mechanical plates */}
+                  <path d="M50 65 L58 65 L58 70 L50 70 Z" fill="#ff4500" mask="url(#mechaDragonFillMask)" opacity="0.8" />
+                  <path d="M70 65 L78 65 L78 70 L70 70 Z" fill="#ff4500" mask="url(#mechaDragonFillMask)" opacity="0.8" />
+                  <path d="M48 78 L56 78 L56 85 L48 85 Z" fill="#ffd700" mask="url(#mechaDragonFillMask)" opacity="0.8" />
+                  <path d="M72 78 L80 78 L80 85 L72 85 Z" fill="#ffd700" mask="url(#mechaDragonFillMask)" opacity="0.8" />
+                  {/* Tech details */}
+                  <circle cx="54" cy="67" r="2" fill="#00ffff" mask="url(#mechaDragonFillMask)" />
+                  <circle cx="74" cy="67" r="2" fill="#00ffff" mask="url(#mechaDragonFillMask)" />
+                  <line x1="52" y1="81" x2="58" y2="81" stroke="#00ffff" strokeWidth="2" mask="url(#mechaDragonFillMask)" />
+                  <line x1="70" y1="81" x2="76" y2="81" stroke="#00ffff" strokeWidth="2" mask="url(#mechaDragonFillMask)" />
+                  {/* Head */}
+                  <ellipse cx="64" cy="40" rx="22" ry="20" fill="url(#mechaDragonGrad)" mask="url(#mechaDragonFillMask)" />
+                  <ellipse cx="64" cy="40" rx="22" ry="20" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Mechanical horns */}
+                  <path d="M48 32 L42 20 L44 22 L50 30 Z" fill="#ff4500" mask="url(#mechaDragonFillMask)" />
+                  <path d="M48 32 L42 20 L44 22 L50 30 Z" fill="none" stroke="#ffd700" strokeWidth="1.5" />
+                  <path d="M80 32 L86 20 L84 22 L78 30 Z" fill="#ff4500" mask="url(#mechaDragonFillMask)" />
+                  <path d="M80 32 L86 20 L84 22 L78 30 Z" fill="none" stroke="#ffd700" strokeWidth="1.5" />
+                  {/* Cyber eyes */}
+                  <ellipse cx="54" cy="38" rx="6" ry="7" fill="#ff0000" mask="url(#mechaDragonFillMask)" />
+                  <ellipse cx="74" cy="38" rx="6" ry="7" fill="#ff0000" mask="url(#mechaDragonFillMask)" />
+                  <circle cx="54" cy="37" r="3" fill="#ffff00" mask="url(#mechaDragonFillMask)" />
+                  <circle cx="74" cy="37" r="3" fill="#ffff00" mask="url(#mechaDragonFillMask)" />
+                  <circle cx="54" cy="36" r="1" fill="#ffffff" mask="url(#mechaDragonFillMask)" />
+                  <circle cx="74" cy="36" r="1" fill="#ffffff" mask="url(#mechaDragonFillMask)" />
+                  {/* Snout with exhaust */}
+                  <path d="M64 45 Q70 48, 72 52 Q70 50, 64 48 Z" fill="#ffd700" mask="url(#mechaDragonFillMask)" />
+                  <path d="M64 45 Q58 48, 56 52 Q58 50, 64 48 Z" fill="#ffd700" mask="url(#mechaDragonFillMask)" />
+                  <circle cx="68" cy="50" r="2" fill="#ff4500" mask="url(#mechaDragonFillMask)" />
+                  <circle cx="60" cy="50" r="2" fill="#ff4500" mask="url(#mechaDragonFillMask)" />
+                  {/* Mechanical wings */}
+                  <path d="M36 65 L20 50 L22 52 L24 60 L30 68 Z" fill="url(#mechaDragonGrad)" mask="url(#mechaDragonFillMask)" opacity="0.7" />
+                  <path d="M36 65 L20 50 L22 52 L24 60 L30 68 Z" fill="none" stroke="#00ffff" strokeWidth="1.5" />
+                  <path d="M92 65 L108 50 L106 52 L104 60 L98 68 Z" fill="url(#mechaDragonGrad)" mask="url(#mechaDragonFillMask)" opacity="0.7" />
+                  <path d="M92 65 L108 50 L106 52 L104 60 L98 68 Z" fill="none" stroke="#00ffff" strokeWidth="1.5" />
+                  {/* Wing details */}
+                  <line x1="25" y1="55" x2="32" y2="66" stroke="#ffd700" strokeWidth="1.5" mask="url(#mechaDragonFillMask)" opacity="0.7" />
+                  <line x1="103" y1="55" x2="96" y2="66" stroke="#ffd700" strokeWidth="1.5" mask="url(#mechaDragonFillMask)" opacity="0.7" />
+                  {/* Energy tail */}
+                  <path d="M64 110 L60 120 L64 118 L68 120 Z" fill="#ff4500" mask="url(#mechaDragonFillMask)" />
+                  <path d="M64 110 L60 120 L64 118 L68 120 Z" fill="none" stroke="#00ffff" strokeWidth="1.5" />
+                  <circle cx="64" cy="115" r="3" fill="#ffff00" mask="url(#mechaDragonFillMask)" />
+                  {/* Power core */}
+                  <circle cx="64" cy="75" r="6" fill="#ff4500" mask="url(#mechaDragonFillMask)" opacity="0.8" />
+                  <circle cx="64" cy="75" r="4" fill="#ffff00" mask="url(#mechaDragonFillMask)" />
+                  <circle cx="64" cy="75" r="2" fill="#ffffff" mask="url(#mechaDragonFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐉🤖 Mecha Dragon</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-red-600">{Math.round(mechaDragonFill)}%</div>
+            </div>
+
+            {/* Neural Orb */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="neuralOrb" onClick={() => handleCharacterClick('neuralOrb')} onMouseEnter={() => handleCharacterHover('neuralOrb')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'neuralOrb' ? [1, 1.3, 1] : [1, 1.15, 1], rotate: [0, 360] }} transition={{ duration: hoveredCharacter === 'neuralOrb' ? 4 : 8, repeat: Infinity, ease: "linear" }} whileHover={{ scale: 1.35, filter: "brightness(1.5) drop-shadow(0 0 30px rgba(147,112,219,0.9))" }} whileTap={{ scale: 0.8 }} className={`${hoveredCharacter === 'neuralOrb' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="neuralOrbGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ff00ff" />
+                      <stop offset="40%" stopColor="#9370db" />
+                      <stop offset="70%" stopColor="#00ffff" />
+                      <stop offset="100%" stopColor="#4169e1" />
+                    </radialGradient>
+                    <filter id="neuralOrbGlow"><feGaussianBlur stdDeviation="6" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="neuralOrbFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (neuralOrbFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Main orb */}
+                  <circle cx="64" cy="64" r="30" fill="url(#neuralOrbGrad)" mask="url(#neuralOrbFillMask)" filter="url(#neuralOrbGlow)" />
+                  <circle cx="64" cy="64" r="30" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Inner neural network */}
+                  <circle cx="64" cy="64" r="22" fill="none" stroke="#ff00ff" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.6" />
+                  <circle cx="64" cy="64" r="15" fill="none" stroke="#9370db" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.6" />
+                  <circle cx="64" cy="64" r="8" fill="none" stroke="#00ffff" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.6" />
+                  {/* Neural nodes */}
+                  <circle cx="64" cy="42" r="3" fill="#ff00ff" mask="url(#neuralOrbFillMask)" />
+                  <circle cx="64" cy="86" r="3" fill="#ff00ff" mask="url(#neuralOrbFillMask)" />
+                  <circle cx="42" cy="64" r="3" fill="#00ffff" mask="url(#neuralOrbFillMask)" />
+                  <circle cx="86" cy="64" r="3" fill="#00ffff" mask="url(#neuralOrbFillMask)" />
+                  <circle cx="52" cy="52" r="2" fill="#9370db" mask="url(#neuralOrbFillMask)" />
+                  <circle cx="76" cy="52" r="2" fill="#9370db" mask="url(#neuralOrbFillMask)" />
+                  <circle cx="52" cy="76" r="2" fill="#9370db" mask="url(#neuralOrbFillMask)" />
+                  <circle cx="76" cy="76" r="2" fill="#9370db" mask="url(#neuralOrbFillMask)" />
+                  {/* Neural connections */}
+                  <line x1="64" y1="42" x2="64" y2="64" stroke="#ff00ff" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.5" />
+                  <line x1="64" y1="86" x2="64" y2="64" stroke="#ff00ff" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.5" />
+                  <line x1="42" y1="64" x2="64" y2="64" stroke="#00ffff" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.5" />
+                  <line x1="86" y1="64" x2="64" y2="64" stroke="#00ffff" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.5" />
+                  <line x1="52" y1="52" x2="64" y2="64" stroke="#9370db" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.5" />
+                  <line x1="76" y1="52" x2="64" y2="64" stroke="#9370db" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.5" />
+                  <line x1="52" y1="76" x2="64" y2="64" stroke="#9370db" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.5" />
+                  <line x1="76" y1="76" x2="64" y2="64" stroke="#9370db" strokeWidth="1" mask="url(#neuralOrbFillMask)" opacity="0.5" />
+                  {/* Core */}
+                  <circle cx="64" cy="64" r="6" fill="#ffffff" mask="url(#neuralOrbFillMask)" opacity="0.9" />
+                  <circle cx="64" cy="64" r="4" fill="#ff00ff" mask="url(#neuralOrbFillMask)" />
+                  <circle cx="64" cy="64" r="2" fill="#00ffff" mask="url(#neuralOrbFillMask)" />
+                  {/* Outer energy rings */}
+                  <circle cx="64" cy="64" r="38" fill="none" stroke="#ff00ff" strokeWidth="1.5" mask="url(#neuralOrbFillMask)" opacity="0.4" />
+                  <circle cx="64" cy="64" r="44" fill="none" stroke="#00ffff" strokeWidth="1.5" mask="url(#neuralOrbFillMask)" opacity="0.3" />
+                  {/* Data streams */}
+                  <path d="M64 24 Q80 30, 88 40" stroke="#ff00ff" strokeWidth="1.5" mask="url(#neuralOrbFillMask)" fill="none" opacity="0.5" />
+                  <path d="M64 104 Q48 98, 40 88" stroke="#00ffff" strokeWidth="1.5" mask="url(#neuralOrbFillMask)" fill="none" opacity="0.5" />
+                  <path d="M24 64 Q30 48, 40 40" stroke="#9370db" strokeWidth="1.5" mask="url(#neuralOrbFillMask)" fill="none" opacity="0.5" />
+                  <path d="M104 64 Q98 80, 88 88" stroke="#9370db" strokeWidth="1.5" mask="url(#neuralOrbFillMask)" fill="none" opacity="0.5" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🔮 Neural Orb</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(neuralOrbFill)}%</div>
+            </div>
+
+            {/* Laser */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="laser" onClick={() => handleCharacterClick('laser')} onMouseEnter={() => handleCharacterHover('laser')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'laser' ? [1, 1.2, 1] : [1, 1.1, 1], y: hoveredCharacter === 'laser' ? [0, -10, 0] : [0, -4, 0] }} transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.3, filter: "brightness(1.6) drop-shadow(0 0 25px rgba(255,0,0,0.9))" }} whileTap={{ scale: 0.85 }} className={`${hoveredCharacter === 'laser' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#ff0000" />
+                      <stop offset="50%" stopColor="#ff4500" />
+                      <stop offset="100%" stopColor="#ffff00" />
+                    </linearGradient>
+                    <filter id="laserGlow"><feGaussianBlur stdDeviation="5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="laserFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (laserFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Laser cannon base */}
+                  <rect x="48" y="85" width="32" height="20" rx="3" fill="#696969" mask="url(#laserFillMask)" />
+                  <rect x="48" y="85" width="32" height="20" rx="3" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Barrel */}
+                  <rect x="54" y="45" width="20" height="40" rx="2" fill="url(#laserGrad)" mask="url(#laserFillMask)" filter="url(#laserGlow)" />
+                  <rect x="54" y="45" width="20" height="40" rx="2" fill="none" stroke="#ff0000" strokeWidth="2" />
+                  {/* Barrel details */}
+                  <line x1="54" y1="55" x2="74" y2="55" stroke="#ffff00" strokeWidth="1.5" mask="url(#laserFillMask)" />
+                  <line x1="54" y1="65" x2="74" y2="65" stroke="#ffff00" strokeWidth="1.5" mask="url(#laserFillMask)" />
+                  <line x1="54" y1="75" x2="74" y2="75" stroke="#ffff00" strokeWidth="1.5" mask="url(#laserFillMask)" />
+                  {/* Energy vents */}
+                  <rect x="50" y="50" width="2" height="8" fill="#ff4500" mask="url(#laserFillMask)" />
+                  <rect x="76" y="50" width="2" height="8" fill="#ff4500" mask="url(#laserFillMask)" />
+                  <rect x="50" y="62" width="2" height="8" fill="#ff4500" mask="url(#laserFillMask)" />
+                  <rect x="76" y="62" width="2" height="8" fill="#ff4500" mask="url(#laserFillMask)" />
+                  <rect x="50" y="74" width="2" height="8" fill="#ff4500" mask="url(#laserFillMask)" />
+                  <rect x="76" y="74" width="2" height="8" fill="#ff4500" mask="url(#laserFillMask)" />
+                  {/* Laser beam exit */}
+                  <ellipse cx="64" cy="45" rx="10" ry="8" fill="#ff0000" mask="url(#laserFillMask)" opacity="0.8" />
+                  <ellipse cx="64" cy="45" rx="7" ry="5" fill="#ff4500" mask="url(#laserFillMask)" />
+                  <ellipse cx="64" cy="45" rx="4" ry="3" fill="#ffff00" mask="url(#laserFillMask)" />
+                  <circle cx="64" cy="45" r="2" fill="#ffffff" mask="url(#laserFillMask)" />
+                  {/* Laser beam */}
+                  <rect x="60" y="15" width="8" height="30" fill="#ff0000" mask="url(#laserFillMask)" opacity="0.7" />
+                  <rect x="61" y="15" width="6" height="30" fill="#ff4500" mask="url(#laserFillMask)" opacity="0.6" />
+                  <rect x="62" y="15" width="4" height="30" fill="#ffff00" mask="url(#laserFillMask)" opacity="0.5" />
+                  <rect x="63" y="15" width="2" height="30" fill="#ffffff" mask="url(#laserFillMask)" opacity="0.4" />
+                  {/* Energy core */}
+                  <circle cx="64" cy="95" r="6" fill="#ff0000" mask="url(#laserFillMask)" />
+                  <circle cx="64" cy="95" r="4" fill="#ffff00" mask="url(#laserFillMask)" />
+                  <circle cx="64" cy="95" r="2" fill="#ffffff" mask="url(#laserFillMask)" />
+                  {/* Tech panels */}
+                  <rect x="52" y="88" width="3" height="12" fill="#00ffff" mask="url(#laserFillMask)" opacity="0.6" />
+                  <rect x="73" y="88" width="3" height="12" fill="#00ffff" mask="url(#laserFillMask)" opacity="0.6" />
+                  {/* Status lights */}
+                  <circle cx="58" cy="92" r="1.5" fill="#00ff00" mask="url(#laserFillMask)" />
+                  <circle cx="70" cy="92" r="1.5" fill="#00ff00" mask="url(#laserFillMask)" />
+                  {/* Cooling fins */}
+                  <path d="M45 70 L42 68 L42 72 Z" fill="#696969" mask="url(#laserFillMask)" />
+                  <path d="M83 70 L86 68 L86 72 Z" fill="#696969" mask="url(#laserFillMask)" />
+                  <path d="M45 60 L42 58 L42 62 Z" fill="#696969" mask="url(#laserFillMask)" />
+                  <path d="M83 60 L86 58 L86 62 Z" fill="#696969" mask="url(#laserFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">⚡🔴 Laser</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-red-600">{Math.round(laserFill)}%</div>
+            </div>
+
+            {/* Hologram */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="hologram" onClick={() => handleCharacterClick('hologram')} onMouseEnter={() => handleCharacterHover('hologram')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'hologram' ? [1, 1.2, 1] : [1, 1.08, 1], opacity: [0.7, 1, 0.7] }} transition={{ duration: hoveredCharacter === 'hologram' ? 2 : 3, repeat: Infinity, ease: "easeInOut" }} whileHover={{ scale: 1.25, opacity: 1, filter: "brightness(1.5) drop-shadow(0 0 25px rgba(0,255,255,0.9))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'hologram' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="hologramGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#00ffff" />
+                      <stop offset="25%" stopColor="#00ffaa" />
+                      <stop offset="50%" stopColor="#00ccff" />
+                      <stop offset="75%" stopColor="#66ffff" />
+                      <stop offset="100%" stopColor="#ccffff" />
+                    </linearGradient>
+                    <radialGradient id="hologramRadial" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff" opacity="0.8" />
+                      <stop offset="30%" stopColor="#00ffff" opacity="0.6" />
+                      <stop offset="70%" stopColor="#00ffaa" opacity="0.4" />
+                      <stop offset="100%" stopColor="#00ccff" opacity="0.2" />
+                    </radialGradient>
+                    <filter id="hologramGlow"><feGaussianBlur stdDeviation="5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="hologramFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (hologramFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Outer glow aura */}
+                  <circle cx="64" cy="64" r="55" fill="url(#hologramRadial)" mask="url(#hologramFillMask)" opacity="0.15" />
+                  {/* Head with enhanced glow */}
+                  <circle cx="64" cy="45" r="18" fill="url(#hologramGrad)" mask="url(#hologramFillMask)" filter="url(#hologramGlow)" opacity="0.85" />
+                  <circle cx="64" cy="45" r="18" fill="none" stroke="#00ffff" strokeWidth="2.5" opacity="0.9" />
+                  <circle cx="64" cy="45" r="20" fill="none" stroke="#00ffaa" strokeWidth="1" mask="url(#hologramFillMask)" opacity="0.4" />
+                  {/* Eyes - brighter */}
+                  <circle cx="58" cy="43" r="3" fill="#00ffff" mask="url(#hologramFillMask)" />
+                  <circle cx="70" cy="43" r="3" fill="#00ffff" mask="url(#hologramFillMask)" />
+                  <circle cx="58" cy="42" r="1.5" fill="#ffffff" mask="url(#hologramFillMask)" />
+                  <circle cx="70" cy="42" r="1.5" fill="#ffffff" mask="url(#hologramFillMask)" />
+                  {/* Mouth line - glowing */}
+                  <line x1="58" y1="50" x2="70" y2="50" stroke="#00ffff" strokeWidth="2" mask="url(#hologramFillMask)" opacity="0.9" />
+                  {/* Body with gradient */}
+                  <path d="M50 63 L64 58 L78 63 L74 90 L54 90 Z" fill="url(#hologramGrad)" mask="url(#hologramFillMask)" filter="url(#hologramGlow)" opacity="0.75" />
+                  <path d="M50 63 L64 58 L78 63 L74 90 L54 90 Z" fill="none" stroke="#00ffff" strokeWidth="2.5" opacity="0.9" />
+                  <path d="M50 63 L64 58 L78 63 L74 90 L54 90 Z" fill="none" stroke="#00ffaa" strokeWidth="1" mask="url(#hologramFillMask)" opacity="0.5" />
+                  {/* Chest core */}
+                  <circle cx="64" cy="75" r="4" fill="#00ffff" mask="url(#hologramFillMask)" opacity="0.8" />
+                  <circle cx="64" cy="75" r="6" fill="none" stroke="#00ffaa" strokeWidth="1" mask="url(#hologramFillMask)" opacity="0.5" />
+                  <circle cx="64" cy="75" r="2" fill="#ffffff" mask="url(#hologramFillMask)" />
+                  {/* Arms - glowing */}
+                  <line x1="50" y1="65" x2="38" y2="75" stroke="#00ffff" strokeWidth="3.5" mask="url(#hologramFillMask)" opacity="0.8" />
+                  <line x1="78" y1="65" x2="90" y2="75" stroke="#00ffff" strokeWidth="3.5" mask="url(#hologramFillMask)" opacity="0.8" />
+                  <line x1="50" y1="65" x2="38" y2="75" stroke="#00ffaa" strokeWidth="1.5" mask="url(#hologramFillMask)" opacity="0.5" />
+                  <line x1="78" y1="65" x2="90" y2="75" stroke="#00ffaa" strokeWidth="1.5" mask="url(#hologramFillMask)" opacity="0.5" />
+                  {/* Hands glow */}
+                  <circle cx="38" cy="75" r="3" fill="#00ffff" mask="url(#hologramFillMask)" opacity="0.7" />
+                  <circle cx="90" cy="75" r="3" fill="#00ffff" mask="url(#hologramFillMask)" opacity="0.7" />
+                  {/* Legs - glowing */}
+                  <line x1="58" y1="90" x2="56" y2="110" stroke="#00ffff" strokeWidth="3.5" mask="url(#hologramFillMask)" opacity="0.8" />
+                  <line x1="70" y1="90" x2="72" y2="110" stroke="#00ffff" strokeWidth="3.5" mask="url(#hologramFillMask)" opacity="0.8" />
+                  <line x1="58" y1="90" x2="56" y2="110" stroke="#00ffaa" strokeWidth="1.5" mask="url(#hologramFillMask)" opacity="0.5" />
+                  <line x1="70" y1="90" x2="72" y2="110" stroke="#00ffaa" strokeWidth="1.5" mask="url(#hologramFillMask)" opacity="0.5" />
+                  {/* Feet glow */}
+                  <circle cx="56" cy="110" r="2.5" fill="#00ffff" mask="url(#hologramFillMask)" opacity="0.7" />
+                  <circle cx="72" cy="110" r="2.5" fill="#00ffff" mask="url(#hologramFillMask)" opacity="0.7" />
+                  {/* Enhanced scan lines with alternating colors */}
+                  <line x1="40" y1="40" x2="88" y2="40" stroke="#00ffff" strokeWidth="0.8" mask="url(#hologramFillMask)" opacity="0.5" />
+                  <line x1="40" y1="48" x2="88" y2="48" stroke="#00ffaa" strokeWidth="0.8" mask="url(#hologramFillMask)" opacity="0.4" />
+                  <line x1="40" y1="56" x2="88" y2="56" stroke="#00ffff" strokeWidth="0.8" mask="url(#hologramFillMask)" opacity="0.5" />
+                  <line x1="40" y1="64" x2="88" y2="64" stroke="#00ccff" strokeWidth="0.8" mask="url(#hologramFillMask)" opacity="0.4" />
+                  <line x1="40" y1="72" x2="88" y2="72" stroke="#00ffff" strokeWidth="0.8" mask="url(#hologramFillMask)" opacity="0.5" />
+                  <line x1="40" y1="80" x2="88" y2="80" stroke="#00ffaa" strokeWidth="0.8" mask="url(#hologramFillMask)" opacity="0.4" />
+                  <line x1="40" y1="88" x2="88" y2="88" stroke="#00ffff" strokeWidth="0.8" mask="url(#hologramFillMask)" opacity="0.5" />
+                  <line x1="40" y1="96" x2="88" y2="96" stroke="#00ccff" strokeWidth="0.8" mask="url(#hologramFillMask)" opacity="0.4" />
+                  <line x1="40" y1="104" x2="88" y2="104" stroke="#00ffaa" strokeWidth="0.8" mask="url(#hologramFillMask)" opacity="0.4" />
+                  {/* Enhanced data particles with multiple colors */}
+                  <circle cx="45" cy="55" r="2" fill="#00ffff" mask="url(#hologramFillMask)" opacity="0.8" />
+                  <circle cx="83" cy="68" r="2" fill="#00ffaa" mask="url(#hologramFillMask)" opacity="0.8" />
+                  <circle cx="50" cy="85" r="2" fill="#00ccff" mask="url(#hologramFillMask)" opacity="0.8" />
+                  <circle cx="78" cy="78" r="2" fill="#66ffff" mask="url(#hologramFillMask)" opacity="0.8" />
+                  <circle cx="42" cy="70" r="1.5" fill="#00ffff" mask="url(#hologramFillMask)" opacity="0.6" />
+                  <circle cx="86" cy="92" r="1.5" fill="#00ffaa" mask="url(#hologramFillMask)" opacity="0.6" />
+                  {/* Pixel glitches for hologram effect */}
+                  <rect x="48" y="47" width="2" height="1" fill="#ffffff" mask="url(#hologramFillMask)" opacity="0.7" />
+                  <rect x="75" y="52" width="1" height="2" fill="#ffffff" mask="url(#hologramFillMask)" opacity="0.7" />
+                  <rect x="52" y="78" width="2" height="1" fill="#00ffff" mask="url(#hologramFillMask)" opacity="0.6" />
+                  <rect x="73" y="83" width="1" height="2" fill="#00ffaa" mask="url(#hologramFillMask)" opacity="0.6" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">👤✨ Hologram</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">{Math.round(hologramFill)}%</div>
+            </div>
+
+            {/* Tech Fox */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="techFox" onClick={() => handleCharacterClick('techFox')} onMouseEnter={() => handleCharacterHover('techFox')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'techFox' ? [1, 1.18, 1] : [1, 1.08, 1], rotate: clickedCharacter === 'techFox' ? [0, 6, -6, 0] : 0 }} transition={{ duration: 1.1, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.25, filter: "brightness(1.3) drop-shadow(0 0 20px rgba(255,140,0,0.9))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'techFox' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="techFoxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ff8c00" />
+                      <stop offset="50%" stopColor="#00ffff" />
+                      <stop offset="100%" stopColor="#ffd700" />
+                    </linearGradient>
+                    <filter id="techFoxGlow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="techFoxFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (techFoxFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Body */}
+                  <ellipse cx="64" cy="80" rx="28" ry="32" fill="url(#techFoxGrad)" mask="url(#techFoxFillMask)" filter="url(#techFoxGlow)" />
+                  <ellipse cx="64" cy="80" rx="28" ry="32" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Tech belly panel */}
+                  <rect x="56" y="75" width="16" height="12" rx="2" fill="#00ffff" mask="url(#techFoxFillMask)" opacity="0.4" />
+                  <circle cx="58" cy="78" r="1" fill="#ffd700" mask="url(#techFoxFillMask)" />
+                  <circle cx="64" cy="78" r="1" fill="#ffd700" mask="url(#techFoxFillMask)" />
+                  <circle cx="70" cy="78" r="1" fill="#ffd700" mask="url(#techFoxFillMask)" />
+                  {/* Head */}
+                  <ellipse cx="64" cy="48" rx="20" ry="18" fill="url(#techFoxGrad)" mask="url(#techFoxFillMask)" />
+                  <ellipse cx="64" cy="48" rx="20" ry="18" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Tech ears */}
+                  <path d="M50 35 L44 20 L48 24 L54 32 Z" fill="#ff8c00" mask="url(#techFoxFillMask)" />
+                  <path d="M50 35 L44 20 L48 24 L54 32 Z" fill="none" stroke="#00ffff" strokeWidth="1.5" />
+                  <circle cx="48" cy="26" r="2" fill="#ffd700" mask="url(#techFoxFillMask)" />
+                  <path d="M78 35 L84 20 L80 24 L74 32 Z" fill="#ff8c00" mask="url(#techFoxFillMask)" />
+                  <path d="M78 35 L84 20 L80 24 L74 32 Z" fill="none" stroke="#00ffff" strokeWidth="1.5" />
+                  <circle cx="80" cy="26" r="2" fill="#ffd700" mask="url(#techFoxFillMask)" />
+                  {/* Cyber eyes */}
+                  <ellipse cx="56" cy="46" rx="5" ry="6" fill="#00ffff" mask="url(#techFoxFillMask)" />
+                  <ellipse cx="72" cy="46" rx="5" ry="6" fill="#00ffff" mask="url(#techFoxFillMask)" />
+                  <circle cx="56" cy="45" r="2" fill="#ffffff" mask="url(#techFoxFillMask)" />
+                  <circle cx="72" cy="45" r="2" fill="#ffffff" mask="url(#techFoxFillMask)" />
+                  {/* Snout */}
+                  <path d="M64 52 Q68 56, 70 58 L64 56 L58 58 Q60 56, 64 52 Z" fill="#ffd700" mask="url(#techFoxFillMask)" />
+                  <circle cx="64" cy="56" r="2" fill="#000" mask="url(#techFoxFillMask)" />
+                  {/* Energy tail */}
+                  <path d="M90 85 Q105 88, 115 95 Q110 90, 105 88 Q100 85, 92 86 Z" fill="url(#techFoxGrad)" mask="url(#techFoxFillMask)" opacity="0.8" />
+                  <path d="M90 85 Q105 88, 115 95" stroke="#00ffff" strokeWidth="2" mask="url(#techFoxFillMask)" fill="none" />
+                  <circle cx="115" cy="95" r="3" fill="#ffd700" mask="url(#techFoxFillMask)" />
+                  {/* Circuit lines */}
+                  <line x1="60" y1="70" x2="60" y2="75" stroke="#00ffff" strokeWidth="1" mask="url(#techFoxFillMask)" opacity="0.5" />
+                  <line x1="68" y1="70" x2="68" y2="75" stroke="#00ffff" strokeWidth="1" mask="url(#techFoxFillMask)" opacity="0.5" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🦊⚡ Tech Fox</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(techFoxFill)}%</div>
+            </div>
+
+            {/* AI Wolf */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="aiWolf" onClick={() => handleCharacterClick('aiWolf')} onMouseEnter={() => handleCharacterHover('aiWolf')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'aiWolf' ? [1, 1.2, 1] : [1, 1.1, 1], rotate: clickedCharacter === 'aiWolf' ? [0, 7, -7, 0] : 0 }} transition={{ duration: 1.4, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.26, filter: "brightness(1.3) drop-shadow(0 0 22px rgba(65,105,225,0.9))" }} whileTap={{ scale: 0.88 }} className={`${hoveredCharacter === 'aiWolf' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="aiWolfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#4169e1" />
+                      <stop offset="50%" stopColor="#00ffff" />
+                      <stop offset="100%" stopColor="#c0c0c0" />
+                    </linearGradient>
+                    <filter id="aiWolfGlow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="aiWolfFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (aiWolfFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Body */}
+                  <ellipse cx="64" cy="78" rx="30" ry="34" fill="url(#aiWolfGrad)" mask="url(#aiWolfFillMask)" filter="url(#aiWolfGlow)" />
+                  <ellipse cx="64" cy="78" rx="30" ry="34" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Fur tech pattern */}
+                  <path d="M50 70 Q54 72, 58 70" stroke="#c0c0c0" strokeWidth="2" mask="url(#aiWolfFillMask)" fill="none" />
+                  <path d="M70 70 Q74 72, 78 70" stroke="#c0c0c0" strokeWidth="2" mask="url(#aiWolfFillMask)" fill="none" />
+                  <line x1="60" y1="82" x2="64" y2="82" stroke="#00ffff" strokeWidth="2" mask="url(#aiWolfFillMask)" />
+                  <line x1="64" y1="82" x2="68" y2="82" stroke="#00ffff" strokeWidth="2" mask="url(#aiWolfFillMask)" />
+                  {/* Head */}
+                  <ellipse cx="64" cy="46" rx="24" ry="22" fill="url(#aiWolfGrad)" mask="url(#aiWolfFillMask)" />
+                  <ellipse cx="64" cy="46" rx="24" ry="22" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Tech ears */}
+                  <path d="M46 32 L40 18 L44 22 L50 30 Z" fill="#4169e1" mask="url(#aiWolfFillMask)" />
+                  <path d="M46 32 L40 18 L44 22 L50 30 Z" fill="none" stroke="#00ffff" strokeWidth="1.5" />
+                  <line x1="43" y1="25" x2="47" y2="28" stroke="#c0c0c0" strokeWidth="1" mask="url(#aiWolfFillMask)" />
+                  <path d="M82 32 L88 18 L84 22 L78 30 Z" fill="#4169e1" mask="url(#aiWolfFillMask)" />
+                  <path d="M82 32 L88 18 L84 22 L78 30 Z" fill="none" stroke="#00ffff" strokeWidth="1.5" />
+                  <line x1="85" y1="25" x2="81" y2="28" stroke="#c0c0c0" strokeWidth="1" mask="url(#aiWolfFillMask)" />
+                  {/* AI eyes */}
+                  <ellipse cx="54" cy="44" rx="6" ry="7" fill="#00ffff" mask="url(#aiWolfFillMask)" />
+                  <ellipse cx="74" cy="44" rx="6" ry="7" fill="#00ffff" mask="url(#aiWolfFillMask)" />
+                  <circle cx="54" cy="43" r="3" fill="#4169e1" mask="url(#aiWolfFillMask)" />
+                  <circle cx="74" cy="43" r="3" fill="#4169e1" mask="url(#aiWolfFillMask)" />
+                  <circle cx="54" cy="42" r="1" fill="#ffffff" mask="url(#aiWolfFillMask)" />
+                  <circle cx="74" cy="42" r="1" fill="#ffffff" mask="url(#aiWolfFillMask)" />
+                  {/* Snout with tech detail */}
+                  <ellipse cx="64" cy="54" rx="10" ry="8" fill="#c0c0c0" mask="url(#aiWolfFillMask)" opacity="0.6" />
+                  <ellipse cx="64" cy="56" rx="4" ry="3" fill="#000" mask="url(#aiWolfFillMask)" />
+                  <line x1="64" y1="56" x2="64" y2="60" stroke="#00ffff" strokeWidth="1" mask="url(#aiWolfFillMask)" />
+                  {/* Energy aura lines */}
+                  <line x1="40" y1="46" x2="32" y2="46" stroke="#00ffff" strokeWidth="1.5" mask="url(#aiWolfFillMask)" opacity="0.6" />
+                  <line x1="88" y1="46" x2="96" y2="46" stroke="#00ffff" strokeWidth="1.5" mask="url(#aiWolfFillMask)" opacity="0.6" />
+                  {/* Power core */}
+                  <circle cx="64" cy="78" r="5" fill="#4169e1" mask="url(#aiWolfFillMask)" opacity="0.8" />
+                  <circle cx="64" cy="78" r="3" fill="#00ffff" mask="url(#aiWolfFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐺🤖 AI Wolf</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-600">{Math.round(aiWolfFill)}%</div>
+            </div>
+
+            {/* Circuit Bot */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="circuitBot" onClick={() => handleCharacterClick('circuitBot')} onMouseEnter={() => handleCharacterHover('circuitBot')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'circuitBot' ? [1, 1.16, 1] : [1, 1.06, 1], y: hoveredCharacter === 'circuitBot' ? [0, -6, 0] : [0, -2, 0] }} transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.24, filter: "brightness(1.4) drop-shadow(0 0 20px rgba(50,205,50,0.9))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'circuitBot' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="circuitBotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#32cd32" />
+                      <stop offset="50%" stopColor="#00ff00" />
+                      <stop offset="100%" stopColor="#ffff00" />
+                    </linearGradient>
+                    <filter id="circuitBotGlow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="circuitBotFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (circuitBotFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Body */}
+                  <rect x="44" y="60" width="40" height="44" rx="4" fill="url(#circuitBotGrad)" mask="url(#circuitBotFillMask)" filter="url(#circuitBotGlow)" />
+                  <rect x="44" y="60" width="40" height="44" rx="4" fill="none" stroke="#00ff00" strokeWidth="2" />
+                  {/* Circuit board patterns */}
+                  <path d="M52 68 L60 68 L60 76 L52 76 Z" fill="none" stroke="#ffff00" strokeWidth="1.5" mask="url(#circuitBotFillMask)" />
+                  <path d="M68 68 L76 68 L76 76 L68 76 Z" fill="none" stroke="#ffff00" strokeWidth="1.5" mask="url(#circuitBotFillMask)" />
+                  <line x1="56" y1="72" x2="64" y2="72" stroke="#00ff00" strokeWidth="1.5" mask="url(#circuitBotFillMask)" />
+                  <line x1="64" y1="72" x2="72" y2="72" stroke="#00ff00" strokeWidth="1.5" mask="url(#circuitBotFillMask)" />
+                  <circle cx="56" cy="72" r="2" fill="#ffff00" mask="url(#circuitBotFillMask)" />
+                  <circle cx="72" cy="72" r="2" fill="#ffff00" mask="url(#circuitBotFillMask)" />
+                  {/* Power core */}
+                  <rect x="58" y="84" width="12" height="12" rx="2" fill="#32cd32" mask="url(#circuitBotFillMask)" />
+                  <circle cx="64" cy="90" r="4" fill="#ffff00" mask="url(#circuitBotFillMask)" />
+                  <circle cx="64" cy="90" r="2" fill="#ffffff" mask="url(#circuitBotFillMask)" />
+                  {/* Head */}
+                  <rect x="50" y="36" width="28" height="24" rx="3" fill="url(#circuitBotGrad)" mask="url(#circuitBotFillMask)" />
+                  <rect x="50" y="36" width="28" height="24" rx="3" fill="none" stroke="#00ff00" strokeWidth="2" />
+                  {/* LED eyes */}
+                  <rect x="56" y="44" width="6" height="8" rx="1" fill="#00ff00" mask="url(#circuitBotFillMask)" />
+                  <rect x="66" y="44" width="6" height="8" rx="1" fill="#00ff00" mask="url(#circuitBotFillMask)" />
+                  <rect x="57" y="46" width="4" height="4" fill="#ffff00" mask="url(#circuitBotFillMask)" />
+                  <rect x="67" y="46" width="4" height="4" fill="#ffff00" mask="url(#circuitBotFillMask)" />
+                  {/* Antenna */}
+                  <line x1="64" y1="36" x2="64" y2="26" stroke="#32cd32" strokeWidth="2" mask="url(#circuitBotFillMask)" />
+                  <circle cx="64" cy="26" r="3" fill="#ffff00" mask="url(#circuitBotFillMask)" />
+                  <circle cx="64" cy="26" r="5" fill="none" stroke="#00ff00" strokeWidth="1" mask="url(#circuitBotFillMask)" opacity="0.5" />
+                  {/* Arms */}
+                  <rect x="36" y="68" width="8" height="16" rx="2" fill="#32cd32" mask="url(#circuitBotFillMask)" />
+                  <rect x="84" y="68" width="8" height="16" rx="2" fill="#32cd32" mask="url(#circuitBotFillMask)" />
+                  <circle cx="40" cy="84" r="3" fill="#00ff00" mask="url(#circuitBotFillMask)" />
+                  <circle cx="88" cy="84" r="3" fill="#00ff00" mask="url(#circuitBotFillMask)" />
+                  {/* Legs */}
+                  <rect x="52" y="104" width="8" height="12" rx="2" fill="#32cd32" mask="url(#circuitBotFillMask)" />
+                  <rect x="68" y="104" width="8" height="12" rx="2" fill="#32cd32" mask="url(#circuitBotFillMask)" />
+                  {/* Circuit connectors */}
+                  <line x1="50" y1="70" x2="44" y2="70" stroke="#00ff00" strokeWidth="1.5" mask="url(#circuitBotFillMask)" />
+                  <line x1="78" y1="70" x2="84" y2="70" stroke="#00ff00" strokeWidth="1.5" mask="url(#circuitBotFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🔌🤖 Circuit Bot</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-green-600">{Math.round(circuitBotFill)}%</div>
+            </div>
+
+            {/* Cyber Panther */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="cyberPanther" onClick={() => handleCharacterClick('cyberPanther')} onMouseEnter={() => handleCharacterHover('cyberPanther')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'cyberPanther' ? [1, 1.22, 1] : [1, 1.12, 1], rotate: clickedCharacter === 'cyberPanther' ? [0, 9, -9, 0] : 0 }} transition={{ duration: 1.3, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.28, filter: "brightness(1.35) drop-shadow(0 0 22px rgba(148,0,211,0.9))" }} whileTap={{ scale: 0.87 }} className={`${hoveredCharacter === 'cyberPanther' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="cyberPantherGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#9400d3" />
+                      <stop offset="50%" stopColor="#00ffff" />
+                      <stop offset="100%" stopColor="#ff00ff" />
+                    </linearGradient>
+                    <filter id="cyberPantherGlow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="cyberPantherFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (cyberPantherFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Body */}
+                  <ellipse cx="64" cy="80" rx="32" ry="36" fill="url(#cyberPantherGrad)" mask="url(#cyberPantherFillMask)" filter="url(#cyberPantherGlow)" />
+                  <ellipse cx="64" cy="80" rx="32" ry="36" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Tech spots */}
+                  <circle cx="52" cy="75" r="4" fill="#ff00ff" mask="url(#cyberPantherFillMask)" opacity="0.7" />
+                  <circle cx="76" cy="75" r="4" fill="#ff00ff" mask="url(#cyberPantherFillMask)" opacity="0.7" />
+                  <circle cx="58" cy="88" r="3" fill="#00ffff" mask="url(#cyberPantherFillMask)" opacity="0.7" />
+                  <circle cx="70" cy="88" r="3" fill="#00ffff" mask="url(#cyberPantherFillMask)" opacity="0.7" />
+                  {/* Neon lines */}
+                  <line x1="48" y1="80" x2="54" y2="80" stroke="#ff00ff" strokeWidth="2" mask="url(#cyberPantherFillMask)" />
+                  <line x1="74" y1="80" x2="80" y2="80" stroke="#ff00ff" strokeWidth="2" mask="url(#cyberPantherFillMask)" />
+                  {/* Head */}
+                  <ellipse cx="64" cy="46" rx="26" ry="24" fill="url(#cyberPantherGrad)" mask="url(#cyberPantherFillMask)" />
+                  <ellipse cx="64" cy="46" rx="26" ry="24" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Mechanical ears */}
+                  <path d="M42 30 L36 18 L40 22 L46 28 Z" fill="#9400d3" mask="url(#cyberPantherFillMask)" />
+                  <path d="M42 30 L36 18 L40 22 L46 28 Z" fill="none" stroke="#ff00ff" strokeWidth="1.5" />
+                  <circle cx="40" cy="23" r="2" fill="#00ffff" mask="url(#cyberPantherFillMask)" />
+                  <path d="M86 30 L92 18 L88 22 L82 28 Z" fill="#9400d3" mask="url(#cyberPantherFillMask)" />
+                  <path d="M86 30 L92 18 L88 22 L82 28 Z" fill="none" stroke="#ff00ff" strokeWidth="1.5" />
+                  <circle cx="88" cy="23" r="2" fill="#00ffff" mask="url(#cyberPantherFillMask)" />
+                  {/* Glowing eyes */}
+                  <ellipse cx="52" cy="44" rx="7" ry="8" fill="#ff00ff" mask="url(#cyberPantherFillMask)" />
+                  <ellipse cx="76" cy="44" rx="7" ry="8" fill="#ff00ff" mask="url(#cyberPantherFillMask)" />
+                  <ellipse cx="52" cy="44" rx="4" ry="6" fill="#00ffff" mask="url(#cyberPantherFillMask)" />
+                  <ellipse cx="76" cy="44" rx="4" ry="6" fill="#00ffff" mask="url(#cyberPantherFillMask)" />
+                  <circle cx="52" cy="42" r="2" fill="#ffffff" mask="url(#cyberPantherFillMask)" />
+                  <circle cx="76" cy="42" r="2" fill="#ffffff" mask="url(#cyberPantherFillMask)" />
+                  {/* Tech snout */}
+                  <ellipse cx="64" cy="54" rx="9" ry="7" fill="#9400d3" mask="url(#cyberPantherFillMask)" opacity="0.6" />
+                  <ellipse cx="64" cy="56" rx="3" ry="2" fill="#000" mask="url(#cyberPantherFillMask)" />
+                  {/* Energy whiskers */}
+                  <line x1="38" y1="48" x2="26" y2="46" stroke="#ff00ff" strokeWidth="1.5" mask="url(#cyberPantherFillMask)" />
+                  <line x1="38" y1="52" x2="26" y2="52" stroke="#00ffff" strokeWidth="1.5" mask="url(#cyberPantherFillMask)" />
+                  <line x1="90" y1="48" x2="102" y2="46" stroke="#ff00ff" strokeWidth="1.5" mask="url(#cyberPantherFillMask)" />
+                  <line x1="90" y1="52" x2="102" y2="52" stroke="#00ffff" strokeWidth="1.5" mask="url(#cyberPantherFillMask)" />
+                  {/* Energy tail */}
+                  <path d="M92 90 Q105 95, 112 105 L110 103 Q102 93, 90 92 Z" fill="url(#cyberPantherGrad)" mask="url(#cyberPantherFillMask)" opacity="0.8" />
+                  <circle cx="112" cy="105" r="4" fill="#ff00ff" mask="url(#cyberPantherFillMask)" />
+                  <circle cx="112" cy="105" r="2" fill="#00ffff" mask="url(#cyberPantherFillMask)" />
+                  {/* Power core */}
+                  <circle cx="64" cy="80" r="6" fill="#9400d3" mask="url(#cyberPantherFillMask)" opacity="0.8" />
+                  <circle cx="64" cy="80" r="4" fill="#ff00ff" mask="url(#cyberPantherFillMask)" />
+                  <circle cx="64" cy="80" r="2" fill="#ffffff" mask="url(#cyberPantherFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐆⚡ Cyber Panther</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(cyberPantherFill)}%</div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Cosmlings Category */}
+        <div>
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-600 bg-clip-text text-transparent">
+            🌌 Cosmlings
+          </h2>
+          <div className="flex flex-wrap items-center justify-center gap-8 py-8">
+            
+            {/* Star */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="star" onClick={() => handleCharacterClick('star')} onMouseEnter={() => handleCharacterHover('star')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'star' ? [1, 1.3, 1] : [1, 1.15, 1], rotate: [0, 360] }} transition={{ duration: hoveredCharacter === 'star' ? 3 : 6, repeat: Infinity, ease: "linear" }} whileHover={{ scale: 1.4, filter: "brightness(1.6) drop-shadow(0 0 30px rgba(255,255,0,1))" }} whileTap={{ scale: 0.85 }} className={`${hoveredCharacter === 'star' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="starGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff" />
+                      <stop offset="30%" stopColor="#ffff00" />
+                      <stop offset="70%" stopColor="#ffd700" />
+                      <stop offset="100%" stopColor="#ff8c00" />
+                    </radialGradient>
+                    <filter id="starGlow"><feGaussianBlur stdDeviation="6" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="starFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (starFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Extended outer glow rays - 8 directions */}
+                  <path d="M64 5 L68 56 L64 60 L60 56 Z" fill="#ffff00" mask="url(#starFillMask)" opacity="0.5" filter="url(#starGlow)" />
+                  <path d="M64 123 L68 72 L64 68 L60 72 Z" fill="#ffff00" mask="url(#starFillMask)" opacity="0.5" filter="url(#starGlow)" />
+                  <path d="M5 64 L56 68 L60 64 L56 60 Z" fill="#ffff00" mask="url(#starFillMask)" opacity="0.5" filter="url(#starGlow)" />
+                  <path d="M123 64 L72 68 L68 64 L72 60 Z" fill="#ffff00" mask="url(#starFillMask)" opacity="0.5" filter="url(#starGlow)" />
+                  {/* Diagonal rays */}
+                  <path d="M20 20 L56 56 L64 64 L56 56 Z" fill="#ffd700" mask="url(#starFillMask)" opacity="0.4" filter="url(#starGlow)" />
+                  <path d="M108 20 L72 56 L64 64 L72 56 Z" fill="#ffd700" mask="url(#starFillMask)" opacity="0.4" filter="url(#starGlow)" />
+                  <path d="M20 108 L56 72 L64 64 L56 72 Z" fill="#ffd700" mask="url(#starFillMask)" opacity="0.4" filter="url(#starGlow)" />
+                  <path d="M108 108 L72 72 L64 64 L72 72 Z" fill="#ffd700" mask="url(#starFillMask)" opacity="0.4" filter="url(#starGlow)" />
+                  {/* Main star body - enhanced 5 pointed star */}
+                  <path d="M64 18 L73 50 L107 50 L79 69 L89 107 L64 83 L39 107 L49 69 L21 50 L55 50 Z" fill="url(#starGrad)" mask="url(#starFillMask)" filter="url(#starGlow)" />
+                  <path d="M64 18 L73 50 L107 50 L79 69 L89 107 L64 83 L39 107 L49 69 L21 50 L55 50 Z" fill="none" stroke="#ffff00" strokeWidth="3" />
+                  {/* Star point highlights */}
+                  <circle cx="64" cy="25" r="4" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="97" cy="52" r="3.5" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="82" cy="98" r="3.5" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="46" cy="98" r="3.5" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="31" cy="52" r="3.5" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  {/* Inner star core - layered */}
+                  <circle cx="64" cy="64" r="18" fill="#ffffff" mask="url(#starFillMask)" opacity="0.7" filter="url(#starGlow)" />
+                  <circle cx="64" cy="64" r="14" fill="#ffff00" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="64" cy="64" r="10" fill="#ffffff" mask="url(#starFillMask)" opacity="0.8" />
+                  <circle cx="64" cy="64" r="6" fill="#ffff00" mask="url(#starFillMask)" />
+                  <circle cx="64" cy="64" r="3" fill="#ffffff" mask="url(#starFillMask)" />
+                  {/* Enhanced sparkle details - more spread out */}
+                  <circle cx="64" cy="35" r="2.5" fill="#ffffff" mask="url(#starFillMask)" opacity="0.95" />
+                  <circle cx="93" cy="55" r="2" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="85" cy="85" r="2.5" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="43" cy="85" r="2.5" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="35" cy="55" r="2" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="75" cy="45" r="1.5" fill="#ffd700" mask="url(#starFillMask)" opacity="0.8" />
+                  <circle cx="85" cy="70" r="1.5" fill="#ffd700" mask="url(#starFillMask)" opacity="0.8" />
+                  <circle cx="53" cy="45" r="1.5" fill="#ffd700" mask="url(#starFillMask)" opacity="0.8" />
+                  <circle cx="43" cy="70" r="1.5" fill="#ffd700" mask="url(#starFillMask)" opacity="0.8" />
+                  {/* Twinkling effect circles */}
+                  <circle cx="72" cy="32" r="1" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="56" cy="32" r="1" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="95" cy="64" r="1" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                  <circle cx="33" cy="64" r="1" fill="#ffffff" mask="url(#starFillMask)" opacity="0.9" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">⭐ Star</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-600">{Math.round(starFill)}%</div>
+            </div>
+
+            {/* Planet */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="planet" onClick={() => handleCharacterClick('planet')} onMouseEnter={() => handleCharacterHover('planet')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'planet' ? [1, 1.12, 1] : [1, 1.05, 1], rotate: [0, 360] }} transition={{ duration: hoveredCharacter === 'planet' ? 20 : 40, repeat: Infinity, ease: "linear" }} whileHover={{ scale: 1.25, filter: "brightness(1.3) drop-shadow(0 0 20px rgba(65,105,225,0.8))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'planet' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="planetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#4169e1" />
+                      <stop offset="30%" stopColor="#32cd32" />
+                      <stop offset="60%" stopColor="#1e90ff" />
+                      <stop offset="100%" stopColor="#00bfff" />
+                    </linearGradient>
+                    <radialGradient id="planetShade" cx="35%" cy="35%" r="65%">
+                      <stop offset="0%" stopColor="#87ceeb" />
+                      <stop offset="50%" stopColor="#4169e1" />
+                      <stop offset="100%" stopColor="#00008b" />
+                    </radialGradient>
+                    <filter id="planetGlow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="planetFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (planetFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Planet sphere with ocean */}
+                  <circle cx="64" cy="64" r="36" fill="url(#planetShade)" mask="url(#planetFillMask)" filter="url(#planetGlow)" />
+                  <circle cx="64" cy="64" r="36" fill="none" stroke="#4169e1" strokeWidth="2.5" />
+                  {/* Ocean patterns/texture */}
+                  <path d="M35 55 Q45 52, 55 55" stroke="#1e90ff" strokeWidth="0.5" fill="none" mask="url(#planetFillMask)" opacity="0.3" />
+                  <path d="M40 70 Q50 67, 60 70" stroke="#1e90ff" strokeWidth="0.5" fill="none" mask="url(#planetFillMask)" opacity="0.3" />
+                  <path d="M68 60 Q78 57, 88 60" stroke="#1e90ff" strokeWidth="0.5" fill="none" mask="url(#planetFillMask)" opacity="0.3" />
+                  {/* Large continent - North */}
+                  <path d="M50 35 Q60 32, 70 35 Q75 40, 72 48 Q65 50, 58 48 Q52 45, 50 35 Z" fill="#32cd32" mask="url(#planetFillMask)" opacity="0.75" />
+                  <path d="M52 37 Q58 35, 64 37 Q66 40, 64 44 Q60 45, 56 43 Q53 41, 52 37 Z" fill="#228b22" mask="url(#planetFillMask)" opacity="0.6" />
+                  {/* Medium continent - South East */}
+                  <ellipse cx="75" cy="72" rx="14" ry="9" fill="#32cd32" mask="url(#planetFillMask)" opacity="0.75" transform="rotate(-15 75 72)" />
+                  <ellipse cx="75" cy="72" rx="8" ry="5" fill="#228b22" mask="url(#planetFillMask)" opacity="0.6" />
+                  {/* Small islands/continents */}
+                  <ellipse cx="46" cy="76" rx="7" ry="11" fill="#228b22" mask="url(#planetFillMask)" opacity="0.65" />
+                  <circle cx="85" cy="52" r="5" fill="#32cd32" mask="url(#planetFillMask)" opacity="0.7" />
+                  <ellipse cx="38" cy="58" rx="6" ry="4" fill="#228b22" mask="url(#planetFillMask)" opacity="0.6" />
+                  {/* Mountain/terrain details */}
+                  <circle cx="60" cy="40" r="2" fill="#006400" mask="url(#planetFillMask)" opacity="0.5" />
+                  <circle cx="66" cy="42" r="1.5" fill="#006400" mask="url(#planetFillMask)" opacity="0.5" />
+                  <circle cx="78" cy="70" r="2" fill="#006400" mask="url(#planetFillMask)" opacity="0.5" />
+                  {/* Enhanced cloud system */}
+                  <ellipse cx="58" cy="44" rx="9" ry="4" fill="#ffffff" mask="url(#planetFillMask)" opacity="0.6" />
+                  <ellipse cx="63" cy="42" rx="7" ry="3" fill="#ffffff" mask="url(#planetFillMask)" opacity="0.5" />
+                  <ellipse cx="80" cy="65" rx="7" ry="3.5" fill="#ffffff" mask="url(#planetFillMask)" opacity="0.6" />
+                  <ellipse cx="85" cy="63" rx="5" ry="2.5" fill="#ffffff" mask="url(#planetFillMask)" opacity="0.5" />
+                  <ellipse cx="45" cy="70" rx="6" ry="3" fill="#ffffff" mask="url(#planetFillMask)" opacity="0.55" />
+                  <ellipse cx="70" cy="80" rx="5" ry="2.5" fill="#ffffff" mask="url(#planetFillMask)" opacity="0.5" />
+                  {/* Atmosphere glow layers */}
+                  <circle cx="64" cy="64" r="39" fill="none" stroke="#87ceeb" strokeWidth="2" mask="url(#planetFillMask)" opacity="0.5" />
+                  <circle cx="64" cy="64" r="42" fill="none" stroke="#b0e0e6" strokeWidth="1.5" mask="url(#planetFillMask)" opacity="0.3" />
+                  {/* Enhanced ring system */}
+                  <ellipse cx="64" cy="64" rx="52" ry="13" fill="none" stroke="#ffd700" strokeWidth="3.5" mask="url(#planetFillMask)" opacity="0.8" />
+                  <ellipse cx="64" cy="64" rx="52" ry="13" fill="#ffd700" mask="url(#planetFillMask)" opacity="0.25" />
+                  <ellipse cx="64" cy="64" rx="47" ry="11" fill="none" stroke="#ffff00" strokeWidth="2" mask="url(#planetFillMask)" opacity="0.6" />
+                  <ellipse cx="64" cy="64" rx="55" ry="14" fill="none" stroke="#ffed4e" strokeWidth="1.5" mask="url(#planetFillMask)" opacity="0.4" />
+                  {/* Ring shadow on planet */}
+                  <ellipse cx="64" cy="50" rx="25" ry="3" fill="#000000" mask="url(#planetFillMask)" opacity="0.2" />
+                  {/* Enhanced highlight - sun reflection */}
+                  <ellipse cx="50" cy="50" rx="10" ry="12" fill="#ffffff" mask="url(#planetFillMask)" opacity="0.5" />
+                  <circle cx="52" cy="52" r="6" fill="#ffffff" mask="url(#planetFillMask)" opacity="0.6" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🪐 Planet</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-600">{Math.round(planetFill)}%</div>
+            </div>
+
+            {/* Black Hole */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="blackHole" onClick={() => handleCharacterClick('blackHole')} onMouseEnter={() => handleCharacterHover('blackHole')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'blackHole' ? [1, 1.08, 1] : [1, 1.03, 1], rotate: [0, -360] }} transition={{ duration: hoveredCharacter === 'blackHole' ? 8 : 15, repeat: Infinity, ease: "linear" }} whileHover={{ scale: 1.2, filter: "brightness(1.2) drop-shadow(0 0 25px rgba(139,0,255,0.9))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'blackHole' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="blackHoleGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#000000" />
+                      <stop offset="40%" stopColor="#1a001a" />
+                      <stop offset="70%" stopColor="#4b0082" />
+                      <stop offset="90%" stopColor="#8b00ff" />
+                      <stop offset="100%" stopColor="#9370db" />
+                    </radialGradient>
+                    <filter id="blackHoleGlow"><feGaussianBlur stdDeviation="5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="blackHoleFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (blackHoleFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Outer gravitational field distortion */}
+                  <circle cx="64" cy="64" r="60" fill="none" stroke="#4b0082" strokeWidth="0.5" mask="url(#blackHoleFillMask)" opacity="0.2" strokeDasharray="3 3" />
+                  {/* Accretion disk - outermost layer */}
+                  <ellipse cx="64" cy="64" rx="58" ry="16" fill="#9370db" mask="url(#blackHoleFillMask)" opacity="0.25" filter="url(#blackHoleGlow)" />
+                  <ellipse cx="64" cy="64" rx="58" ry="16" fill="none" stroke="#9370db" strokeWidth="1.5" mask="url(#blackHoleFillMask)" opacity="0.5" />
+                  {/* Accretion disk - outer layer */}
+                  <ellipse cx="64" cy="64" rx="52" ry="14" fill="#8b00ff" mask="url(#blackHoleFillMask)" opacity="0.35" filter="url(#blackHoleGlow)" />
+                  <ellipse cx="64" cy="64" rx="52" ry="14" fill="none" stroke="#9370db" strokeWidth="2" mask="url(#blackHoleFillMask)" opacity="0.65" />
+                  {/* Disk detail bands */}
+                  <ellipse cx="64" cy="64" rx="50" ry="13" fill="none" stroke="#4b0082" strokeWidth="1" mask="url(#blackHoleFillMask)" opacity="0.4" />
+                  {/* Accretion disk - middle layer */}
+                  <ellipse cx="64" cy="64" rx="46" ry="12" fill="#4b0082" mask="url(#blackHoleFillMask)" opacity="0.55" filter="url(#blackHoleGlow)" />
+                  <ellipse cx="64" cy="64" rx="46" ry="12" fill="none" stroke="#8b00ff" strokeWidth="2.5" mask="url(#blackHoleFillMask)" opacity="0.75" />
+                  {/* Inner accretion disk */}
+                  <ellipse cx="64" cy="64" rx="38" ry="10" fill="#8b00ff" mask="url(#blackHoleFillMask)" opacity="0.65" filter="url(#blackHoleGlow)" />
+                  <ellipse cx="64" cy="64" rx="38" ry="10" fill="none" stroke="#a020f0" strokeWidth="2" mask="url(#blackHoleFillMask)" opacity="0.8" />
+                  {/* Hot inner disk */}
+                  <ellipse cx="64" cy="64" rx="30" ry="8" fill="#a020f0" mask="url(#blackHoleFillMask)" opacity="0.7" filter="url(#blackHoleGlow)" />
+                  {/* Photon sphere */}
+                  <circle cx="64" cy="64" r="25" fill="none" stroke="#ff00ff" strokeWidth="1" mask="url(#blackHoleFillMask)" opacity="0.6" />
+                  {/* Event horizon - enhanced */}
+                  <circle cx="64" cy="64" r="22" fill="url(#blackHoleGrad)" mask="url(#blackHoleFillMask)" filter="url(#blackHoleGlow)" />
+                  <circle cx="64" cy="64" r="22" fill="none" stroke="#4b0082" strokeWidth="2.5" opacity="0.85" />
+                  <circle cx="64" cy="64" r="20" fill="#000000" mask="url(#blackHoleFillMask)" opacity="0.9" />
+                  {/* Inner event horizon glow */}
+                  <circle cx="64" cy="64" r="18" fill="none" stroke="#8b00ff" strokeWidth="0.5" mask="url(#blackHoleFillMask)" opacity="0.7" />
+                  {/* Singularity - multi-layered */}
+                  <circle cx="64" cy="64" r="14" fill="#000000" mask="url(#blackHoleFillMask)" />
+                  <circle cx="64" cy="64" r="10" fill="#000000" mask="url(#blackHoleFillMask)" opacity="0.95" />
+                  <circle cx="64" cy="64" r="6" fill="#000000" mask="url(#blackHoleFillMask)" />
+                  <circle cx="64" cy="64" r="3" fill="#000000" mask="url(#blackHoleFillMask)" />
+                  {/* Gravitational lensing rings - enhanced */}
+                  <circle cx="64" cy="64" r="32" fill="none" stroke="#9370db" strokeWidth="1.5" mask="url(#blackHoleFillMask)" opacity="0.55" />
+                  <circle cx="64" cy="64" r="35" fill="none" stroke="#8b00ff" strokeWidth="1" mask="url(#blackHoleFillMask)" opacity="0.45" />
+                  <circle cx="64" cy="64" r="40" fill="none" stroke="#9370db" strokeWidth="0.5" mask="url(#blackHoleFillMask)" opacity="0.35" />
+                  {/* Matter streams - enhanced and more varied */}
+                  <path d="M28 48 Q38 53, 48 57" stroke="#8b00ff" strokeWidth="2.5" mask="url(#blackHoleFillMask)" fill="none" opacity="0.75" filter="url(#blackHoleGlow)" />
+                  <path d="M100 48 Q90 53, 80 57" stroke="#8b00ff" strokeWidth="2.5" mask="url(#blackHoleFillMask)" fill="none" opacity="0.75" filter="url(#blackHoleGlow)" />
+                  <path d="M28 80 Q38 75, 48 71" stroke="#9370db" strokeWidth="2.5" mask="url(#blackHoleFillMask)" fill="none" opacity="0.7" filter="url(#blackHoleGlow)" />
+                  <path d="M100 80 Q90 75, 80 71" stroke="#9370db" strokeWidth="2.5" mask="url(#blackHoleFillMask)" fill="none" opacity="0.7" filter="url(#blackHoleGlow)" />
+                  {/* Diagonal matter streams */}
+                  <path d="M35 35 Q45 45, 52 52" stroke="#4b0082" strokeWidth="1.5" mask="url(#blackHoleFillMask)" fill="none" opacity="0.6" />
+                  <path d="M93 35 Q83 45, 76 52" stroke="#4b0082" strokeWidth="1.5" mask="url(#blackHoleFillMask)" fill="none" opacity="0.6" />
+                  <path d="M35 93 Q45 83, 52 76" stroke="#4b0082" strokeWidth="1.5" mask="url(#blackHoleFillMask)" fill="none" opacity="0.6" />
+                  <path d="M93 93 Q83 83, 76 76" stroke="#4b0082" strokeWidth="1.5" mask="url(#blackHoleFillMask)" fill="none" opacity="0.6" />
+                  {/* Matter particles being pulled in */}
+                  <circle cx="42" cy="52" r="1.5" fill="#a020f0" mask="url(#blackHoleFillMask)" opacity="0.8" />
+                  <circle cx="86" cy="52" r="1.5" fill="#a020f0" mask="url(#blackHoleFillMask)" opacity="0.8" />
+                  <circle cx="42" cy="76" r="1.5" fill="#8b00ff" mask="url(#blackHoleFillMask)" opacity="0.8" />
+                  <circle cx="86" cy="76" r="1.5" fill="#8b00ff" mask="url(#blackHoleFillMask)" opacity="0.8" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🕳️ Black Hole</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(blackHoleFill)}%</div>
+            </div>
+
+            {/* Nebula */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="nebula" onClick={() => handleCharacterClick('nebula')} onMouseEnter={() => handleCharacterHover('nebula')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'nebula' ? [1, 1.15, 1] : [1, 1.08, 1], opacity: [0.8, 1, 0.8] }} transition={{ duration: hoveredCharacter === 'nebula' ? 4 : 7, repeat: Infinity, ease: "easeInOut" }} whileHover={{ scale: 1.3, opacity: 1, filter: "brightness(1.4) drop-shadow(0 0 30px rgba(147,112,219,0.9))" }} whileTap={{ scale: 0.85 }} className={`${hoveredCharacter === 'nebula' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="nebulaGrad1" cx="40%" cy="40%" r="60%">
+                      <stop offset="0%" stopColor="#ff1493" opacity="0.8" />
+                      <stop offset="50%" stopColor="#9370db" opacity="0.6" />
+                      <stop offset="100%" stopColor="#4b0082" opacity="0.3" />
+                    </radialGradient>
+                    <radialGradient id="nebulaGrad2" cx="60%" cy="60%" r="50%">
+                      <stop offset="0%" stopColor="#00ffff" opacity="0.7" />
+                      <stop offset="50%" stopColor="#1e90ff" opacity="0.5" />
+                      <stop offset="100%" stopColor="#000080" opacity="0.2" />
+                    </radialGradient>
+                    <filter id="nebulaGlow"><feGaussianBlur stdDeviation="8" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="nebulaFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (nebulaFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Main nebula cloud layers - enhanced */}
+                  <ellipse cx="48" cy="48" rx="38" ry="32" fill="url(#nebulaGrad1)" mask="url(#nebulaFillMask)" filter="url(#nebulaGlow)" opacity="0.9" />
+                  <ellipse cx="77" cy="77" rx="33" ry="38" fill="url(#nebulaGrad2)" mask="url(#nebulaFillMask)" filter="url(#nebulaGlow)" opacity="0.85" />
+                  <ellipse cx="62" cy="67" rx="42" ry="37" fill="#9370db" mask="url(#nebulaFillMask)" opacity="0.5" filter="url(#nebulaGlow)" />
+                  {/* Overlapping gas clouds - more layers */}
+                  <circle cx="38" cy="58" r="22" fill="#ff1493" mask="url(#nebulaFillMask)" opacity="0.6" filter="url(#nebulaGlow)" />
+                  <circle cx="87" cy="53" r="20" fill="#00ffff" mask="url(#nebulaFillMask)" opacity="0.6" filter="url(#nebulaGlow)" />
+                  <circle cx="72" cy="88" r="24" fill="#9370db" mask="url(#nebulaFillMask)" opacity="0.5" filter="url(#nebulaGlow)" />
+                  <ellipse cx="55" cy="42" rx="18" ry="15" fill="#ff1493" mask="url(#nebulaFillMask)" opacity="0.5" filter="url(#nebulaGlow)" />
+                  <ellipse cx="82" cy="75" rx="16" ry="20" fill="#00ffff" mask="url(#nebulaFillMask)" opacity="0.45" filter="url(#nebulaGlow)" />
+                  {/* Dark dust lanes */}
+                  <ellipse cx="64" cy="55" rx="25" ry="8" fill="#000000" mask="url(#nebulaFillMask)" opacity="0.3" transform="rotate(-20 64 55)" />
+                  <ellipse cx="68" cy="75" rx="20" ry="6" fill="#000000" mask="url(#nebulaFillMask)" opacity="0.25" transform="rotate(15 68 75)" />
+                  {/* Filament structures */}
+                  <path d="M35 45 Q45 55, 55 50 Q65 45, 75 52" stroke="#ff1493" strokeWidth="2" fill="none" mask="url(#nebulaFillMask)" opacity="0.4" filter="url(#nebulaGlow)" />
+                  <path d="M40 70 Q50 75, 60 72 Q70 68, 80 73" stroke="#00ffff" strokeWidth="1.5" fill="none" mask="url(#nebulaFillMask)" opacity="0.4" filter="url(#nebulaGlow)" />
+                  <path d="M50 35 Q60 40, 70 38 Q80 36, 90 40" stroke="#9370db" strokeWidth="1.5" fill="none" mask="url(#nebulaFillMask)" opacity="0.35" />
+                  {/* Small gas pockets */}
+                  <circle cx="45" cy="52" r="8" fill="#9370db" mask="url(#nebulaFillMask)" opacity="0.4" filter="url(#nebulaGlow)" />
+                  <circle cx="75" cy="62" r="10" fill="#ff1493" mask="url(#nebulaFillMask)" opacity="0.35" filter="url(#nebulaGlow)" />
+                  <circle cx="60" cy="82" r="9" fill="#00ffff" mask="url(#nebulaFillMask)" opacity="0.4" filter="url(#nebulaGlow)" />
+                  {/* Enhanced star field */}
+                  <circle cx="43" cy="43" r="2.5" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.95" />
+                  <circle cx="72" cy="48" r="2" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.9" />
+                  <circle cx="53" cy="68" r="2.5" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.95" />
+                  <circle cx="82" cy="72" r="2" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.9" />
+                  <circle cx="67" cy="88" r="1.5" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.85" />
+                  <circle cx="48" cy="78" r="1.5" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.85" />
+                  <circle cx="87" cy="58" r="2" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.9" />
+                  <circle cx="35" cy="65" r="1.5" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.85" />
+                  <circle cx="90" cy="80" r="1.5" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.85" />
+                  <circle cx="58" cy="38" r="1" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.8" />
+                  <circle cx="78" cy="85" r="1" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.8" />
+                  {/* Bright star formation regions - enhanced */}
+                  <circle cx="58" cy="58" r="4" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.95" filter="url(#nebulaGlow)" />
+                  <circle cx="58" cy="58" r="6" fill="#ffff00" mask="url(#nebulaFillMask)" opacity="0.4" filter="url(#nebulaGlow)" />
+                  <circle cx="58" cy="58" r="9" fill="#ff8c00" mask="url(#nebulaFillMask)" opacity="0.2" filter="url(#nebulaGlow)" />
+                  <circle cx="75" cy="65" r="3" fill="#ffffff" mask="url(#nebulaFillMask)" opacity="0.9" filter="url(#nebulaGlow)" />
+                  <circle cx="75" cy="65" r="5" fill="#00ffff" mask="url(#nebulaFillMask)" opacity="0.35" filter="url(#nebulaGlow)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🌌 Nebula</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(nebulaFill)}%</div>
+            </div>
+
+            {/* Comet */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="comet" onClick={() => handleCharacterClick('comet')} onMouseEnter={() => handleCharacterHover('comet')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'comet' ? [1, 1.15, 1] : [1, 1.08, 1], x: hoveredCharacter === 'comet' ? [0, 3, 0] : [0, 1, 0], y: hoveredCharacter === 'comet' ? [0, -3, 0] : [0, -1, 0] }} transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.25, filter: "brightness(1.5) drop-shadow(0 0 25px rgba(255,69,0,0.9))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'comet' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="cometTailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ff4500" opacity="0.8" />
+                      <stop offset="40%" stopColor="#ffd700" opacity="0.5" />
+                      <stop offset="70%" stopColor="#ffffff" opacity="0.2" />
+                      <stop offset="100%" stopColor="#ffffff" opacity="0" />
+                    </linearGradient>
+                    <radialGradient id="cometHeadGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff" />
+                      <stop offset="30%" stopColor="#ffff00" />
+                      <stop offset="70%" stopColor="#ff8c00" />
+                      <stop offset="100%" stopColor="#ff4500" />
+                    </radialGradient>
+                    <filter id="cometGlow"><feGaussianBlur stdDeviation="5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="cometFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (cometFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Main ion tail - long streaming (blue/cyan) */}
+                  <path d="M92 36 Q60 55, 25 85 Q40 75, 52 68 Q70 57, 92 38 Z" fill="#87ceeb" mask="url(#cometFillMask)" opacity="0.4" filter="url(#cometGlow)" />
+                  <path d="M90 38 Q58 57, 22 88 Q38 78, 50 70 Q68 59, 90 40 Z" fill="#add8e6" mask="url(#cometFillMask)" opacity="0.3" />
+                  {/* Main dust tail - golden/orange */}
+                  <path d="M93 38 Q55 52, 18 82 Q38 72, 50 66 Q68 56, 93 40 Z" fill="url(#cometTailGrad)" mask="url(#cometFillMask)" filter="url(#cometGlow)" opacity="0.9" />
+                  <path d="M90 42 Q52 56, 20 86 Q40 76, 52 70 Q70 60, 90 44 Z" fill="url(#cometTailGrad)" mask="url(#cometFillMask)" opacity="0.7" />
+                  <path d="M88 44 Q50 58, 23 89 Q43 79, 55 73 Q72 63, 88 46 Z" fill="url(#cometTailGrad)" mask="url(#cometFillMask)" opacity="0.5" />
+                  {/* Secondary/diverging tails */}
+                  <path d="M87 40 Q62 62, 38 92 Q52 82, 62 77 Q74 67, 87 42 Z" fill="#ffd700" mask="url(#cometFillMask)" opacity="0.4" filter="url(#cometGlow)" />
+                  <path d="M90 35 Q70 48, 50 62 Q60 56, 70 50 Q80 43, 90 37 Z" fill="#ff8c00" mask="url(#cometFillMask)" opacity="0.35" />
+                  {/* Tail particles - more distributed */}
+                  <circle cx="78" cy="48" r="2.5" fill="#ffff00" mask="url(#cometFillMask)" opacity="0.85" filter="url(#cometGlow)" />
+                  <circle cx="68" cy="58" r="2" fill="#ffd700" mask="url(#cometFillMask)" opacity="0.75" />
+                  <circle cx="58" cy="68" r="2.5" fill="#ff8c00" mask="url(#cometFillMask)" opacity="0.7" />
+                  <circle cx="48" cy="76" r="2" fill="#ff4500" mask="url(#cometFillMask)" opacity="0.6" />
+                  <circle cx="38" cy="84" r="1.5" fill="#ffffff" mask="url(#cometFillMask)" opacity="0.55" />
+                  <circle cx="73" cy="53" r="1.5" fill="#ffffff" mask="url(#cometFillMask)" opacity="0.85" />
+                  <circle cx="63" cy="63" r="1.5" fill="#ffff00" mask="url(#cometFillMask)" opacity="0.75" />
+                  <circle cx="53" cy="72" r="1" fill="#ffd700" mask="url(#cometFillMask)" opacity="0.7" />
+                  <circle cx="43" cy="80" r="1" fill="#ff8c00" mask="url(#cometFillMask)" opacity="0.6" />
+                  <circle cx="75" cy="45" r="1" fill="#add8e6" mask="url(#cometFillMask)" opacity="0.6" />
+                  <circle cx="65" cy="55" r="1" fill="#87ceeb" mask="url(#cometFillMask)" opacity="0.5" />
+                  {/* Enhanced nucleus with rocky texture */}
+                  <ellipse cx="96" cy="32" rx="19" ry="16" fill="url(#cometHeadGrad)" mask="url(#cometFillMask)" filter="url(#cometGlow)" />
+                  <ellipse cx="96" cy="32" rx="19" ry="16" fill="none" stroke="#ff8c00" strokeWidth="2.5" />
+                  {/* Rocky surface details */}
+                  <circle cx="92" cy="28" r="3" fill="#8b4513" mask="url(#cometFillMask)" opacity="0.6" />
+                  <circle cx="98" cy="33" r="2.5" fill="#a0522d" mask="url(#cometFillMask)" opacity="0.5" />
+                  <circle cx="95" cy="36" r="2" fill="#8b4513" mask="url(#cometFillMask)" opacity="0.55" />
+                  <circle cx="100" cy="29" r="1.5" fill="#654321" mask="url(#cometFillMask)" opacity="0.5" />
+                  {/* Bright core */}
+                  <ellipse cx="93" cy="29" rx="9" ry="7" fill="#ffffff" mask="url(#cometFillMask)" opacity="0.95" />
+                  <ellipse cx="93" cy="29" rx="6" ry="4" fill="#ffffff" mask="url(#cometFillMask)" />
+                  <circle cx="93" cy="29" r="3" fill="#ffff00" mask="url(#cometFillMask)" />
+                  {/* Enhanced coma (gas/dust envelope) - multi-layered */}
+                  <ellipse cx="96" cy="32" rx="24" ry="21" fill="#ff8c00" mask="url(#cometFillMask)" opacity="0.35" filter="url(#cometGlow)" />
+                  <ellipse cx="96" cy="32" rx="28" ry="25" fill="none" stroke="#ffd700" strokeWidth="2" mask="url(#cometFillMask)" opacity="0.45" />
+                  <ellipse cx="96" cy="32" rx="32" ry="28" fill="none" stroke="#ffed4e" strokeWidth="1" mask="url(#cometFillMask)" opacity="0.3" />
+                  {/* Outgassing jets */}
+                  <path d="M98 28 Q102 24, 106 22" stroke="#ffffff" strokeWidth="1.5" fill="none" mask="url(#cometFillMask)" opacity="0.6" />
+                  <path d="M100 34 Q105 36, 110 38" stroke="#ffd700" strokeWidth="1.5" fill="none" mask="url(#cometFillMask)" opacity="0.5" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">☄️ Comet</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(cometFill)}%</div>
+            </div>
+
+            {/* Supernova */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="supernova" onClick={() => handleCharacterClick('supernova')} onMouseEnter={() => handleCharacterHover('supernova')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'supernova' ? [1, 1.5, 1.2, 1.5, 1] : [1, 1.2, 1.1, 1.2, 1], opacity: [1, 0.8, 1, 0.7, 1] }} transition={{ duration: hoveredCharacter === 'supernova' ? 1.5 : 3, repeat: Infinity, ease: "easeInOut" }} whileHover={{ scale: 1.6, filter: "brightness(2) drop-shadow(0 0 40px rgba(255,69,0,1))" }} whileTap={{ scale: 0.8 }} className={`${hoveredCharacter === 'supernova' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="supernovaCore" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff" />
+                      <stop offset="20%" stopColor="#ffff00" />
+                      <stop offset="50%" stopColor="#ff8c00" />
+                      <stop offset="80%" stopColor="#ff4500" />
+                      <stop offset="100%" stopColor="#ff0000" />
+                    </radialGradient>
+                    <radialGradient id="supernovaExpansion" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ff4500" opacity="0.8" />
+                      <stop offset="40%" stopColor="#ff8c00" opacity="0.5" />
+                      <stop offset="70%" stopColor="#ffd700" opacity="0.3" />
+                      <stop offset="100%" stopColor="#ffff00" opacity="0" />
+                    </radialGradient>
+                    <filter id="supernovaGlow"><feGaussianBlur stdDeviation="8" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="supernovaFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (supernovaFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Outer explosion waves */}
+                  <circle cx="64" cy="64" r="55" fill="url(#supernovaExpansion)" mask="url(#supernovaFillMask)" filter="url(#supernovaGlow)" opacity="0.4" />
+                  <circle cx="64" cy="64" r="55" fill="none" stroke="#ffd700" strokeWidth="2" mask="url(#supernovaFillMask)" opacity="0.3" />
+                  <circle cx="64" cy="64" r="48" fill="url(#supernovaExpansion)" mask="url(#supernovaFillMask)" filter="url(#supernovaGlow)" opacity="0.5" />
+                  <circle cx="64" cy="64" r="40" fill="url(#supernovaExpansion)" mask="url(#supernovaFillMask)" filter="url(#supernovaGlow)" opacity="0.6" />
+                  {/* Explosion rays */}
+                  <path d="M64 20 L68 60 L64 64 L60 60 Z" fill="#ffff00" mask="url(#supernovaFillMask)" opacity="0.7" filter="url(#supernovaGlow)" />
+                  <path d="M64 108 L68 68 L64 64 L60 68 Z" fill="#ffff00" mask="url(#supernovaFillMask)" opacity="0.7" filter="url(#supernovaGlow)" />
+                  <path d="M20 64 L60 68 L64 64 L60 60 Z" fill="#ffff00" mask="url(#supernovaFillMask)" opacity="0.7" filter="url(#supernovaGlow)" />
+                  <path d="M108 64 L68 68 L64 64 L68 60 Z" fill="#ffff00" mask="url(#supernovaFillMask)" opacity="0.7" filter="url(#supernovaGlow)" />
+                  {/* Diagonal rays */}
+                  <path d="M30 30 L58 58 L64 64 L58 58 Z" fill="#ff8c00" mask="url(#supernovaFillMask)" opacity="0.6" filter="url(#supernovaGlow)" />
+                  <path d="M98 30 L70 58 L64 64 L70 58 Z" fill="#ff8c00" mask="url(#supernovaFillMask)" opacity="0.6" filter="url(#supernovaGlow)" />
+                  <path d="M30 98 L58 70 L64 64 L58 70 Z" fill="#ff8c00" mask="url(#supernovaFillMask)" opacity="0.6" filter="url(#supernovaGlow)" />
+                  <path d="M98 98 L70 70 L64 64 L70 70 Z" fill="#ff8c00" mask="url(#supernovaFillMask)" opacity="0.6" filter="url(#supernovaGlow)" />
+                  {/* Core explosion */}
+                  <circle cx="64" cy="64" r="25" fill="url(#supernovaCore)" mask="url(#supernovaFillMask)" filter="url(#supernovaGlow)" />
+                  <circle cx="64" cy="64" r="25" fill="none" stroke="#ff8c00" strokeWidth="3" />
+                  <circle cx="64" cy="64" r="18" fill="#ffff00" mask="url(#supernovaFillMask)" opacity="0.9" />
+                  <circle cx="64" cy="64" r="12" fill="#ffffff" mask="url(#supernovaFillMask)" />
+                  {/* Debris particles */}
+                  <circle cx="85" cy="40" r="3" fill="#ff4500" mask="url(#supernovaFillMask)" opacity="0.8" />
+                  <circle cx="43" cy="88" r="2.5" fill="#ff8c00" mask="url(#supernovaFillMask)" opacity="0.7" />
+                  <circle cx="88" cy="85" r="2" fill="#ffd700" mask="url(#supernovaFillMask)" opacity="0.8" />
+                  <circle cx="40" cy="43" r="2.5" fill="#ffff00" mask="url(#supernovaFillMask)" opacity="0.7" />
+                  <circle cx="75" cy="25" r="1.5" fill="#ffffff" mask="url(#supernovaFillMask)" opacity="0.9" />
+                  <circle cx="53" cy="103" r="1.5" fill="#ffffff" mask="url(#supernovaFillMask)" opacity="0.9" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">💥 Supernova</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-red-600">{Math.round(supernovaFill)}%</div>
+            </div>
+
+            {/* Void */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="void" onClick={() => handleCharacterClick('void')} onMouseEnter={() => handleCharacterHover('void')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'void' ? [1, 0.95, 1] : [1, 0.98, 1], opacity: [0.9, 0.6, 0.9] }} transition={{ duration: hoveredCharacter === 'void' ? 3 : 5, repeat: Infinity, ease: "easeInOut" }} whileHover={{ scale: 1.15, filter: "brightness(0.5) drop-shadow(0 0 30px rgba(75,0,130,0.9))" }} whileTap={{ scale: 0.92 }} className={`${hoveredCharacter === 'void' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="voidGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#000000" />
+                      <stop offset="60%" stopColor="#0a0a0a" />
+                      <stop offset="90%" stopColor="#1a001a" />
+                      <stop offset="100%" stopColor="#2f2f2f" />
+                    </radialGradient>
+                    <filter id="voidGlow"><feGaussianBlur stdDeviation="6" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="voidFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (voidFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Outer distortion rings */}
+                  <circle cx="64" cy="64" r="58" fill="none" stroke="#2f2f2f" strokeWidth="1.5" mask="url(#voidFillMask)" opacity="0.3" />
+                  <circle cx="64" cy="64" r="52" fill="none" stroke="#4b0082" strokeWidth="1" mask="url(#voidFillMask)" opacity="0.4" />
+                  <circle cx="64" cy="64" r="46" fill="none" stroke="#2f2f2f" strokeWidth="1.5" mask="url(#voidFillMask)" opacity="0.5" />
+                  {/* Void body */}
+                  <circle cx="64" cy="64" r="40" fill="url(#voidGrad)" mask="url(#voidFillMask)" filter="url(#voidGlow)" />
+                  <circle cx="64" cy="64" r="40" fill="none" stroke="#4b0082" strokeWidth="2" opacity="0.6" />
+                  {/* Inner void */}
+                  <circle cx="64" cy="64" r="32" fill="#000000" mask="url(#voidFillMask)" />
+                  <circle cx="64" cy="64" r="24" fill="#000000" mask="url(#voidFillMask)" opacity="0.9" />
+                  <circle cx="64" cy="64" r="16" fill="#000000" mask="url(#voidFillMask)" />
+                  {/* Distortion effects */}
+                  <path d="M64 30 Q70 35, 75 30" stroke="#4b0082" strokeWidth="1" fill="none" mask="url(#voidFillMask)" opacity="0.5" />
+                  <path d="M64 98 Q58 93, 53 98" stroke="#4b0082" strokeWidth="1" fill="none" mask="url(#voidFillMask)" opacity="0.5" />
+                  <path d="M30 64 Q35 58, 30 53" stroke="#4b0082" strokeWidth="1" fill="none" mask="url(#voidFillMask)" opacity="0.5" />
+                  <path d="M98 64 Q93 70, 98 75" stroke="#4b0082" strokeWidth="1" fill="none" mask="url(#voidFillMask)" opacity="0.5" />
+                  {/* Swirl patterns */}
+                  <path d="M64 44 Q70 50, 64 56 Q58 62, 64 68" stroke="#2f2f2f" strokeWidth="2" fill="none" mask="url(#voidFillMask)" opacity="0.4" />
+                  <path d="M44 64 Q50 58, 56 64 Q62 70, 68 64" stroke="#2f2f2f" strokeWidth="2" fill="none" mask="url(#voidFillMask)" opacity="0.4" />
+                  {/* Gravity well indicators */}
+                  <circle cx="64" cy="64" r="10" fill="none" stroke="#4b0082" strokeWidth="1.5" mask="url(#voidFillMask)" opacity="0.6" />
+                  <circle cx="64" cy="64" r="5" fill="none" stroke="#8b00ff" strokeWidth="1" mask="url(#voidFillMask)" opacity="0.7" />
+                  {/* Faint stars being pulled in */}
+                  <circle cx="50" cy="50" r="1" fill="#ffffff" mask="url(#voidFillMask)" opacity="0.3" />
+                  <circle cx="78" cy="50" r="1" fill="#ffffff" mask="url(#voidFillMask)" opacity="0.3" />
+                  <circle cx="50" cy="78" r="1" fill="#ffffff" mask="url(#voidFillMask)" opacity="0.3" />
+                  <circle cx="78" cy="78" r="1" fill="#ffffff" mask="url(#voidFillMask)" opacity="0.3" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">⚫ Void</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-gray-800">{Math.round(voidFill)}%</div>
+            </div>
+
+            {/* Galaxy */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="galaxy" onClick={() => handleCharacterClick('galaxy')} onMouseEnter={() => handleCharacterHover('galaxy')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'galaxy' ? [1, 1.1, 1] : [1, 1.05, 1], rotate: [0, 360] }} transition={{ duration: hoveredCharacter === 'galaxy' ? 25 : 50, repeat: Infinity, ease: "linear" }} whileHover={{ scale: 1.25, filter: "brightness(1.4) drop-shadow(0 0 25px rgba(147,112,219,0.9))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'galaxy' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="galaxyCore" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff" />
+                      <stop offset="30%" stopColor="#ffff00" />
+                      <stop offset="60%" stopColor="#ff8c00" />
+                      <stop offset="100%" stopColor="#ff1493" />
+                    </radialGradient>
+                    <linearGradient id="galaxyArm1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#9370db" opacity="0.8" />
+                      <stop offset="50%" stopColor="#4169e1" opacity="0.5" />
+                      <stop offset="100%" stopColor="#9370db" opacity="0.2" />
+                    </linearGradient>
+                    <filter id="galaxyGlow"><feGaussianBlur stdDeviation="5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="galaxyFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (galaxyFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Spiral arms */}
+                  <path d="M64 64 Q90 50, 105 60 Q115 70, 110 85" stroke="#9370db" strokeWidth="12" fill="none" mask="url(#galaxyFillMask)" opacity="0.6" filter="url(#galaxyGlow)" />
+                  <path d="M64 64 Q38 78, 23 68 Q13 58, 18 43" stroke="#4169e1" strokeWidth="12" fill="none" mask="url(#galaxyFillMask)" opacity="0.6" filter="url(#galaxyGlow)" />
+                  <path d="M64 64 Q50 38, 40 23 Q30 13, 45 18" stroke="#9370db" strokeWidth="10" fill="none" mask="url(#galaxyFillMask)" opacity="0.5" filter="url(#galaxyGlow)" />
+                  <path d="M64 64 Q78 90, 88 105 Q98 115, 83 110" stroke="#4169e1" strokeWidth="10" fill="none" mask="url(#galaxyFillMask)" opacity="0.5" filter="url(#galaxyGlow)" />
+                  {/* Additional spiral details */}
+                  <path d="M64 64 Q95 55, 108 70" stroke="#ff1493" strokeWidth="6" fill="none" mask="url(#galaxyFillMask)" opacity="0.4" />
+                  <path d="M64 64 Q33 73, 20 58" stroke="#ff1493" strokeWidth="6" fill="none" mask="url(#galaxyFillMask)" opacity="0.4" />
+                  {/* Stars in arms */}
+                  <circle cx="95" cy="55" r="2" fill="#ffffff" mask="url(#galaxyFillMask)" />
+                  <circle cx="105" cy="75" r="1.5" fill="#ffff00" mask="url(#galaxyFillMask)" />
+                  <circle cx="33" cy="73" r="2" fill="#ffffff" mask="url(#galaxyFillMask)" />
+                  <circle cx="23" cy="53" r="1.5" fill="#ffff00" mask="url(#galaxyFillMask)" />
+                  <circle cx="45" cy="28" r="1.5" fill="#ffffff" mask="url(#galaxyFillMask)" />
+                  <circle cx="83" cy="100" r="2" fill="#ffffff" mask="url(#galaxyFillMask)" />
+                  <circle cx="90" cy="65" r="1" fill="#ffffff" mask="url(#galaxyFillMask)" />
+                  <circle cx="38" cy="63" r="1" fill="#ffffff" mask="url(#galaxyFillMask)" />
+                  <circle cx="55" cy="45" r="1.5" fill="#ffff00" mask="url(#galaxyFillMask)" />
+                  <circle cx="73" cy="83" r="1.5" fill="#ffff00" mask="url(#galaxyFillMask)" />
+                  {/* Galactic core */}
+                  <circle cx="64" cy="64" r="18" fill="url(#galaxyCore)" mask="url(#galaxyFillMask)" filter="url(#galaxyGlow)" />
+                  <circle cx="64" cy="64" r="18" fill="none" stroke="#ff8c00" strokeWidth="2" />
+                  <circle cx="64" cy="64" r="12" fill="#ffff00" mask="url(#galaxyFillMask)" opacity="0.8" />
+                  <circle cx="64" cy="64" r="6" fill="#ffffff" mask="url(#galaxyFillMask)" />
+                  {/* Core glow rings */}
+                  <circle cx="64" cy="64" r="22" fill="none" stroke="#ff1493" strokeWidth="1" mask="url(#galaxyFillMask)" opacity="0.4" />
+                  <circle cx="64" cy="64" r="26" fill="none" stroke="#9370db" strokeWidth="1" mask="url(#galaxyFillMask)" opacity="0.3" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🌌 Galaxy</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(galaxyFill)}%</div>
+            </div>
+
+            {/* Alien */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="alien" onClick={() => handleCharacterClick('alien')} onMouseEnter={() => handleCharacterHover('alien')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'alien' ? [1, 1.15, 1] : [1, 1.08, 1], y: hoveredCharacter === 'alien' ? [0, -5, 0] : [0, -2, 0] }} transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.3, filter: "brightness(1.5) drop-shadow(0 0 25px rgba(0,255,0,0.9))" }} whileTap={{ scale: 0.85 }} className={`${hoveredCharacter === 'alien' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="alienBodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#39ff14" />
+                      <stop offset="50%" stopColor="#00ff00" />
+                      <stop offset="100%" stopColor="#00cc00" />
+                    </linearGradient>
+                    <radialGradient id="alienEyeGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#000000" />
+                      <stop offset="70%" stopColor="#001a00" />
+                      <stop offset="100%" stopColor="#003300" />
+                    </radialGradient>
+                    <filter id="alienGlow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="alienFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (alienFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Head */}
+                  <ellipse cx="64" cy="50" rx="35" ry="42" fill="url(#alienBodyGrad)" mask="url(#alienFillMask)" filter="url(#alienGlow)" />
+                  <ellipse cx="64" cy="50" rx="35" ry="42" fill="none" stroke="#00ff00" strokeWidth="2.5" />
+                  {/* Large alien eyes */}
+                  <ellipse cx="52" cy="48" rx="12" ry="18" fill="url(#alienEyeGrad)" mask="url(#alienFillMask)" />
+                  <ellipse cx="76" cy="48" rx="12" ry="18" fill="url(#alienEyeGrad)" mask="url(#alienFillMask)" />
+                  <ellipse cx="52" cy="48" rx="12" ry="18" fill="none" stroke="#39ff14" strokeWidth="2" />
+                  <ellipse cx="76" cy="48" rx="12" ry="18" fill="none" stroke="#39ff14" strokeWidth="2" />
+                  {/* Eye highlights */}
+                  <ellipse cx="54" cy="45" rx="4" ry="6" fill="#39ff14" mask="url(#alienFillMask)" opacity="0.6" />
+                  <ellipse cx="78" cy="45" rx="4" ry="6" fill="#39ff14" mask="url(#alienFillMask)" opacity="0.6" />
+                  <circle cx="55" cy="43" r="2" fill="#7fff00" mask="url(#alienFillMask)" />
+                  <circle cx="79" cy="43" r="2" fill="#7fff00" mask="url(#alienFillMask)" />
+                  {/* Antenna */}
+                  <line x1="50" y1="15" x2="50" y2="25" stroke="#00ff00" strokeWidth="2.5" mask="url(#alienFillMask)" />
+                  <circle cx="50" cy="12" r="4" fill="#39ff14" mask="url(#alienFillMask)" filter="url(#alienGlow)" />
+                  <circle cx="50" cy="12" r="6" fill="none" stroke="#39ff14" strokeWidth="1.5" mask="url(#alienFillMask)" opacity="0.5" />
+                  <line x1="78" y1="15" x2="78" y2="25" stroke="#00ff00" strokeWidth="2.5" mask="url(#alienFillMask)" />
+                  <circle cx="78" cy="12" r="4" fill="#39ff14" mask="url(#alienFillMask)" filter="url(#alienGlow)" />
+                  <circle cx="78" cy="12" r="6" fill="none" stroke="#39ff14" strokeWidth="1.5" mask="url(#alienFillMask)" opacity="0.5" />
+                  {/* Neck */}
+                  <rect x="56" y="78" width="16" height="8" rx="2" fill="url(#alienBodyGrad)" mask="url(#alienFillMask)" />
+                  <rect x="56" y="78" width="16" height="8" rx="2" fill="none" stroke="#00ff00" strokeWidth="2" />
+                  {/* Body */}
+                  <ellipse cx="64" cy="100" rx="28" ry="20" fill="url(#alienBodyGrad)" mask="url(#alienFillMask)" filter="url(#alienGlow)" />
+                  <ellipse cx="64" cy="100" rx="28" ry="20" fill="none" stroke="#00ff00" strokeWidth="2.5" />
+                  {/* Arms */}
+                  <path d="M38 95 Q30 95, 25 100" stroke="#00ff00" strokeWidth="5" fill="none" mask="url(#alienFillMask)" strokeLinecap="round" />
+                  <circle cx="25" cy="100" r="4" fill="#39ff14" mask="url(#alienFillMask)" />
+                  <path d="M90 95 Q98 95, 103 100" stroke="#00ff00" strokeWidth="5" fill="none" mask="url(#alienFillMask)" strokeLinecap="round" />
+                  <circle cx="103" cy="100" r="4" fill="#39ff14" mask="url(#alienFillMask)" />
+                  {/* Small mouth */}
+                  <line x1="58" y1="68" x2="70" y2="68" stroke="#00cc00" strokeWidth="2" mask="url(#alienFillMask)" strokeLinecap="round" />
+                  {/* Tech details */}
+                  <circle cx="64" cy="100" r="5" fill="#7fff00" mask="url(#alienFillMask)" opacity="0.5" />
+                  <circle cx="64" cy="100" r="3" fill="#39ff14" mask="url(#alienFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">👽 Alien</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-green-600">{Math.round(alienFill)}%</div>
+            </div>
+
+            {/* Phoenix */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="phoenix" onClick={() => handleCharacterClick('phoenix')} onMouseEnter={() => handleCharacterHover('phoenix')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'phoenix' ? [1, 1.2, 1.1, 1.2, 1] : [1, 1.1, 1.05, 1.1, 1], y: hoveredCharacter === 'phoenix' ? [0, -4, -2, -4, 0] : [0, -2, -1, -2, 0] }} transition={{ duration: hoveredCharacter === 'phoenix' ? 2 : 3.5, repeat: Infinity, ease: "easeInOut" }} whileHover={{ scale: 1.35, filter: "brightness(1.6) drop-shadow(0 0 30px rgba(255,69,0,1))" }} whileTap={{ scale: 0.85 }} className={`${hoveredCharacter === 'phoenix' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="phoenixBodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#ffd700" />
+                      <stop offset="40%" stopColor="#ff8c00" />
+                      <stop offset="100%" stopColor="#ff4500" />
+                    </linearGradient>
+                    <radialGradient id="phoenixFlameGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffff00" opacity="0.9" />
+                      <stop offset="50%" stopColor="#ff8c00" opacity="0.6" />
+                      <stop offset="100%" stopColor="#ff4500" opacity="0.3" />
+                    </radialGradient>
+                    <filter id="phoenixGlow"><feGaussianBlur stdDeviation="5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="phoenixFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (phoenixFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Flame aura */}
+                  <ellipse cx="64" cy="64" rx="50" ry="55" fill="url(#phoenixFlameGrad)" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" opacity="0.5" />
+                  {/* Tail feathers with flames */}
+                  <path d="M64 95 Q50 105, 40 115 Q45 110, 50 105 Q55 100, 64 95" fill="url(#phoenixBodyGrad)" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <path d="M64 95 Q64 108, 60 120 Q62 112, 64 105 Q64 100, 64 95" fill="url(#phoenixBodyGrad)" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <path d="M64 95 Q78 105, 88 115 Q83 110, 78 105 Q73 100, 64 95" fill="url(#phoenixBodyGrad)" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  {/* Flame tips on tail */}
+                  <circle cx="40" cy="115" r="4" fill="#ffff00" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <circle cx="60" cy="120" r="4" fill="#ffff00" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <circle cx="88" cy="115" r="4" fill="#ffff00" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  {/* Body */}
+                  <ellipse cx="64" cy="65" rx="22" ry="28" fill="url(#phoenixBodyGrad)" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <ellipse cx="64" cy="65" rx="22" ry="28" fill="none" stroke="#ff8c00" strokeWidth="2.5" />
+                  {/* Wings spread */}
+                  <path d="M42 60 Q20 50, 15 45 Q25 48, 35 52 Q40 56, 42 60" fill="url(#phoenixBodyGrad)" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <path d="M42 70 Q18 75, 10 80 Q22 77, 32 73 Q40 72, 42 70" fill="url(#phoenixBodyGrad)" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <path d="M86 60 Q108 50, 113 45 Q103 48, 93 52 Q88 56, 86 60" fill="url(#phoenixBodyGrad)" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <path d="M86 70 Q110 75, 118 80 Q106 77, 96 73 Q88 72, 86 70" fill="url(#phoenixBodyGrad)" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  {/* Wing flame tips */}
+                  <circle cx="15" cy="45" r="3" fill="#ffff00" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <circle cx="10" cy="80" r="3" fill="#ffff00" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <circle cx="113" cy="45" r="3" fill="#ffff00" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <circle cx="118" cy="80" r="3" fill="#ffff00" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  {/* Head */}
+                  <ellipse cx="64" cy="42" rx="14" ry="16" fill="url(#phoenixBodyGrad)" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <ellipse cx="64" cy="42" rx="14" ry="16" fill="none" stroke="#ff8c00" strokeWidth="2" />
+                  {/* Crest flames */}
+                  <path d="M64 26 Q62 20, 60 15 Q62 20, 64 25" fill="#ffff00" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <path d="M64 26 Q64 18, 64 12 Q64 18, 64 25" fill="#ffff00" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <path d="M64 26 Q66 20, 68 15 Q66 20, 64 25" fill="#ffff00" mask="url(#phoenixFillMask)" filter="url(#phoenixGlow)" />
+                  <circle cx="60" cy="15" r="2.5" fill="#ffffff" mask="url(#phoenixFillMask)" />
+                  <circle cx="64" cy="12" r="2.5" fill="#ffffff" mask="url(#phoenixFillMask)" />
+                  <circle cx="68" cy="15" r="2.5" fill="#ffffff" mask="url(#phoenixFillMask)" />
+                  {/* Eyes */}
+                  <circle cx="59" cy="40" r="3" fill="#ff4500" mask="url(#phoenixFillMask)" />
+                  <circle cx="69" cy="40" r="3" fill="#ff4500" mask="url(#phoenixFillMask)" />
+                  <circle cx="59" cy="40" r="1.5" fill="#ffff00" mask="url(#phoenixFillMask)" />
+                  <circle cx="69" cy="40" r="1.5" fill="#ffff00" mask="url(#phoenixFillMask)" />
+                  {/* Beak */}
+                  <path d="M64 45 L67 50 L64 48 L61 50 Z" fill="#ff8c00" mask="url(#phoenixFillMask)" />
+                  {/* Body glow center */}
+                  <ellipse cx="64" cy="65" rx="10" ry="14" fill="#ffff00" mask="url(#phoenixFillMask)" opacity="0.4" />
+                  <circle cx="64" cy="65" r="6" fill="#ffffff" mask="url(#phoenixFillMask)" opacity="0.3" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🔥🦅 Phoenix</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(phoenixFill)}%</div>
+            </div>
+
+            {/* Cosmic Dragon */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="cosmicDragon" onClick={() => handleCharacterClick('cosmicDragon')} onMouseEnter={() => handleCharacterHover('cosmicDragon')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'cosmicDragon' ? [1, 1.15, 1.08, 1.15, 1] : [1, 1.08, 1.04, 1.08, 1], x: hoveredCharacter === 'cosmicDragon' ? [0, 2, -2, 0] : [0, 1, -1, 0] }} transition={{ duration: hoveredCharacter === 'cosmicDragon' ? 2.5 : 4, repeat: Infinity, ease: "easeInOut" }} whileHover={{ scale: 1.28, filter: "brightness(1.5) drop-shadow(0 0 28px rgba(147,112,219,0.9))" }} whileTap={{ scale: 0.88 }} className={`${hoveredCharacter === 'cosmicDragon' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="cosmicDragonBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#9370db" />
+                      <stop offset="50%" stopColor="#4169e1" />
+                      <stop offset="100%" stopColor="#00ffff" />
+                    </linearGradient>
+                    <radialGradient id="cosmicDragonGlowGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff" opacity="0.8" />
+                      <stop offset="50%" stopColor="#9370db" opacity="0.5" />
+                      <stop offset="100%" stopColor="#4169e1" opacity="0.2" />
+                    </radialGradient>
+                    <filter id="cosmicDragonGlow"><feGaussianBlur stdDeviation="5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="cosmicDragonFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (cosmicDragonFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Cosmic aura */}
+                  <circle cx="64" cy="64" r="55" fill="url(#cosmicDragonGlowGrad)" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" opacity="0.4" />
+                  {/* Tail */}
+                  <path d="M30 100 Q20 95, 15 85 Q18 90, 22 92 Q26 95, 30 100" fill="url(#cosmicDragonBodyGrad)" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" />
+                  <path d="M30 100 Q35 110, 40 118 Q37 112, 34 106 Q32 102, 30 100" fill="url(#cosmicDragonBodyGrad)" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" />
+                  <line x1="30" y1="100" x2="50" y2="95" stroke="#4169e1" strokeWidth="6" mask="url(#cosmicDragonFillMask)" strokeLinecap="round" />
+                  <circle cx="15" cy="85" r="3" fill="#00ffff" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" />
+                  <circle cx="40" cy="118" r="3" fill="#00ffff" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" />
+                  {/* Body */}
+                  <ellipse cx="60" cy="80" rx="20" ry="25" fill="url(#cosmicDragonBodyGrad)" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" />
+                  <ellipse cx="60" cy="80" rx="20" ry="25" fill="none" stroke="#9370db" strokeWidth="2.5" />
+                  {/* Scales/spots */}
+                  <circle cx="55" cy="75" r="3" fill="#00ffff" mask="url(#cosmicDragonFillMask)" opacity="0.6" />
+                  <circle cx="65" cy="82" r="2.5" fill="#00ffff" mask="url(#cosmicDragonFillMask)" opacity="0.6" />
+                  <circle cx="58" cy="88" r="2" fill="#00ffff" mask="url(#cosmicDragonFillMask)" opacity="0.6" />
+                  {/* Wings */}
+                  <path d="M55 65 Q30 55, 20 50 Q25 52, 35 58 Q45 63, 55 65" fill="url(#cosmicDragonBodyGrad)" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" opacity="0.8" />
+                  <path d="M55 75 Q28 80, 18 88 Q26 84, 38 78 Q48 74, 55 75" fill="url(#cosmicDragonBodyGrad)" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" opacity="0.8" />
+                  <path d="M65 65 Q90 55, 100 50 Q95 52, 85 58 Q75 63, 65 65" fill="url(#cosmicDragonBodyGrad)" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" opacity="0.8" />
+                  <path d="M65 75 Q92 80, 102 88 Q94 84, 82 78 Q72 74, 65 75" fill="url(#cosmicDragonBodyGrad)" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" opacity="0.8" />
+                  {/* Wing stars */}
+                  <circle cx="25" cy="52" r="2" fill="#ffffff" mask="url(#cosmicDragonFillMask)" />
+                  <circle cx="22" cy="85" r="1.5" fill="#ffffff" mask="url(#cosmicDragonFillMask)" />
+                  <circle cx="95" cy="52" r="2" fill="#ffffff" mask="url(#cosmicDragonFillMask)" />
+                  <circle cx="98" cy="85" r="1.5" fill="#ffffff" mask="url(#cosmicDragonFillMask)" />
+                  {/* Neck */}
+                  <ellipse cx="68" cy="58" rx="10" ry="18" fill="url(#cosmicDragonBodyGrad)" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" transform="rotate(-25 68 58)" />
+                  <ellipse cx="68" cy="58" rx="10" ry="18" fill="none" stroke="#9370db" strokeWidth="2" transform="rotate(-25 68 58)" />
+                  {/* Head */}
+                  <ellipse cx="78" cy="38" rx="16" ry="18" fill="url(#cosmicDragonBodyGrad)" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" />
+                  <ellipse cx="78" cy="38" rx="16" ry="18" fill="none" stroke="#9370db" strokeWidth="2.5" />
+                  {/* Eyes */}
+                  <circle cx="74" cy="35" r="4" fill="#ffff00" mask="url(#cosmicDragonFillMask)" />
+                  <circle cx="82" cy="35" r="4" fill="#ffff00" mask="url(#cosmicDragonFillMask)" />
+                  <circle cx="74" cy="35" r="2" fill="#ff4500" mask="url(#cosmicDragonFillMask)" />
+                  <circle cx="82" cy="35" r="2" fill="#ff4500" mask="url(#cosmicDragonFillMask)" />
+                  {/* Horns */}
+                  <path d="M70 22 L68 18 Q70 20, 70 22" fill="#9370db" mask="url(#cosmicDragonFillMask)" />
+                  <path d="M86 22 L88 18 Q86 20, 86 22" fill="#9370db" mask="url(#cosmicDragonFillMask)" />
+                  <circle cx="68" cy="18" r="2" fill="#00ffff" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" />
+                  <circle cx="88" cy="18" r="2" fill="#00ffff" mask="url(#cosmicDragonFillMask)" filter="url(#cosmicDragonGlow)" />
+                  {/* Snout */}
+                  <ellipse cx="85" cy="43" rx="8" ry="6" fill="url(#cosmicDragonBodyGrad)" mask="url(#cosmicDragonFillMask)" />
+                  <ellipse cx="85" cy="43" rx="8" ry="6" fill="none" stroke="#4169e1" strokeWidth="1.5" />
+                  {/* Nostrils */}
+                  <circle cx="88" cy="42" r="1.5" fill="#4169e1" mask="url(#cosmicDragonFillMask)" />
+                  <circle cx="88" cy="45" r="1.5" fill="#4169e1" mask="url(#cosmicDragonFillMask)" />
+                  {/* Cosmic breath */}
+                  <circle cx="95" cy="43" r="2" fill="#00ffff" mask="url(#cosmicDragonFillMask)" opacity="0.7" filter="url(#cosmicDragonGlow)" />
+                  <circle cx="100" cy="40" r="1.5" fill="#9370db" mask="url(#cosmicDragonFillMask)" opacity="0.6" filter="url(#cosmicDragonGlow)" />
+                  <circle cx="103" cy="45" r="1" fill="#ffffff" mask="url(#cosmicDragonFillMask)" opacity="0.8" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐉🌌 Cosmic Dragon</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(cosmicDragonFill)}%</div>
+            </div>
+
+            {/* Meteor */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="meteor" onClick={() => handleCharacterClick('meteor')} onMouseEnter={() => handleCharacterHover('meteor')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'meteor' ? [1, 1.12, 1] : [1, 1.06, 1], x: hoveredCharacter === 'meteor' ? [0, 4, 0] : [0, 2, 0], y: hoveredCharacter === 'meteor' ? [0, -4, 0] : [0, -2, 0] }} transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }} whileHover={{ scale: 1.3, filter: "brightness(1.6) drop-shadow(0 0 30px rgba(255,69,0,1))" }} whileTap={{ scale: 0.85 }} className={`${hoveredCharacter === 'meteor' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="meteorCoreGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff" />
+                      <stop offset="30%" stopColor="#ffff00" />
+                      <stop offset="60%" stopColor="#ff8c00" />
+                      <stop offset="100%" stopColor="#8b4513" />
+                    </radialGradient>
+                    <linearGradient id="meteorTrailGrad" x1="100%" y1="100%" x2="0%" y2="0%">
+                      <stop offset="0%" stopColor="#ff4500" opacity="0.9" />
+                      <stop offset="40%" stopColor="#ff8c00" opacity="0.6" />
+                      <stop offset="70%" stopColor="#ffd700" opacity="0.3" />
+                      <stop offset="100%" stopColor="#ffff00" opacity="0" />
+                    </linearGradient>
+                    <filter id="meteorGlow"><feGaussianBlur stdDeviation="6" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="meteorFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (meteorFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Long trail */}
+                  <path d="M100 28 Q70 50, 30 80 Q50 65, 65 55 Q80 40, 100 28" fill="url(#meteorTrailGrad)" mask="url(#meteorFillMask)" filter="url(#meteorGlow)" />
+                  <path d="M98 32 Q68 54, 28 84 Q48 69, 63 59 Q78 44, 98 32" fill="url(#meteorTrailGrad)" mask="url(#meteorFillMask)" opacity="0.7" />
+                  <path d="M95 30 Q75 55, 40 90 Q55 75, 68 65 Q82 48, 95 30" fill="#ff8c00" mask="url(#meteorFillMask)" opacity="0.4" />
+                  {/* Trail particles */}
+                  <circle cx="88" cy="40" r="3" fill="#ffff00" mask="url(#meteorFillMask)" opacity="0.8" filter="url(#meteorGlow)" />
+                  <circle cx="75" cy="52" r="2.5" fill="#ff8c00" mask="url(#meteorFillMask)" opacity="0.7" filter="url(#meteorGlow)" />
+                  <circle cx="62" cy="64" r="2" fill="#ffd700" mask="url(#meteorFillMask)" opacity="0.6" />
+                  <circle cx="48" cy="76" r="1.5" fill="#ff4500" mask="url(#meteorFillMask)" opacity="0.5" />
+                  <circle cx="82" cy="45" r="2" fill="#ffffff" mask="url(#meteorFillMask)" opacity="0.9" />
+                  <circle cx="68" cy="58" r="1.5" fill="#ffffff" mask="url(#meteorFillMask)" opacity="0.8" />
+                  <circle cx="55" cy="70" r="1" fill="#ffff00" mask="url(#meteorFillMask)" opacity="0.7" />
+                  {/* Meteor head - irregular rock shape */}
+                  <ellipse cx="108" cy="20" rx="12" ry="10" fill="url(#meteorCoreGrad)" mask="url(#meteorFillMask)" filter="url(#meteorGlow)" transform="rotate(-45 108 20)" />
+                  <ellipse cx="108" cy="20" rx="12" ry="10" fill="none" stroke="#ff8c00" strokeWidth="2" transform="rotate(-45 108 20)" />
+                  {/* Rocky texture */}
+                  <circle cx="105" cy="18" r="3" fill="#8b4513" mask="url(#meteorFillMask)" opacity="0.7" />
+                  <circle cx="110" cy="22" r="2.5" fill="#8b4513" mask="url(#meteorFillMask)" opacity="0.6" />
+                  <circle cx="108" cy="19" r="2" fill="#a0522d" mask="url(#meteorFillMask)" opacity="0.5" />
+                  {/* Fire glow around head */}
+                  <ellipse cx="108" cy="20" rx="16" ry="14" fill="#ff4500" mask="url(#meteorFillMask)" opacity="0.4" filter="url(#meteorGlow)" transform="rotate(-45 108 20)" />
+                  <ellipse cx="108" cy="20" rx="20" ry="18" fill="#ff8c00" mask="url(#meteorFillMask)" opacity="0.2" filter="url(#meteorGlow)" transform="rotate(-45 108 20)" />
+                  {/* Hot core glow */}
+                  <circle cx="108" cy="20" r="5" fill="#ffffff" mask="url(#meteorFillMask)" opacity="0.8" />
+                  <circle cx="108" cy="20" r="3" fill="#ffff00" mask="url(#meteorFillMask)" />
+                  {/* Additional flame wisps */}
+                  <path d="M102 16 Q98 18, 95 22" stroke="#ff4500" strokeWidth="2" fill="none" mask="url(#meteorFillMask)" opacity="0.6" />
+                  <path d="M114 24 Q118 26, 120 30" stroke="#ff8c00" strokeWidth="2" fill="none" mask="url(#meteorFillMask)" opacity="0.6" />
+                  <circle cx="95" cy="22" r="2" fill="#ffd700" mask="url(#meteorFillMask)" opacity="0.7" filter="url(#meteorGlow)" />
+                  <circle cx="120" cy="30" r="1.5" fill="#ffd700" mask="url(#meteorFillMask)" opacity="0.7" filter="url(#meteorGlow)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">💫 Meteor</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(meteorFill)}%</div>
+            </div>
+
+            {/* Aurora */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="aurora" onClick={() => handleCharacterClick('aurora')} onMouseEnter={() => handleCharacterHover('aurora')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'aurora' ? [1, 1.1, 1] : [1, 1.05, 1], opacity: [0.8, 1, 0.9, 1, 0.8] }} transition={{ duration: hoveredCharacter === 'aurora' ? 3 : 5, repeat: Infinity, ease: "easeInOut" }} whileHover={{ scale: 1.2, opacity: 1, filter: "brightness(1.5) drop-shadow(0 0 30px rgba(0,255,255,0.8))" }} whileTap={{ scale: 0.9 }} className={`${hoveredCharacter === 'aurora' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <linearGradient id="auroraGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#00ffff" opacity="0.8" />
+                      <stop offset="50%" stopColor="#00ff00" opacity="0.6" />
+                      <stop offset="100%" stopColor="#00ffff" opacity="0.4" />
+                    </linearGradient>
+                    <linearGradient id="auroraGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#ff00ff" opacity="0.7" />
+                      <stop offset="50%" stopColor="#9370db" opacity="0.5" />
+                      <stop offset="100%" stopColor="#ff00ff" opacity="0.3" />
+                    </linearGradient>
+                    <linearGradient id="auroraGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#00ff00" opacity="0.8" />
+                      <stop offset="50%" stopColor="#7fff00" opacity="0.6" />
+                      <stop offset="100%" stopColor="#00ff00" opacity="0.4" />
+                    </linearGradient>
+                    <filter id="auroraGlow"><feGaussianBlur stdDeviation="7" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="auroraFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (auroraFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Flowing aurora waves - cyan */}
+                  <path d="M20 50 Q35 35, 50 40 T80 35 Q95 32, 108 38" stroke="url(#auroraGrad1)" strokeWidth="8" fill="none" mask="url(#auroraFillMask)" filter="url(#auroraGlow)" opacity="0.8" strokeLinecap="round" />
+                  <path d="M18 55 Q33 38, 48 45 T78 38 Q93 35, 110 42" stroke="url(#auroraGrad1)" strokeWidth="6" fill="none" mask="url(#auroraFillMask)" filter="url(#auroraGlow)" opacity="0.6" strokeLinecap="round" />
+                  {/* Magenta/purple waves */}
+                  <path d="M22 65 Q38 50, 54 58 T84 52 Q98 48, 112 55" stroke="url(#auroraGrad2)" strokeWidth="10" fill="none" mask="url(#auroraFillMask)" filter="url(#auroraGlow)" opacity="0.7" strokeLinecap="round" />
+                  <path d="M20 70 Q36 53, 52 63 T82 55 Q96 50, 114 60" stroke="url(#auroraGrad2)" strokeWidth="7" fill="none" mask="url(#auroraFillMask)" filter="url(#auroraGlow)" opacity="0.5" strokeLinecap="round" />
+                  {/* Green waves */}
+                  <path d="M18 82 Q34 68, 50 75 T80 70 Q94 66, 110 72" stroke="url(#auroraGrad3)" strokeWidth="9" fill="none" mask="url(#auroraFillMask)" filter="url(#auroraGlow)" opacity="0.8" strokeLinecap="round" />
+                  <path d="M16 88 Q32 72, 48 82 T78 75 Q92 70, 112 78" stroke="url(#auroraGrad3)" strokeWidth="6" fill="none" mask="url(#auroraFillMask)" filter="url(#auroraGlow)" opacity="0.6" strokeLinecap="round" />
+                  {/* Additional flowing curves for depth */}
+                  <path d="M25 45 Q40 32, 55 38 T85 33" stroke="#00ffff" strokeWidth="4" fill="none" mask="url(#auroraFillMask)" filter="url(#auroraGlow)" opacity="0.5" strokeLinecap="round" />
+                  <path d="M28 78 Q43 62, 58 70 T88 65" stroke="#ff00ff" strokeWidth="5" fill="none" mask="url(#auroraFillMask)" filter="url(#auroraGlow)" opacity="0.4" strokeLinecap="round" />
+                  {/* Vertical rays emanating upward */}
+                  <line x1="40" y1="95" x2="38" y2="70" stroke="#00ffff" strokeWidth="2" mask="url(#auroraFillMask)" opacity="0.6" filter="url(#auroraGlow)" strokeLinecap="round" />
+                  <line x1="55" y1="100" x2="54" y2="65" stroke="#00ff00" strokeWidth="2.5" mask="url(#auroraFillMask)" opacity="0.7" filter="url(#auroraGlow)" strokeLinecap="round" />
+                  <line x1="70" y1="98" x2="69" y2="68" stroke="#ff00ff" strokeWidth="2" mask="url(#auroraFillMask)" opacity="0.6" filter="url(#auroraGlow)" strokeLinecap="round" />
+                  <line x1="85" y1="95" x2="84" y2="72" stroke="#7fff00" strokeWidth="2" mask="url(#auroraFillMask)" opacity="0.5" filter="url(#auroraGlow)" strokeLinecap="round" />
+                  {/* Shimmer particles */}
+                  <circle cx="45" cy="42" r="2" fill="#ffffff" mask="url(#auroraFillMask)" opacity="0.9" />
+                  <circle cx="60" cy="38" r="1.5" fill="#00ffff" mask="url(#auroraFillMask)" opacity="0.8" filter="url(#auroraGlow)" />
+                  <circle cx="75" cy="40" r="2" fill="#ffffff" mask="url(#auroraFillMask)" opacity="0.9" />
+                  <circle cx="50" cy="62" r="1.5" fill="#ff00ff" mask="url(#auroraFillMask)" opacity="0.7" filter="url(#auroraGlow)" />
+                  <circle cx="65" cy="58" r="2" fill="#00ff00" mask="url(#auroraFillMask)" opacity="0.8" filter="url(#auroraGlow)" />
+                  <circle cx="80" cy="55" r="1.5" fill="#ffffff" mask="url(#auroraFillMask)" opacity="0.9" />
+                  <circle cx="55" cy="78" r="2" fill="#7fff00" mask="url(#auroraFillMask)" opacity="0.8" filter="url(#auroraGlow)" />
+                  <circle cx="70" cy="75" r="1.5" fill="#00ffff" mask="url(#auroraFillMask)" opacity="0.7" filter="url(#auroraGlow)" />
+                  {/* Bright glow spots */}
+                  <circle cx="64" cy="55" r="8" fill="#ffffff" mask="url(#auroraFillMask)" opacity="0.3" filter="url(#auroraGlow)" />
+                  <circle cx="50" cy="68" r="6" fill="#00ffff" mask="url(#auroraFillMask)" opacity="0.3" filter="url(#auroraGlow)" />
+                  <circle cx="78" cy="62" r="7" fill="#ff00ff" mask="url(#auroraFillMask)" opacity="0.3" filter="url(#auroraGlow)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🌈 Aurora</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">{Math.round(auroraFill)}%</div>
+            </div>
+
+            {/* Quantum Star */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="quantumStar" onClick={() => handleCharacterClick('quantumStar')} onMouseEnter={() => handleCharacterHover('quantumStar')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'quantumStar' ? [1, 1.2, 0.9, 1.2, 1] : [1, 1.1, 0.95, 1.1, 1], rotate: [0, 180, 360] }} transition={{ duration: hoveredCharacter === 'quantumStar' ? 2 : 4, repeat: Infinity, ease: "linear" }} whileHover={{ scale: 1.35, filter: "brightness(1.8) drop-shadow(0 0 35px rgba(0,255,255,1))" }} whileTap={{ scale: 0.8 }} className={`${hoveredCharacter === 'quantumStar' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="quantumStarCoreGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff" />
+                      <stop offset="30%" stopColor="#00ffff" />
+                      <stop offset="60%" stopColor="#ff00ff" />
+                      <stop offset="100%" stopColor="#ffff00" />
+                    </radialGradient>
+                    <filter id="quantumStarGlow"><feGaussianBlur stdDeviation="6" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="quantumStarFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (quantumStarFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Quantum field effect */}
+                  <circle cx="64" cy="64" r="50" fill="none" stroke="#00ffff" strokeWidth="1" mask="url(#quantumStarFillMask)" opacity="0.3" strokeDasharray="4 4" />
+                  <circle cx="64" cy="64" r="45" fill="none" stroke="#ff00ff" strokeWidth="1" mask="url(#quantumStarFillMask)" opacity="0.3" strokeDasharray="3 3" />
+                  <circle cx="64" cy="64" r="40" fill="none" stroke="#ffff00" strokeWidth="1" mask="url(#quantumStarFillMask)" opacity="0.3" strokeDasharray="5 5" />
+                  {/* Quantum particles orbiting */}
+                  <circle cx="64" cy="20" r="3" fill="#00ffff" mask="url(#quantumStarFillMask)" filter="url(#quantumStarGlow)" />
+                  <circle cx="108" cy="64" r="3" fill="#ff00ff" mask="url(#quantumStarFillMask)" filter="url(#quantumStarGlow)" />
+                  <circle cx="64" cy="108" r="3" fill="#ffff00" mask="url(#quantumStarFillMask)" filter="url(#quantumStarGlow)" />
+                  <circle cx="20" cy="64" r="3" fill="#00ffff" mask="url(#quantumStarFillMask)" filter="url(#quantumStarGlow)" />
+                  <circle cx="92" cy="36" r="2" fill="#ffffff" mask="url(#quantumStarFillMask)" filter="url(#quantumStarGlow)" />
+                  <circle cx="92" cy="92" r="2" fill="#ff00ff" mask="url(#quantumStarFillMask)" filter="url(#quantumStarGlow)" />
+                  <circle cx="36" cy="92" r="2" fill="#00ffff" mask="url(#quantumStarFillMask)" filter="url(#quantumStarGlow)" />
+                  <circle cx="36" cy="36" r="2" fill="#ffff00" mask="url(#quantumStarFillMask)" filter="url(#quantumStarGlow)" />
+                  {/* Main quantum star shape */}
+                  <path d="M64 25 L70 50 L95 50 L74 65 L82 92 L64 75 L46 92 L54 65 L33 50 L58 50 Z" fill="url(#quantumStarCoreGrad)" mask="url(#quantumStarFillMask)" filter="url(#quantumStarGlow)" />
+                  <path d="M64 25 L70 50 L95 50 L74 65 L82 92 L64 75 L46 92 L54 65 L33 50 L58 50 Z" fill="none" stroke="#00ffff" strokeWidth="2" />
+                  {/* Inner quantum core */}
+                  <circle cx="64" cy="64" r="18" fill="#ffffff" mask="url(#quantumStarFillMask)" opacity="0.8" filter="url(#quantumStarGlow)" />
+                  <circle cx="64" cy="64" r="14" fill="#00ffff" mask="url(#quantumStarFillMask)" opacity="0.7" />
+                  <circle cx="64" cy="64" r="10" fill="#ff00ff" mask="url(#quantumStarFillMask)" opacity="0.8" />
+                  <circle cx="64" cy="64" r="6" fill="#ffffff" mask="url(#quantumStarFillMask)" />
+                  {/* Quantum entanglement lines */}
+                  <line x1="64" y1="20" x2="64" y2="44" stroke="#00ffff" strokeWidth="1.5" mask="url(#quantumStarFillMask)" opacity="0.5" strokeDasharray="2 2" />
+                  <line x1="108" y1="64" x2="84" y2="64" stroke="#ff00ff" strokeWidth="1.5" mask="url(#quantumStarFillMask)" opacity="0.5" strokeDasharray="2 2" />
+                  <line x1="64" y1="108" x2="64" y2="84" stroke="#ffff00" strokeWidth="1.5" mask="url(#quantumStarFillMask)" opacity="0.5" strokeDasharray="2 2" />
+                  <line x1="20" y1="64" x2="44" y2="64" stroke="#00ffff" strokeWidth="1.5" mask="url(#quantumStarFillMask)" opacity="0.5" strokeDasharray="2 2" />
+                  {/* Additional sparkles */}
+                  <circle cx="64" cy="35" r="2" fill="#ffffff" mask="url(#quantumStarFillMask)" />
+                  <circle cx="85" cy="50" r="1.5" fill="#00ffff" mask="url(#quantumStarFillMask)" />
+                  <circle cx="78" cy="78" r="2" fill="#ff00ff" mask="url(#quantumStarFillMask)" />
+                  <circle cx="50" cy="78" r="1.5" fill="#ffff00" mask="url(#quantumStarFillMask)" />
+                  <circle cx="43" cy="50" r="2" fill="#ffffff" mask="url(#quantumStarFillMask)" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">⚛️✨ Quantum Star</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">{Math.round(quantumStarFill)}%</div>
+            </div>
+
+            {/* Celestial Orb */}
+            <div className="relative w-32 h-32 cursor-pointer" data-character="celestialOrb" onClick={() => handleCharacterClick('celestialOrb')} onMouseEnter={() => handleCharacterHover('celestialOrb')} onMouseLeave={() => handleCharacterHover(null)}>
+              <motion.div animate={{ scale: hoveredCharacter === 'celestialOrb' ? [1, 1.15, 1] : [1, 1.08, 1], y: hoveredCharacter === 'celestialOrb' ? [0, -5, 0, 5, 0] : [0, -3, 0, 3, 0] }} transition={{ duration: hoveredCharacter === 'celestialOrb' ? 4 : 6, repeat: Infinity, ease: "easeInOut" }} whileHover={{ scale: 1.25, filter: "brightness(1.5) drop-shadow(0 0 28px rgba(147,112,219,0.9))" }} whileTap={{ scale: 0.88 }} className={`${hoveredCharacter === 'celestialOrb' ? 'drop-shadow-2xl' : ''}`}>
+                <svg width="128" height="128" viewBox="0 0 128 128" className="w-32 h-32">
+                  <defs>
+                    <radialGradient id="celestialOrbGrad" cx="40%" cy="40%" r="60%">
+                      <stop offset="0%" stopColor="#ffffff" />
+                      <stop offset="30%" stopColor="#87ceeb" />
+                      <stop offset="60%" stopColor="#9370db" />
+                      <stop offset="100%" stopColor="#4b0082" />
+                    </radialGradient>
+                    <radialGradient id="celestialOrbInnerGrad" cx="35%" cy="35%" r="65%">
+                      <stop offset="0%" stopColor="#ffffff" opacity="0.9" />
+                      <stop offset="50%" stopColor="#9370db" opacity="0.6" />
+                      <stop offset="100%" stopColor="#4b0082" opacity="0.3" />
+                    </radialGradient>
+                    <filter id="celestialOrbGlow"><feGaussianBlur stdDeviation="6" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <mask id="celestialOrbFillMask"><rect x="0" y="0" width="128" height="128" fill="white" transform={`translate(0, ${128 - (celestialOrbFill * 1.28)})`} /></mask>
+                  </defs>
+                  {/* Outer ethereal glow rings */}
+                  <circle cx="64" cy="64" r="55" fill="none" stroke="#9370db" strokeWidth="1.5" mask="url(#celestialOrbFillMask)" opacity="0.3" />
+                  <circle cx="64" cy="64" r="50" fill="none" stroke="#87ceeb" strokeWidth="1" mask="url(#celestialOrbFillMask)" opacity="0.4" />
+                  <circle cx="64" cy="64" r="45" fill="none" stroke="#9370db" strokeWidth="1.5" mask="url(#celestialOrbFillMask)" opacity="0.5" />
+                  {/* Main orb body */}
+                  <circle cx="64" cy="64" r="38" fill="url(#celestialOrbGrad)" mask="url(#celestialOrbFillMask)" filter="url(#celestialOrbGlow)" />
+                  <circle cx="64" cy="64" r="38" fill="none" stroke="#9370db" strokeWidth="2.5" />
+                  {/* Inner mystical patterns */}
+                  <circle cx="64" cy="64" r="32" fill="url(#celestialOrbInnerGrad)" mask="url(#celestialOrbFillMask)" filter="url(#celestialOrbGlow)" opacity="0.7" />
+                  <circle cx="64" cy="64" r="26" fill="none" stroke="#87ceeb" strokeWidth="1.5" mask="url(#celestialOrbFillMask)" opacity="0.6" />
+                  <circle cx="64" cy="64" r="20" fill="none" stroke="#ffffff" strokeWidth="1" mask="url(#celestialOrbFillMask)" opacity="0.7" />
+                  {/* Crystal-like internal structures */}
+                  <path d="M64 44 L74 54 L64 64 L54 54 Z" fill="#87ceeb" mask="url(#celestialOrbFillMask)" opacity="0.5" />
+                  <path d="M64 64 L74 74 L64 84 L54 74 Z" fill="#9370db" mask="url(#celestialOrbFillMask)" opacity="0.5" />
+                  <path d="M44 64 L54 74 L64 64 L54 54 Z" fill="#4b0082" mask="url(#celestialOrbFillMask)" opacity="0.4" />
+                  <path d="M64 64 L74 54 L84 64 L74 74 Z" fill="#87ceeb" mask="url(#celestialOrbFillMask)" opacity="0.4" />
+                  <line x1="64" y1="44" x2="64" y2="84" stroke="#ffffff" strokeWidth="1" mask="url(#celestialOrbFillMask)" opacity="0.5" />
+                  <line x1="44" y1="64" x2="84" y2="64" stroke="#ffffff" strokeWidth="1" mask="url(#celestialOrbFillMask)" opacity="0.5" />
+                  <line x1="52" y1="52" x2="76" y2="76" stroke="#87ceeb" strokeWidth="0.5" mask="url(#celestialOrbFillMask)" opacity="0.5" />
+                  <line x1="76" y1="52" x2="52" y2="76" stroke="#87ceeb" strokeWidth="0.5" mask="url(#celestialOrbFillMask)" opacity="0.5" />
+                  {/* Core bright spot */}
+                  <circle cx="64" cy="64" r="10" fill="#ffffff" mask="url(#celestialOrbFillMask)" opacity="0.8" filter="url(#celestialOrbGlow)" />
+                  <circle cx="64" cy="64" r="6" fill="#ffffff" mask="url(#celestialOrbFillMask)" />
+                  {/* Highlight reflection */}
+                  <ellipse cx="54" cy="52" rx="12" ry="8" fill="#ffffff" mask="url(#celestialOrbFillMask)" opacity="0.5" />
+                  <ellipse cx="54" cy="52" rx="8" ry="5" fill="#ffffff" mask="url(#celestialOrbFillMask)" opacity="0.7" />
+                  {/* Floating energy particles around orb */}
+                  <circle cx="40" cy="50" r="2" fill="#87ceeb" mask="url(#celestialOrbFillMask)" opacity="0.8" filter="url(#celestialOrbGlow)" />
+                  <circle cx="88" cy="55" r="1.5" fill="#9370db" mask="url(#celestialOrbFillMask)" opacity="0.7" filter="url(#celestialOrbGlow)" />
+                  <circle cx="45" cy="80" r="2" fill="#ffffff" mask="url(#celestialOrbFillMask)" opacity="0.9" />
+                  <circle cx="85" cy="75" r="1.5" fill="#87ceeb" mask="url(#celestialOrbFillMask)" opacity="0.8" filter="url(#celestialOrbGlow)" />
+                  <circle cx="64" cy="30" r="1.5" fill="#ffffff" mask="url(#celestialOrbFillMask)" opacity="0.9" />
+                  <circle cx="30" cy="64" r="2" fill="#9370db" mask="url(#celestialOrbFillMask)" opacity="0.7" filter="url(#celestialOrbGlow)" />
+                  <circle cx="98" cy="64" r="1.5" fill="#87ceeb" mask="url(#celestialOrbFillMask)" opacity="0.8" filter="url(#celestialOrbGlow)" />
+                  <circle cx="64" cy="98" r="2" fill="#ffffff" mask="url(#celestialOrbFillMask)" opacity="0.9" />
+                </svg>
+              </motion.div>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🔮✨ Celestial Orb</div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(celestialOrbFill)}%</div>
             </div>
 
           </div>
