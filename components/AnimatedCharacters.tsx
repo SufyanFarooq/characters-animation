@@ -73,6 +73,7 @@ const AnimatedCharacters: React.FC = () => {
   const [theme, setTheme] = useState<'day' | 'night'>('day');
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [particlesEnabled, setParticlesEnabled] = useState(true);
+  const [activeCategory, setActiveCategory] = useState<string>('cosmlings');
 
   // Animation loop
   useEffect(() => {
@@ -1358,9 +1359,70 @@ const AnimatedCharacters: React.FC = () => {
         </div>
       </div>
 
+      {/* Category Navigation Tabs */}
+      <div className="mb-8 px-4">
+        <div className="flex flex-wrap gap-3 items-center justify-center">
+          <button
+            onClick={() => setActiveCategory('animals')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+              activeCategory === 'animals'
+                ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg scale-105'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            🦁 Animals & Nature <span className="ml-2 px-2 py-0.5 bg-white/30 rounded-full text-xs">5</span>
+          </button>
+          
+          <button
+            onClick={() => setActiveCategory('sparklings')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+              activeCategory === 'sparklings'
+                ? 'bg-gradient-to-r from-pink-400 to-yellow-400 text-white shadow-lg scale-105'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            ✨ Sparklings <span className="ml-2 px-2 py-0.5 bg-white/30 rounded-full text-xs">15</span>
+          </button>
+          
+          <button
+            onClick={() => setActiveCategory('beastlings')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+              activeCategory === 'beastlings'
+                ? 'bg-gradient-to-r from-orange-400 to-red-500 text-white shadow-lg scale-105'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            🐯 Beastlings <span className="ml-2 px-2 py-0.5 bg-white/30 rounded-full text-xs">15</span>
+          </button>
+          
+          <button
+            onClick={() => setActiveCategory('techlings')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+              activeCategory === 'techlings'
+                ? 'bg-gradient-to-r from-cyan-400 to-blue-600 text-white shadow-lg scale-105'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            🤖 Techlings <span className="ml-2 px-2 py-0.5 bg-white/30 rounded-full text-xs">15</span>
+          </button>
+          
+          <button
+            onClick={() => setActiveCategory('cosmlings')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+              activeCategory === 'cosmlings'
+                ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-105'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            🌌 Cosmlings <span className="ml-2 px-2 py-0.5 bg-white/30 rounded-full text-xs">15</span>
+          </button>
+        </div>
+      </div>
+
       {/* Categories Section */}
       <div className="space-y-12 px-8">
         {/* Animals & Nature Category */}
+        {activeCategory === 'animals' && (
         <div>
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
             🌿 Animals & Nature
@@ -2240,8 +2302,10 @@ const AnimatedCharacters: React.FC = () => {
         </div>
           </div>
         </div>
+        )}
 
         {/* Sparklings Category */}
+        {activeCategory === 'sparklings' && (
         <div>
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 bg-clip-text text-transparent">
             ✨ Sparklings
@@ -4101,8 +4165,10 @@ const AnimatedCharacters: React.FC = () => {
         </div>
           </div>
         </div>
+        )}
 
         {/* Beastlings Category */}
+        {activeCategory === 'beastlings' && (
         <div>
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
             🦁 Beastlings
@@ -5013,8 +5079,10 @@ const AnimatedCharacters: React.FC = () => {
 
           </div>
         </div>
+        )}
 
         {/* Techlings Category */}
+        {activeCategory === 'techlings' && (
         <div>
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
             🤖 Techlings
@@ -5966,8 +6034,10 @@ const AnimatedCharacters: React.FC = () => {
 
           </div>
         </div>
+        )}
 
         {/* Cosmlings Category */}
+        {activeCategory === 'cosmlings' && (
         <div>
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-600 bg-clip-text text-transparent">
             🌌 Cosmlings
@@ -6885,6 +6955,7 @@ const AnimatedCharacters: React.FC = () => {
 
           </div>
         </div>
+        )}
       </div>
     </div>
   );
