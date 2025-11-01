@@ -1331,6 +1331,76 @@ const AnimatedCharacters: React.FC = () => {
     setHoveredCharacter(character);
   };
 
+  const downloadCharacterAsPNG = async (character: string, event: React.MouseEvent) => {
+    event.stopPropagation(); // Prevent triggering character click
+    
+    const characterElement = document.querySelector(`[data-character="${character}"]`);
+    if (!characterElement) return;
+
+    const svgElement = characterElement.querySelector('svg') as SVGElement;
+    if (!svgElement) return;
+
+    try {
+      // Clone the SVG
+      const clonedSvg = svgElement.cloneNode(true) as SVGElement;
+      
+      // Modify masks to show full fill
+      const masks = clonedSvg.querySelectorAll('mask');
+      masks.forEach(mask => {
+        const rect = mask.querySelector('rect');
+        if (rect) {
+          rect.setAttribute('height', '128');
+          rect.setAttribute('transform', 'translate(0, 0)');
+        }
+      });
+
+      // Serialize SVG
+      const svgData = new XMLSerializer().serializeToString(clonedSvg);
+      const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(svgBlob);
+
+      // Create image and load SVG
+      const img = new Image();
+      await new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = reject;
+        img.src = url;
+      });
+
+      // Create canvas and draw
+      const canvas = document.createElement('canvas');
+      canvas.width = 512; // High resolution
+      canvas.height = 512;
+      const ctx = canvas.getContext('2d', { alpha: true });
+      
+      if (ctx) {
+        // Clear canvas with transparent background
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw SVG
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        
+        // Convert to PNG and download
+        canvas.toBlob((blob) => {
+          if (blob) {
+            const downloadUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.download = `${character}.png`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(downloadUrl);
+          }
+        }, 'image/png');
+      }
+
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading character:', error);
+    }
+  };
+
   return (
     <div className="w-full">
       {/* Control Panel */}
@@ -1589,6 +1659,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-red-600">
             {Math.round(appleFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('apple', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Rabbit Character with Interactive Features */}
@@ -1822,6 +1905,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-pink-600">
             {Math.round(rabbitFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('rabbit', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Hen Character with Interactive Features */}
@@ -2084,6 +2180,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-600">
             {Math.round(henFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('hen', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Monkey Character with Interactive Features */}
@@ -2299,6 +2408,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-amber-600">
             {Math.round(monkeyFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('monkey', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
           </div>
         </div>
@@ -2580,6 +2702,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-500">
             {Math.round(emberFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('ember', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Spark Character with Interactive Features */}
@@ -2690,6 +2825,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-500">
             {Math.round(sparkFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('spark', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Flicker Character with Interactive Features */}
@@ -2801,6 +2949,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-500">
             {Math.round(flickerFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('flicker', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Glow Character with Interactive Features */}
@@ -2910,6 +3071,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-500">
             {Math.round(glowFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('glow', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Flame Character with Interactive Features */}
@@ -3034,6 +3208,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">
             {Math.round(flameFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('flame', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Bubble Character with Interactive Features */}
@@ -3146,6 +3333,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-400">
             {Math.round(bubbleFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('bubble', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Prism Character with Interactive Features */}
@@ -3271,6 +3471,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">
             {Math.round(prismFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('prism', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Pebble Character with Interactive Features */}
@@ -3367,6 +3580,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-stone-600">
             {Math.round(pebbleFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('pebble', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Crystal Character with Interactive Features */}
@@ -3484,6 +3710,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">
             {Math.round(crystalFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('crystal', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Leaf Character with Interactive Features */}
@@ -3598,6 +3837,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-green-600">
             {Math.round(leafFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('leaf', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Cloud Character with Interactive Features */}
@@ -3699,6 +3951,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-gray-500">
             {Math.round(cloudFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('cloud', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Bolt Character with Interactive Features */}
@@ -3815,6 +4080,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-500">
             {Math.round(boltFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('bolt', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Raindrop Character with Interactive Features */}
@@ -3921,6 +4199,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-500">
             {Math.round(raindropFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('raindrop', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Ice Character with Interactive Features */}
@@ -4045,6 +4336,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-500">
             {Math.round(iceFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('ice', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
         {/* Sunbeam Character with Interactive Features */}
@@ -4162,6 +4466,19 @@ const AnimatedCharacters: React.FC = () => {
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-600">
             {Math.round(sunbeamFill)}%
           </div>
+          
+          {/* Download Button */}
+          <button
+            onClick={(e) => downloadCharacterAsPNG('sunbeam', e)}
+            className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            title="Download as PNG"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
           </div>
         </div>
@@ -4238,6 +4555,18 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐅 Tiger</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(tigerFill)}%</div>
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('tiger', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Wolf */}
@@ -4294,6 +4623,18 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐺 Wolf</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-gray-600">{Math.round(wolfFill)}%</div>
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('wolf', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Eagle */}
@@ -4346,6 +4687,18 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🦅 Eagle</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-700">{Math.round(eagleFill)}%</div>
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('eagle', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Panther */}
@@ -4407,6 +4760,18 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐆 Panther</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-gray-900">{Math.round(pantherFill)}%</div>
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('panther', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Dragon */}
@@ -4469,6 +4834,18 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐉 Dragon</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-red-600">{Math.round(dragonFill)}%</div>
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('dragon', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Goat */}
@@ -4535,6 +4912,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐐 Goat</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-700">{Math.round(goatFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('goat', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Fox */}
@@ -4599,6 +4989,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🦊 Fox</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(foxFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('fox', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Owl */}
@@ -4669,6 +5072,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🦉 Owl</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-800">{Math.round(owlFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('owl', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Rat */}
@@ -4705,6 +5121,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐀 Rat</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-gray-600">{Math.round(ratFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('rat', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Dog */}
@@ -4760,6 +5189,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐕 Dog</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-700">{Math.round(dogFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('dog', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Cat */}
@@ -4819,6 +5261,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐈 Cat</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(catFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('cat', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Bear */}
@@ -4874,6 +5329,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐻 Bear</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-800">{Math.round(bearFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('bear', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Rhino */}
@@ -4933,6 +5401,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🦏 Rhino</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-gray-700">{Math.round(rhinoFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('rhino', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Snake */}
@@ -4991,6 +5472,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐍 Snake</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-green-700">{Math.round(snakeFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('snake', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Lion */}
@@ -5075,6 +5569,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🦁 Lion</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(lionFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('lion', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
           </div>
@@ -5178,6 +5685,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🤖 Robot</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-600">{Math.round(robotFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('robot', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Drone */}
@@ -5267,6 +5787,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🚁 Drone</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">{Math.round(droneFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('drone', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* AI Core */}
@@ -5322,6 +5855,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🧠 AI Core</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(aiCoreFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('aiCore', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* NanoBot */}
@@ -5372,6 +5918,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🔬 NanoBot</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">{Math.round(nanoBotFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('nanoBot', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Holo Chip */}
@@ -5426,6 +5985,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">💾 Holo Chip</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-teal-600">{Math.round(holoChipFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('holoChip', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Cyber Lion */}
@@ -5475,6 +6047,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🦁⚡ Cyber Lion</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-600">{Math.round(cyberLionFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('cyberLion', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Cyber Tiger */}
@@ -5533,6 +6118,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐯⚡ Cyber Tiger</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(cyberTigerFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('cyberTiger', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Mecha Dragon */}
@@ -5601,6 +6199,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐉🤖 Mecha Dragon</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-red-600">{Math.round(mechaDragonFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('mechaDragon', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Neural Orb */}
@@ -5658,6 +6269,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🔮 Neural Orb</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(neuralOrbFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('neuralOrb', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Laser */}
@@ -5719,6 +6343,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">⚡🔴 Laser</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-red-600">{Math.round(laserFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('laser', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Hologram */}
@@ -5805,6 +6442,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">👤✨ Hologram</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">{Math.round(hologramFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('hologram', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Tech Fox */}
@@ -5857,6 +6507,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🦊⚡ Tech Fox</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(techFoxFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('techFox', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* AI Wolf */}
@@ -5911,6 +6574,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐺🤖 AI Wolf</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-600">{Math.round(aiWolfFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('aiWolf', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Circuit Bot */}
@@ -5967,6 +6643,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🔌🤖 Circuit Bot</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-green-600">{Math.round(circuitBotFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('circuitBot', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Cyber Panther */}
@@ -6030,6 +6719,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐆⚡ Cyber Panther</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(cyberPantherFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('cyberPanther', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
           </div>
@@ -6102,6 +6804,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">⭐ Star</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-yellow-600">{Math.round(starFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('star', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Planet */}
@@ -6168,6 +6883,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🪐 Planet</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-600">{Math.round(planetFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('planet', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Black Hole */}
@@ -6239,6 +6967,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🕳️ Black Hole</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(blackHoleFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('blackHole', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Nebula */}
@@ -6302,6 +7043,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🌌 Nebula</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(nebulaFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('nebula', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Comet */}
@@ -6369,6 +7123,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">☄️ Comet</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(cometFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('comet', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Supernova */}
@@ -6423,6 +7190,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">💥 Supernova</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-red-600">{Math.round(supernovaFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('supernova', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Void */}
@@ -6470,6 +7250,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">⚫ Void</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-gray-800">{Math.round(voidFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('void', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Galaxy */}
@@ -6522,6 +7315,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🌌 Galaxy</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(galaxyFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('galaxy', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Alien */}
@@ -6582,6 +7388,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">👽 Alien</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-green-600">{Math.round(alienFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('alien', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Phoenix */}
@@ -6649,6 +7468,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🔥🦅 Phoenix</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(phoenixFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('phoenix', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Cosmic Dragon */}
@@ -6724,6 +7556,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🐉🌌 Cosmic Dragon</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(cosmicDragonFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('cosmicDragon', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Meteor */}
@@ -6780,6 +7625,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">💫 Meteor</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-orange-600">{Math.round(meteorFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('meteor', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Aurora */}
@@ -6839,6 +7697,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🌈 Aurora</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">{Math.round(auroraFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('aurora', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Quantum Star */}
@@ -6891,6 +7762,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">⚛️✨ Quantum Star</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-cyan-600">{Math.round(quantumStarFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('quantumStar', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
             {/* Celestial Orb */}
@@ -6951,6 +7835,19 @@ const AnimatedCharacters: React.FC = () => {
               </motion.div>
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/80 px-2 py-1 rounded whitespace-nowrap">🔮✨ Celestial Orb</div>
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-purple-600">{Math.round(celestialOrbFill)}%</div>
+
+              {/* Download Button */}
+              <button
+                onClick={(e) => downloadCharacterAsPNG('celestialOrb', e)}
+                className="absolute top-0 right-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                title="Download as PNG"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
             </div>
 
           </div>
